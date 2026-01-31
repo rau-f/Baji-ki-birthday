@@ -118,6 +118,7 @@
             filter: blur(1px);
             opacity: 0.6;
             animation: drift var(--duration) linear infinite;
+            will-change: transform, opacity;
         }
         @keyframes drift {
             0% { transform: translateY(0) translateX(0); opacity: 0; }
@@ -182,6 +183,11 @@
 
         /* --- UNIFIED STARRY BACKGROUND --- */
         .star-dust-bg {
+            position: fixed;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
             background-color: #010103; /* Much Darker Base */
             background-image: 
                 radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 60%), /* Reduced Gold Glow opacity */
@@ -202,11 +208,14 @@
                              250px 250px, 350px 350px, 450px 450px, 
                              500px 500px, 600px 600px, 700px 700px;
             animation: star-twinkle 6s ease-in-out infinite alternate;
+            will-change: transform;
+            z-index: -1;
+            pointer-events: none;
         }
 
         @keyframes star-twinkle {
-            0% { background-size: 800px 800px, 800px 800px, 150px 150px, 200px 200px, 300px 300px, 250px 250px, 350px 350px, 450px 450px, 500px 500px, 600px 600px, 700px 700px; }
-            100% { background-size: 810px 810px, 790px 790px, 155px 155px, 205px 205px, 305px 305px, 255px 255px, 355px 355px, 455px 455px, 505px 505px, 605px 605px, 705px 705px; }
+            0% { transform: scale(1); }
+            100% { transform: scale(1.02); }
         }
 
         .gold-glow-text {
@@ -217,6 +226,7 @@
             background: linear-gradient(145deg, #1A1A1D, #0F0F12);
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8), inset 0 0 1px 1px rgba(255, 255, 255, 0.05);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
         }
         .floating-tile:hover {
             transform: translateY(-5px);
@@ -352,7 +362,8 @@
 
 <body class="text-slate-100 overflow-x-hidden relative min-h-screen transition-colors duration-500">
     <!-- Fixed Global Background (Stars) -->
-    <div class="fixed inset-0 z-[-1] star-dust-bg pointer-events-none"></div>
+    <!-- Fixed Global Background (Stars) -->
+    <div class="star-dust-bg"></div>
 
     <!-- Audio -->
     <audio id="bg-music" loop>
