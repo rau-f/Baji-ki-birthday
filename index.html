@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Happy Birthday Gulshan! 🎉</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -399,6 +402,26 @@
             max-width: 90%;
         }
 
+        /* Photo Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
         /* Final Card - Mobile Optimized */
         .final-card {
             display: none;
@@ -601,23 +624,49 @@
 
         /* Animations */
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes popIn {
-            0% { transform: scale(0.8); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         @keyframes slideInUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
         /* Mobile-specific adjustments */
@@ -626,35 +675,35 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 10px;
             }
-            
+
             .progress-step {
                 width: 35px;
                 height: 35px;
                 margin: 0 8px;
                 font-size: 1rem;
             }
-            
+
             .progress-step::after {
                 width: 16px;
                 right: -16px;
             }
-            
+
             .sound-controls {
                 top: 15px;
                 right: 15px;
             }
-            
+
             .sound-btn {
                 width: 45px;
                 height: 45px;
                 font-size: 1.3rem;
             }
-            
+
             .drag-item {
                 padding: 12px 16px;
                 min-width: 100px;
             }
-            
+
             .drop-zone {
                 min-height: 180px;
             }
@@ -664,35 +713,36 @@
             h1 {
                 font-size: 1.8rem;
             }
-            
+
             .intro-text {
                 font-size: 0.95rem;
             }
-            
+
             .puzzle-title {
                 font-size: 1.5rem;
             }
-            
+
             .puzzle-instructions {
                 font-size: 0.9rem;
             }
-            
+
             .riddle-text {
                 font-size: 1.1rem;
             }
-            
-            .btn-start, .btn-next {
+
+            .btn-start,
+            .btn-next {
                 font-size: 1rem;
             }
-            
+
             body {
                 font-size: 14px;
             }
-            
+
             .memory-game {
                 grid-template-columns: repeat(3, 1fr);
             }
-            
+
             .progress-step {
                 width: 30px;
                 height: 30px;
@@ -700,29 +750,30 @@
                 font-size: 0.9rem;
                 border-width: 2px;
             }
-            
+
             .progress-step::after {
                 width: 10px;
                 right: -10px;
             }
-            
+
             .puzzle-container {
                 padding: 20px 15px;
             }
-            
-            .btn-start, .btn-next {
+
+            .btn-start,
+            .btn-next {
                 min-width: 200px;
                 padding: 15px 30px;
             }
-            
+
             .drag-drop-container {
                 gap: 20px;
             }
-            
+
             .drag-items {
                 gap: 10px;
             }
-            
+
             .drag-item {
                 min-width: 90px;
                 padding: 10px 14px;
@@ -733,42 +784,42 @@
             h1 {
                 font-size: 1.5rem;
             }
-            
+
             .intro-text {
                 font-size: 0.85rem;
             }
-            
+
             .puzzle-title {
                 font-size: 1.3rem;
             }
-            
+
             .puzzle-instructions {
                 font-size: 0.85rem;
             }
-            
+
             .riddle-text {
                 font-size: 1rem;
             }
-            
+
             body {
                 font-size: 13px;
             }
-            
+
             .memory-game {
                 grid-template-columns: repeat(3, 1fr);
                 gap: 8px;
             }
-            
+
             .memory-card {
                 font-size: 1.5rem;
             }
-            
+
             .progress-step {
                 width: 28px;
                 height: 28px;
                 margin: 0 4px;
             }
-            
+
             .progress-step::after {
                 width: 8px;
                 right: -8px;
@@ -777,25 +828,28 @@
 
         /* Landscape orientation fixes */
         @media (max-height: 600px) and (orientation: landscape) {
-            .welcome-screen, .puzzle-section, .final-card {
+
+            .welcome-screen,
+            .puzzle-section,
+            .final-card {
                 min-height: 120vh;
                 padding-top: 60px;
                 padding-bottom: 60px;
             }
-            
+
             h1 {
                 font-size: 2.5rem;
             }
-            
+
             .intro-text {
                 font-size: 1rem;
                 margin-bottom: 20px;
             }
-            
+
             .puzzle-title {
                 font-size: 2rem;
             }
-            
+
             .puzzle-container {
                 padding: 25px;
             }
@@ -803,12 +857,15 @@
 
         /* Prevent zoom on input focus for iOS */
         @media screen and (max-width: 768px) {
-            input, textarea {
+
+            input,
+            textarea {
                 font-size: 16px !important;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Sound Controls -->
     <div class="sound-controls">
@@ -825,11 +882,13 @@
         <div class="welcome-content">
             <h1>Happy Birthday <span class="highlight">Gulshan!</span></h1>
             <p class="intro-text">
-                My dearest sister, even though I'm far away in distance, my love and wishes for you on your special day know no bounds. 
+                My dearest sister, even though I'm far away in distance, my love and wishes for you on your special day
+                know no bounds.
                 This year, I've created something special just for you - a journey of love, memories, and celebration!
             </p>
             <p class="intro-text">
-                To unlock your birthday card, you'll need to solve some fun puzzles. Each puzzle brings you closer to your special message. 
+                To unlock your birthday card, you'll need to solve some fun logical puzzles. Each puzzle brings you
+                closer to your special message.
                 Ready to begin this beautiful journey?
             </p>
             <button class="btn-start" id="start-btn">
@@ -839,7 +898,7 @@
         <div class="confetti-container" id="confetti-container"></div>
     </section>
 
-    <!-- Puzzle 1: Riddle -->
+    <!-- Puzzle 1: Leap Year Riddle -->
     <section class="puzzle-section" id="puzzle1">
         <div class="container">
             <div class="progress-bar">
@@ -848,18 +907,17 @@
                 <div class="progress-step">3</div>
             </div>
             <div class="puzzle-container">
-                <h2 class="puzzle-title">Puzzle 1: The Birthday Riddle</h2>
+                <h2 class="puzzle-title">Puzzle 1: The Leap Year Mystery</h2>
                 <p class="puzzle-instructions">
-                    Let's start with a fun riddle! Solve this to proceed to the next puzzle.
+                    Solve this logical riddle to proceed. It might take a moment to think about!
                 </p>
                 <div class="puzzle-content">
                     <div class="riddle-container">
                         <div class="riddle-text">
-                            "I'm a time that's loved by all, marking moments big and small. 
-                            With candles, cake, and joyful cheer, I come around just once a year. 
-                            What am I?"
+                            A man dies of old age on his 25th birthday. How is this possible?
                         </div>
-                        <input type="text" class="answer-input" id="riddle-answer" placeholder="Enter your answer here...">
+                        <input type="text" class="answer-input" id="riddle-answer"
+                            placeholder="Enter your answer here...">
                         <p id="riddle-feedback" style="text-align: center; margin-top: 15px; font-weight: 600;"></p>
                     </div>
                 </div>
@@ -870,7 +928,7 @@
         </div>
     </section>
 
-    <!-- Puzzle 2: Memory Game -->
+    <!-- Puzzle 2: Memory Game with Birthday Items -->
     <section class="puzzle-section" id="puzzle2">
         <div class="container">
             <div class="progress-bar">
@@ -879,9 +937,10 @@
                 <div class="progress-step">3</div>
             </div>
             <div class="puzzle-container">
-                <h2 class="puzzle-title">Puzzle 2: Memory Match</h2>
+                <h2 class="puzzle-title">Puzzle 2: Birthday Memory Match</h2>
                 <p class="puzzle-instructions">
-                    Find all matching pairs of birthday items! Tap on cards to reveal them and try to find matches.
+                    Find all matching pairs of birthday items! Tap on cards to reveal them and try to find matches. This
+                    one will test your memory!
                 </p>
                 <div class="puzzle-content">
                     <div class="memory-game" id="memory-game">
@@ -896,7 +955,7 @@
         </div>
     </section>
 
-    <!-- Puzzle 3: Drag and Drop -->
+    <!-- Puzzle 3: Cake Cutting Riddle with Drag and Drop Steps -->
     <section class="puzzle-section" id="puzzle3">
         <div class="container">
             <div class="progress-bar">
@@ -905,20 +964,22 @@
                 <div class="progress-step active">3</div>
             </div>
             <div class="puzzle-container">
-                <h2 class="puzzle-title">Puzzle 3: Arrange the Birthday Wishes</h2>
+                <h2 class="puzzle-title">Puzzle 3: The Cake Cutting Challenge</h2>
                 <p class="puzzle-instructions">
-                    Drag the birthday wishes in the correct order to complete the message for Gulshan!
+                    Drag the steps in the correct order to cut a cake into 8 equal pieces with only 3 cuts!
                 </p>
                 <div class="puzzle-content">
                     <div class="drag-drop-container">
                         <div class="drag-items" id="drag-items">
-                            <div class="drag-item" draggable="true" data-id="1">Happy</div>
-                            <div class="drag-item" draggable="true" data-id="2">Birthday</div>
-                            <div class="drag-item" draggable="true" data-id="3">to the most</div>
-                            <div class="drag-item" draggable="true" data-id="4">wonderful sister!</div>
+                            <div class="drag-item" draggable="true" data-id="1">Make one vertical cut to divide the cake
+                                into two halves</div>
+                            <div class="drag-item" draggable="true" data-id="2">Make a second vertical cut perpendicular
+                                to the first to divide into four quarters</div>
+                            <div class="drag-item" draggable="true" data-id="3">Make a horizontal cut through the middle
+                                to divide each quarter into two</div>
                         </div>
                         <div class="drop-zone" id="drop-zone">
-                            <div class="drop-instruction">Drag birthday wishes here in correct order</div>
+                            <div class="drop-instruction">Drag the steps here in the correct order</div>
                         </div>
                     </div>
                     <p id="drag-feedback" style="text-align: center; margin-top: 20px; font-weight: 600;"></p>
@@ -930,26 +991,43 @@
         </div>
     </section>
 
-    <!-- Final Birthday Card -->
+    <!-- Final Birthday Card with Photo Gallery -->
     <section class="final-card" id="final-card">
         <div class="container">
             <div class="card-container">
                 <div class="birthday-message">
                     <h2>Happy Birthday, Dearest Gulshan!</h2>
-                    <p>Today, you turn <span style="color: var(--secondary); font-weight: bold;">23 or 24</span> (you know which one! 😉), and even though I can't be there with you in Lahore to celebrate, I'm sending all my love across the miles.</p>
-                    <p>It's been a year since your beautiful wedding in April 2025, and I'm so happy to see you flourishing in your new life. Marriage looks wonderful on you!</p>
-                    <p>On this special day, I wish you endless joy, laughter that fills your home, love that grows deeper each day, and dreams that turn into reality.</p>
-                    
+                    <p>Today, you turn <span style="color: var(--secondary); font-weight: bold;">23 or 24</span> (you
+                        know which one! 😉), and even though I can't be there with you in Lahore to celebrate, I'm
+                        sending all my love across the miles.</p>
+                    <p>It's been a year since your beautiful wedding in April 2025, and I'm so happy to see you
+                        flourishing in your new life. Marriage looks wonderful on you!</p>
+                    <p>On this special day, I wish you endless joy, laughter that fills your home, love that grows
+                        deeper each day, and dreams that turn into reality.</p>
+
                     <div class="personal-note">
                         <h3>A Special Note Just For You:</h3>
-                        <p>Gulshan, you've always been more than just a sister to me. You've been a guide, a friend, and an inspiration. Even with the distance between us, our bond remains as strong as ever. I'm so proud of the woman you've become and excited for all the beautiful moments ahead in your journey.</p>
-                        <p>May this year bring you closer to your dreams, fill your days with happiness, and bless you with health and prosperity. Enjoy your special day to the fullest!</p>
+                        <p>Gulshan, you've always been more than just a sister to me. You've been a guide, a friend, and
+                            an inspiration. Even with the distance between us, our bond remains as strong as ever. I'm
+                            so proud of the woman you've become and excited for all the beautiful moments ahead in your
+                            journey.</p>
+                        <p>May this year bring you closer to your dreams, fill your days with happiness, and bless you
+                            with health and prosperity. Enjoy your special day to the fullest!</p>
                     </div>
-                    
+
                     <div class="birthday-wish">
                         With all my love,<br>
                         Your sibling who misses you dearly ❤️
                     </div>
+                </div>
+                <h3 class="puzzle-title">Photo Gallery of Memories</h3>
+                <div class="gallery">
+                    <!-- Add your photos here, replace src with actual images -->
+                    <img src="https://via.placeholder.com/300?text=Memory+1" alt="Memory 1">
+                    <img src="https://via.placeholder.com/300?text=Memory+2" alt="Memory 2">
+                    <img src="https://via.placeholder.com/300?text=Memory+3" alt="Memory 3">
+                    <img src="https://via.placeholder.com/300?text=Memory+4" alt="Memory 4">
+                    <!-- Add more as needed -->
                 </div>
             </div>
         </div>
@@ -993,21 +1071,14 @@
         const finalConfetti = document.getElementById('final-confetti');
         const musicBtn = document.getElementById('music-btn');
         const soundBtn = document.getElementById('sound-btn');
-        
-        // Audio elements
-        const bgMusic = document.getElementById('bg-music');
-        const clickSound = document.getElementById('click-sound');
-        const successSound = document.getElementById('success-sound');
-        const applauseSound = document.getElementById('applause-sound');
-        const celebrationSound = document.getElementById('celebration-sound');
 
         // Game State
         let currentPuzzle = 0;
         let matchedPairs = 0;
         let flippedCards = [];
-        let correctOrder = [1, 2, 3, 4];
+        let correctOrder = [1, 2, 3];
         let droppedItems = [];
-        
+
         // Sound State
         let musicEnabled = true;
         let soundEnabled = true;
@@ -1018,7 +1089,7 @@
         function init() {
             // Initialize sound system
             initSounds();
-            
+
             // Start button click event
             startBtn.addEventListener('click', () => {
                 playSound('click');
@@ -1027,10 +1098,10 @@
                 puzzle1.classList.add('active-puzzle');
                 createConfetti(confettiContainer, 50);
                 playApplause();
-                
+
                 // Auto-scroll to first puzzle with smooth behavior
                 setTimeout(() => {
-                    puzzle1.scrollIntoView({ 
+                    puzzle1.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
@@ -1043,14 +1114,14 @@
                 musicEnabled = !musicEnabled;
                 musicBtn.classList.toggle('muted', !musicEnabled);
                 musicBtn.innerHTML = musicEnabled ? '<i class="fas fa-music"></i>' : '<i class="fas fa-music-slash"></i>';
-                
+
                 if (musicEnabled) {
                     playBackgroundMusic();
                 } else {
                     stopBackgroundMusic();
                 }
             });
-            
+
             soundBtn.addEventListener('click', () => {
                 playSound('click');
                 soundEnabled = !soundEnabled;
@@ -1058,11 +1129,11 @@
                 soundBtn.innerHTML = soundEnabled ? '<i class="fas fa-volume-up"></i>' : '<i class="fas fa-volume-mute"></i>';
             });
 
-            // Puzzle 1: Riddle
-            const correctAnswer = "birthday";
-            riddleAnswer.addEventListener('input', function() {
+            // Puzzle 1: Leap Year Riddle
+            const correctAnswer = "he was born on february 29"; // or "leap year" normalized
+            riddleAnswer.addEventListener('input', function () {
                 const answer = this.value.trim().toLowerCase();
-                if (answer === correctAnswer) {
+                if (answer.includes('february 29') || answer.includes('leap year')) {
                     riddleFeedback.textContent = "Correct! 🎉 Well done!";
                     riddleFeedback.style.color = "var(--secondary)";
                     nextBtn1.disabled = false;
@@ -1070,7 +1141,7 @@
                     playSound('success');
                     playApplause();
                 } else if (answer) {
-                    riddleFeedback.textContent = "Not quite, try again!";
+                    riddleFeedback.textContent = "Not quite, try again! Hint: Think about calendar oddities.";
                     riddleFeedback.style.color = "#ff5252";
                 } else {
                     riddleFeedback.textContent = "";
@@ -1084,10 +1155,10 @@
                 puzzle2.classList.add('active-puzzle');
                 initMemoryGame();
                 createConfetti(confettiContainer, 20);
-                
+
                 // Auto-scroll to next puzzle
                 setTimeout(() => {
-                    puzzle2.scrollIntoView({ 
+                    puzzle2.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
@@ -1099,39 +1170,39 @@
                 memoryGame.innerHTML = '';
                 matchedPairs = 0;
                 flippedCards = [];
-                
-                // Emoji pairs for the memory game
+
+                // Birthday items emojis for the memory game
                 const emojis = ['🎂', '🎁', '🎈', '🎉', '🥳', '❤️', '✨', '🌸'];
                 const cards = [...emojis, ...emojis]; // Duplicate for pairs
-                
+
                 // Shuffle cards
                 cards.sort(() => Math.random() - 0.5);
-                
+
                 // Create card elements
                 cards.forEach((emoji, index) => {
                     const card = document.createElement('div');
                     card.className = 'memory-card';
                     card.dataset.index = index;
                     card.dataset.value = emoji;
-                    
+
                     card.innerHTML = `<span style="opacity: 0;">${emoji}</span>`;
-                    
+
                     // Use touch events for mobile
                     card.addEventListener('click', () => {
                         playSound('click');
                         flipCard(card);
                     });
-                    
+
                     // Also support touch events explicitly
                     card.addEventListener('touchstart', (e) => {
                         e.preventDefault();
                         playSound('click');
                         flipCard(card);
                     }, { passive: false });
-                    
+
                     memoryGame.appendChild(card);
                 });
-                
+
                 memoryStatus.textContent = "Find all 8 matching pairs!";
             }
 
@@ -1141,27 +1212,27 @@
                 if (card.classList.contains('matched') || flippedCards.length >= 2 || flippedCards.includes(card)) {
                     return;
                 }
-                
+
                 // Flip the card
                 card.classList.add('flipped');
                 card.innerHTML = `<span>${card.dataset.value}</span>`;
                 flippedCards.push(card);
-                
+
                 // Check for match if two cards are flipped
                 if (flippedCards.length === 2) {
                     const card1 = flippedCards[0];
                     const card2 = flippedCards[1];
-                    
+
                     if (card1.dataset.value === card2.dataset.value) {
                         // Match found
                         card1.classList.add('matched');
                         card2.classList.add('matched');
                         flippedCards = [];
                         matchedPairs++;
-                        
+
                         memoryStatus.textContent = `Great! ${matchedPairs} of 8 pairs found!`;
                         playSound('success');
-                        
+
                         if (matchedPairs === 8) {
                             memoryStatus.textContent = "Excellent! All pairs found! 🎉";
                             nextBtn2.disabled = false;
@@ -1189,10 +1260,10 @@
                 puzzle3.classList.add('active-puzzle');
                 initDragDrop();
                 createConfetti(confettiContainer, 20);
-                
+
                 // Auto-scroll to next puzzle
                 setTimeout(() => {
-                    puzzle3.scrollIntoView({ 
+                    puzzle3.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
@@ -1202,22 +1273,22 @@
             // Puzzle 3: Drag and Drop initialization
             function initDragDrop() {
                 droppedItems = [];
-                dropZone.innerHTML = '<div class="drop-instruction">Drag birthday wishes here in correct order</div>';
-                dragFeedback.textContent = "Arrange the words to form a birthday message for Gulshan!";
+                dropZone.innerHTML = '<div class="drop-instruction">Drag the steps here in correct order</div>';
+                dragFeedback.textContent = "Arrange the steps to solve the riddle!";
                 dragFeedback.style.color = "var(--dark)";
-                
+
                 // Make drag items draggable again
                 document.querySelectorAll('.drag-item').forEach(item => {
                     item.addEventListener('dragstart', dragStart);
                     item.addEventListener('touchstart', touchStart, { passive: false });
                 });
-                
+
                 // Drop zone events
                 dropZone.addEventListener('dragover', dragOver);
                 dropZone.addEventListener('dragenter', dragEnter);
                 dropZone.addEventListener('dragleave', dragLeave);
                 dropZone.addEventListener('drop', drop);
-                
+
                 // Touch events for mobile
                 dropZone.addEventListener('touchmove', touchMove, { passive: false });
                 dropZone.addEventListener('touchend', touchEnd);
@@ -1245,14 +1316,14 @@
             function drop(e) {
                 e.preventDefault();
                 dropZone.classList.remove('over');
-                
+
                 const id = e.dataTransfer.getData('text/plain');
                 handleDrop(id);
             }
 
             // Touch events for mobile drag and drop
             let draggedElement = null;
-            
+
             function touchStart(e) {
                 e.preventDefault();
                 const touch = e.touches[0];
@@ -1260,86 +1331,86 @@
                 draggedElement.classList.add('dragging');
                 playSound('click');
             }
-            
+
             function touchMove(e) {
                 if (!draggedElement) return;
                 e.preventDefault();
             }
-            
+
             function touchEnd(e) {
                 if (!draggedElement) return;
-                
+
                 const touch = e.changedTouches[0];
                 const dropZoneRect = dropZone.getBoundingClientRect();
-                
+
                 // Check if touch ended in drop zone
-                if (touch.clientX >= dropZoneRect.left && 
+                if (touch.clientX >= dropZoneRect.left &&
                     touch.clientX <= dropZoneRect.right &&
-                    touch.clientY >= dropZoneRect.top && 
+                    touch.clientY >= dropZoneRect.top &&
                     touch.clientY <= dropZoneRect.bottom) {
-                    
+
                     handleDrop(draggedElement.dataset.id);
                 }
-                
+
                 draggedElement.classList.remove('dragging');
                 draggedElement = null;
             }
-            
+
             function handleDrop(id) {
                 const draggedItem = document.querySelector(`.drag-item[data-id="${id}"]`);
-                
+
                 // Check if item is already dropped
                 if (droppedItems.includes(parseInt(id))) {
-                    dragFeedback.textContent = "You've already used this word!";
+                    dragFeedback.textContent = "You've already used this step!";
                     dragFeedback.style.color = "#ff5252";
                     draggedItem.classList.remove('dragging');
                     return;
                 }
-                
+
                 // Add to dropped items
                 droppedItems.push(parseInt(id));
-                
+
                 // Create dropped element
                 const droppedElement = document.createElement('div');
                 droppedElement.className = 'dropped-item';
                 droppedElement.textContent = draggedItem.textContent;
                 droppedElement.dataset.id = id;
-                
+
                 // Insert in the correct position (before the instruction)
                 const instruction = dropZone.querySelector('.drop-instruction');
                 dropZone.insertBefore(droppedElement, instruction);
-                
+
                 // Check if all items are dropped
-                if (droppedItems.length === 4) {
+                if (droppedItems.length === 3) {
                     // Check if the order is correct
                     const isCorrect = JSON.stringify(droppedItems) === JSON.stringify(correctOrder);
-                    
+
                     if (isCorrect) {
-                        dragFeedback.textContent = "Perfect! You've arranged the birthday message correctly! 🎉";
+                        dragFeedback.textContent = "Perfect! You've solved the cake cutting riddle! 🎉";
                         dragFeedback.style.color = "var(--secondary)";
                         nextBtn3.disabled = false;
                         createConfetti(confettiContainer, 50);
                         playSound('applause');
                         playApplause();
                     } else {
-                        dragFeedback.textContent = "Almost! Try again. Drag items out and rearrange.";
+                        dragFeedback.textContent = "Almost! Try again.";
                         dragFeedback.style.color = "#ff5252";
                         playSound('click');
                         // Allow reordering by resetting
                         setTimeout(() => {
                             droppedItems = [];
-                            dropZone.innerHTML = '<div class="drop-instruction">Drag birthday wishes here in correct order</div>';
+                            dropZone.innerHTML = '<div class="drop-instruction">Drag the steps here in correct order</div>';
                             document.querySelectorAll('.drag-item').forEach(item => {
                                 item.classList.remove('dragging');
                             });
                         }, 1500);
                     }
                 } else {
-                    dragFeedback.textContent = `Good! ${4 - droppedItems.length} more to place.`;
+                    dragFeedback.textContent = `Good! ${3 - droppedItems.length} more to place.`;
                     dragFeedback.style.color = "var(--dark)";
                     playSound('success');
                 }
-                
+
                 draggedItem.classList.remove('dragging');
             }
 
@@ -1353,10 +1424,10 @@
                 setTimeout(() => createConfetti(finalConfetti, 200), 1000);
                 playSound('celebration');
                 playApplause();
-                
+
                 // Auto-scroll to final card
                 setTimeout(() => {
-                    finalCard.scrollIntoView({ 
+                    finalCard.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
@@ -1370,7 +1441,7 @@
                 generateSuccessSound();
                 generateApplauseSound();
                 generateCelebrationSound();
-                
+
                 // Start background music if enabled
                 if (musicEnabled) {
                     setTimeout(() => {
@@ -1378,74 +1449,74 @@
                     }, 1000);
                 }
             }
-            
+
             function playBackgroundMusic() {
                 if (!musicEnabled) return;
-                
+
                 try {
                     // Create a simple background melody using Web Audio API
                     if (!audioContext) {
                         audioContext = new (window.AudioContext || window.webkitAudioContext)();
                     }
-                    
+
                     // Create a simple pleasant melody
                     const notes = [261.63, 329.63, 392.00, 523.25, 392.00, 329.63]; // C, E, G, C, G, E
                     let currentNote = 0;
-                    
+
                     function playNote() {
                         if (!musicEnabled || !audioContext) return;
-                        
+
                         const oscillator = audioContext.createOscillator();
                         const gainNode = audioContext.createGain();
-                        
+
                         oscillator.connect(gainNode);
                         gainNode.connect(audioContext.destination);
-                        
+
                         oscillator.frequency.value = notes[currentNote];
                         oscillator.type = 'sine';
-                        
+
                         gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
                         gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 1);
-                        
+
                         oscillator.start(audioContext.currentTime);
                         oscillator.stop(audioContext.currentTime + 1);
-                        
+
                         currentNote = (currentNote + 1) % notes.length;
-                        
+
                         // Schedule next note
                         setTimeout(playNote, 1500);
                     }
-                    
+
                     // Start the melody
                     playNote();
                 } catch (e) {
                     console.log("Audio context not supported");
                 }
             }
-            
+
             function stopBackgroundMusic() {
                 // For Web Audio API, we just stop scheduling new notes
                 // The musicEnabled flag will prevent new notes from playing
             }
-            
+
             function generateClickSound() {
                 try {
                     if (!audioContext) {
                         audioContext = new (window.AudioContext || window.webkitAudioContext)();
                     }
-                    
+
                     const oscillator = audioContext.createOscillator();
                     const gainNode = audioContext.createGain();
-                    
+
                     oscillator.connect(gainNode);
                     gainNode.connect(audioContext.destination);
-                    
+
                     oscillator.frequency.value = 800;
                     oscillator.type = 'sine';
-                    
+
                     gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
                     gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
-                    
+
                     // Store the nodes so we can replay
                     clickSound.oscillator = oscillator;
                     clickSound.gainNode = gainNode;
@@ -1454,30 +1525,30 @@
                     console.log("Could not generate click sound");
                 }
             }
-            
+
             function generateSuccessSound() {
                 try {
                     if (!audioContext) {
                         audioContext = new (window.AudioContext || window.webkitAudioContext)();
                     }
-                    
+
                     // Create a rising success sound
                     const oscillator1 = audioContext.createOscillator();
                     const oscillator2 = audioContext.createOscillator();
                     const gainNode = audioContext.createGain();
-                    
+
                     oscillator1.connect(gainNode);
                     oscillator2.connect(gainNode);
                     gainNode.connect(audioContext.destination);
-                    
+
                     oscillator1.frequency.value = 800;
                     oscillator2.frequency.value = 1200;
                     oscillator1.type = 'sine';
                     oscillator2.type = 'sine';
-                    
+
                     gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
                     gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
-                    
+
                     successSound.oscillator1 = oscillator1;
                     successSound.oscillator2 = oscillator2;
                     successSound.gainNode = gainNode;
@@ -1486,18 +1557,18 @@
                     console.log("Could not generate success sound");
                 }
             }
-            
+
             function generateApplauseSound() {
                 try {
                     if (!audioContext) {
                         audioContext = new (window.AudioContext || window.webkitAudioContext)();
                     }
-                    
+
                     // Create applause-like sound with multiple oscillators
                     const gainNode = audioContext.createGain();
                     gainNode.connect(audioContext.destination);
                     gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
-                    
+
                     // Create multiple oscillators at different frequencies
                     const oscillators = [];
                     for (let i = 0; i < 5; i++) {
@@ -1507,7 +1578,7 @@
                         oscillator.type = 'sine';
                         oscillators.push(oscillator);
                     }
-                    
+
                     applauseSound.oscillators = oscillators;
                     applauseSound.gainNode = gainNode;
                     applauseSound.audioContext = audioContext;
@@ -1515,18 +1586,18 @@
                     console.log("Could not generate applause sound");
                 }
             }
-            
+
             function generateCelebrationSound() {
                 try {
                     if (!audioContext) {
                         audioContext = new (window.AudioContext || window.webkitAudioContext)();
                     }
-                    
+
                     // Create a celebratory arpeggio
                     const notes = [523.25, 659.25, 783.99, 1046.50]; // C, E, G, C (higher)
                     const gainNode = audioContext.createGain();
                     gainNode.connect(audioContext.destination);
-                    
+
                     celebrationSound.notes = notes;
                     celebrationSound.gainNode = gainNode;
                     celebrationSound.audioContext = audioContext;
@@ -1534,90 +1605,90 @@
                     console.log("Could not generate celebration sound");
                 }
             }
-            
+
             function playSound(type) {
                 if (!soundEnabled) return;
-                
+
                 try {
                     if (!audioContext) {
                         audioContext = new (window.AudioContext || window.webkitAudioContext)();
                     }
-                    
+
                     if (audioContext.state === 'suspended') {
                         audioContext.resume();
                     }
-                    
-                    switch(type) {
+
+                    switch (type) {
                         case 'click':
                             if (clickSound.oscillator) {
                                 const oscillator = audioContext.createOscillator();
                                 const gainNode = audioContext.createGain();
-                                
+
                                 oscillator.connect(gainNode);
                                 gainNode.connect(audioContext.destination);
-                                
+
                                 oscillator.frequency.value = 800;
                                 oscillator.type = 'sine';
-                                
+
                                 gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
                                 gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
-                                
+
                                 oscillator.start(audioContext.currentTime);
                                 oscillator.stop(audioContext.currentTime + 0.1);
                             }
                             break;
-                            
+
                         case 'success':
                             if (successSound.oscillator1) {
                                 const oscillator1 = audioContext.createOscillator();
                                 const oscillator2 = audioContext.createOscillator();
                                 const gainNode = audioContext.createGain();
-                                
+
                                 oscillator1.connect(gainNode);
                                 oscillator2.connect(gainNode);
                                 gainNode.connect(audioContext.destination);
-                                
+
                                 oscillator1.frequency.value = 800;
                                 oscillator2.frequency.value = 1200;
                                 oscillator1.type = 'sine';
                                 oscillator2.type = 'sine';
-                                
+
                                 gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
                                 gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
-                                
+
                                 oscillator1.start(audioContext.currentTime);
                                 oscillator2.start(audioContext.currentTime);
                                 oscillator1.stop(audioContext.currentTime + 0.5);
                                 oscillator2.stop(audioContext.currentTime + 0.5);
                             }
                             break;
-                            
+
                         case 'applause':
                             if (applauseSound.oscillators) {
                                 const gainNode = audioContext.createGain();
                                 gainNode.connect(audioContext.destination);
                                 gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
                                 gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 1.5);
-                                
+
                                 // Create multiple oscillators at different frequencies
                                 for (let i = 0; i < 5; i++) {
                                     const oscillator = audioContext.createOscillator();
                                     oscillator.connect(gainNode);
                                     oscillator.frequency.value = 500 + Math.random() * 1000;
                                     oscillator.type = 'sine';
-                                    
+
                                     oscillator.start(audioContext.currentTime);
                                     oscillator.stop(audioContext.currentTime + 1.5);
                                 }
                             }
                             break;
-                            
+
                         case 'celebration':
                             if (celebrationSound.notes) {
                                 const notes = celebrationSound.notes;
                                 const gainNode = audioContext.createGain();
                                 gainNode.connect(audioContext.destination);
-                                
+
                                 // Play an arpeggio
                                 notes.forEach((frequency, index) => {
                                     setTimeout(() => {
@@ -1625,10 +1696,10 @@
                                         oscillator.connect(gainNode);
                                         oscillator.frequency.value = frequency;
                                         oscillator.type = 'sine';
-                                        
+
                                         gainNode.gain.setValueAtTime(0.15, audioContext.currentTime);
                                         gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
-                                        
+
                                         oscillator.start(audioContext.currentTime);
                                         oscillator.stop(audioContext.currentTime + 0.3);
                                     }, index * 150);
@@ -1644,7 +1715,7 @@
             // Create confetti effect
             function createConfetti(container, count) {
                 const colors = ['#9c27b0', '#ff4081', '#ffeb3b', '#4a148c', '#e1bee7', '#f8bbd9'];
-                
+
                 for (let i = 0; i < count; i++) {
                     const confetti = document.createElement('div');
                     confetti.className = 'confetti';
@@ -1653,24 +1724,24 @@
                     confetti.style.width = Math.random() * 15 + 5 + 'px';
                     confetti.style.height = Math.random() * 15 + 5 + 'px';
                     confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
-                    
+
                     container.appendChild(confetti);
-                    
+
                     // Animate confetti
                     const animation = confetti.animate([
-                        { 
-                            transform: 'translateY(-100vh) rotate(0deg)', 
-                            opacity: 1 
+                        {
+                            transform: 'translateY(-100vh) rotate(0deg)',
+                            opacity: 1
                         },
-                        { 
-                            transform: `translateY(${window.innerHeight}px) rotate(${Math.random() * 720}deg)`, 
-                            opacity: 0 
+                        {
+                            transform: `translateY(${window.innerHeight}px) rotate(${Math.random() * 720}deg)`,
+                            opacity: 0
                         }
                     ], {
                         duration: Math.random() * 3000 + 2000,
                         easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
                     });
-                    
+
                     // Remove confetti after animation
                     animation.onfinish = () => {
                         confetti.remove();
@@ -1682,12 +1753,12 @@
             function playApplause() {
                 applause.style.animation = 'none';
                 applause.style.opacity = '1';
-                
+
                 // Trigger reflow
                 void applause.offsetWidth;
-                
+
                 applause.style.animation = 'float 1.5s ease-in-out';
-                
+
                 setTimeout(() => {
                     applause.style.opacity = '0';
                 }, 1500);
@@ -1696,13 +1767,13 @@
             // Initialize memory game and drag drop on load (but hidden)
             initMemoryGame();
             initDragDrop();
-            
+
             // Handle mobile viewport height issues
             function setViewportHeight() {
                 let vh = window.innerHeight * 0.01;
                 document.documentElement.style.setProperty('--vh', `${vh}px`);
             }
-            
+
             setViewportHeight();
             window.addEventListener('resize', setViewportHeight);
             window.addEventListener('orientationchange', setViewportHeight);
@@ -1710,13 +1781,14 @@
 
         // Start the app when DOM is loaded
         document.addEventListener('DOMContentLoaded', init);
-        
+
         // Prevent pull-to-refresh on mobile
-        document.addEventListener('touchmove', function(e) {
+        document.addEventListener('touchmove', function (e) {
             if (e.scale !== 1) {
                 e.preventDefault();
             }
         }, { passive: false });
     </script>
 </body>
+
 </html>
