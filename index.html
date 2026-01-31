@@ -342,6 +342,72 @@
             }
         }
 
+        /* --- CANDLE ANIMATIONS --- */
+        .candle-group {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 1rem;
+        }
+        .candle {
+            position: relative;
+            width: 12px;
+            height: 60px;
+            background: linear-gradient(to bottom, #f5e6d3, #d4af37);
+            border-radius: 2px 2px 4px 4px;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+        .candle::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 8px;
+            background: #333;
+            border-radius: 2px;
+        }
+        .flame {
+            position: absolute;
+            top: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 14px;
+            height: 20px;
+            background: linear-gradient(to top, #ff6b35, #ffd700, #fff);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: flicker 0.3s ease-in-out infinite alternate;
+            box-shadow: 0 0 20px #ffd700, 0 0 40px #ff6b35, 0 0 60px rgba(255, 107, 53, 0.5);
+        }
+        @keyframes flicker {
+            0% { transform: translateX(-50%) scale(1) rotate(-2deg); opacity: 1; }
+            50% { transform: translateX(-50%) scale(1.05, 0.95) rotate(1deg); opacity: 0.9; }
+            100% { transform: translateX(-50%) scale(0.95, 1.05) rotate(-1deg); opacity: 1; }
+        }
+
+        /* --- FIREWORK ANIMATIONS --- */
+        .firework {
+            position: fixed;
+            pointer-events: none;
+            z-index: 5;
+        }
+        .firework-particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            animation: firework-burst 1.5s ease-out forwards;
+        }
+        @keyframes firework-burst {
+            0% { transform: translate(0, 0) scale(1); opacity: 1; }
+            100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+        }
+        @keyframes firework-rise {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-200px); opacity: 0; }
+        }
+
         /* Material Symbols Settings */
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
@@ -664,6 +730,28 @@
 
         <!-- Confetti Container -->
         <div id="reveal-confetti" class="fixed inset-0 pointer-events-none z-0 overflow-hidden"></div>
+
+        <!-- Fireworks Container -->
+        <div id="fireworks-container" class="fixed inset-0 pointer-events-none z-[2] overflow-hidden"></div>
+
+        <!-- Candles -->
+        <div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-[3] candle-group">
+            <div class="candle" style="height: 50px;">
+                <div class="flame"></div>
+            </div>
+            <div class="candle" style="height: 65px;">
+                <div class="flame" style="animation-delay: 0.1s;"></div>
+            </div>
+            <div class="candle" style="height: 55px;">
+                <div class="flame" style="animation-delay: 0.2s;"></div>
+            </div>
+            <div class="candle" style="height: 70px;">
+                <div class="flame" style="animation-delay: 0.15s;"></div>
+            </div>
+            <div class="candle" style="height: 45px;">
+                <div class="flame" style="animation-delay: 0.25s;"></div>
+            </div>
+        </div>
 
         <main class="relative z-10 max-w-5xl mx-auto px-6 py-12 lg:py-24">
             <header class="text-center mb-12 md:mb-20">
@@ -1134,7 +1222,13 @@
                 c.style.animationDuration = (Math.random() * 4 + 4) + 's';
                 container.appendChild(c);
             }
-            // Auto play music if not already (user interaction might be needed, but we try)
+
+            // Launch fireworks periodically - more intense!
+            launchFirework();
+            launchFirework(); // Launch 2 at start
+            setInterval(launchFirework, 800); // Faster launches
+
+            // Auto play music if not already
             if (!isPlaying && audio.paused) {
                 audio.play().then(() => {
                     isPlaying = true;
@@ -1142,6 +1236,60 @@
                     musicBtn.classList.add('bg-white/10');
                 }).catch(e => console.log('Autoplay prevented', e));
             }
+        }
+
+        function launchFirework() {
+            const container = document.getElementById('fireworks-container');
+            const firework = document.createElement('div');
+            firework.className = 'firework';
+
+            // Random position - spread across more of the screen
+            const x = Math.random() * 90 + 5; // 5-95% of screen width
+            const y = Math.random() * 50 + 5; // 5-55% of screen height
+            firework.style.left = x + '%';
+            firework.style.top = y + '%';
+
+            // More vibrant firework colors
+            const colorSets = [
+                ['#d4af37', '#ffd700', '#f9e29b'], // Gold
+                ['#ec4899', '#ff6b9d', '#f472b6'], // Pink
+                ['#60a5fa', '#3b82f6', '#93c5fd'], // Blue
+                ['#a78bfa', '#8b5cf6', '#c4b5fd'], // Purple
+                ['#34d399', '#10b981', '#6ee7b7'], // Emerald
+                ['#f97316', '#fb923c', '#fdba74'], // Orange
+                ['#22d3ee', '#06b6d4', '#67e8f9'], // Cyan
+                ['#ffffff', '#f1f5f9', '#e2e8f0'], // White
+            ];
+            const colorSet = colorSets[Math.floor(Math.random() * colorSets.length)];
+
+            // Create more particles for bigger burst
+            const particleCount = 20;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'firework-particle';
+
+                // Pick random color from the set
+                const color = colorSet[Math.floor(Math.random() * colorSet.length)];
+                particle.style.background = color;
+                particle.style.boxShadow = `0 0 6px ${color}, 0 0 12px ${color}`;
+
+                // Calculate burst direction with more randomness
+                const angle = (360 / particleCount) * i + (Math.random() - 0.5) * 20;
+                const distance = 80 + Math.random() * 60; // Bigger burst radius
+                const tx = Math.cos(angle * Math.PI / 180) * distance;
+                const ty = Math.sin(angle * Math.PI / 180) * distance;
+
+                particle.style.setProperty('--tx', tx + 'px');
+                particle.style.setProperty('--ty', ty + 'px');
+                particle.style.animationDelay = Math.random() * 0.15 + 's';
+
+                firework.appendChild(particle);
+            }
+
+            container.appendChild(firework);
+
+            // Remove after animation
+            setTimeout(() => firework.remove(), 2000);
         }
 
         function shareJoy() {
