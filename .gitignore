@@ -1,2 +1,7 @@
+# Ignore unused design assets
 assets/stitch/
-project
+assets/icons/
+
+# System files
+.DS_Store
+Thumbs.db

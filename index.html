@@ -1,1068 +1,1092 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Gulshan - A Special Journey</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Happy 23rd Birthday Gulshan!</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
-    <!-- Icons (CDN for portability, reliable for online sharing) -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Poppins:wght@300;400;500;600&amp;family=Dancing+Script:wght@700&amp;display=swap"
+        rel="stylesheet" />
+
+    <!-- Material Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "deep-navy": "#0a1128",
+                        "champagne-gold": "#d4af37", // Intro
+                        "soft-blush": "#f5d0cc", // Intro
+                        "muted-gold": "#b8860b", // Intro
+
+                        "gold": "#D4AF37", // Puzzle 1, 3
+                        "gold-light": "#F9E29B", // Puzzle 1
+                        "background-dark": "#0B090F", // Puzzle 1
+                        "card-dark": "#15121B", // Puzzle 1
+
+                        "primary": "#D4AF37", // Puzzle 2 (Gold) / Puzzle 3 (Pink overwrite fixed below)
+                        "primary-pink": "#ec4899", // Puzzle 3 specific
+                        "deep-night": "#0B0B0E", // Puzzle 2
+                        "gold-glow": "#FFD700", // Puzzle 2
+
+                        "silver": "#c0c0c0", // Puzzle 3
+                        "canvas-dark": "#120b18", // Puzzle 3
+
+                        "rich-ebony": "#0D0D0D", // Final
+                        "deep-black": "#050505", // Final
+                    },
+                    fontFamily: {
+                        "display": ["Playfair Display", "serif"],
+                        "serif": ["Playfair Display", "serif"],
+                        "sans": ["Plus Jakarta Sans", "sans-serif"], // Default sans
+                        "body": ["Poppins", "sans-serif"], // Puzzle 2 body
+                        "script": ["Dancing Script", "cursive"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        /* GLOBAL VARS */
         :root {
-            --bg-dark: #0a0e27;
-            --bg-deep: #050716;
+            --navy: #0a1128;
             --gold: #d4af37;
-            --gold-light: #f4d03f;
-            --pink: #ff1493;
-            --white: #ffffff;
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(212, 175, 55, 0.2);
-            --font-heading: 'Playfair Display', serif;
-            --font-body: 'Montserrat', sans-serif;
-            --transition-speed: 0.4s;
+            --blush: #f5d0cc;
+            
+            --neon-pink: #ff2d55;
+            --neon-purple: #bf5af2;
+            --neon-blue: #5ac8fa;
+            --neon-gold: #ffd60a;
+            
+            --primary-gold: #D4AF37;
+            --deep-night: #0B0B0E;
+            
+            --gold-outline: #d4af37;
+            --silver-outline: #c0c0c0;
+            --glow-pink: #ec4899;
+            
+            --gold-light: #F9E29C;
+            --gold-dark: #996515;
+            --deep-black: #050505;
+            --rich-ebony: #0D0D0D;
         }
-        * {
-            box-sizing: border-box;
+
+        /* --- INTRO SECTION STYLES --- */
+        .intro-bg {
+            background-color: var(--navy);
+            background-image: radial-gradient(circle at center, #1a2a4a 0%, #0a1128 100%);
         }
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: var(--font-body);
-            background-color: var(--bg-dark);
-            color: var(--white);
-            min-height: 100vh;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-        /* Typography */
-        h1,
-        h2,
-        h3 {
-            font-family: var(--font-heading);
-            margin: 0;
-        }
-        .main-title {
-            font-size: 4rem;
-            line-height: 1.1;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .accent-font {
-            font-family: 'Cormorant Garamond', serif;
-            font-style: italic;
-            color: var(--gold-light);
-        }
-        .highlight-name {
-            color: var(--gold);
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-            font-style: italic;
-        }
-        .overline {
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.6);
-            margin-bottom: 1rem;
-        }
-        /* Buttons */
-        .btn {
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-family: var(--font-body);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all var(--transition-speed) ease;
-            border: none;
-            font-size: 1rem;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin: 1rem 0;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--bg-deep);
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-        }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+        .gold-gradient-text {
+            background: linear-gradient(to bottom, #f9e29c 0%, #d4af37 50%, #b8860b 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .btn-gold {
-            background: var(--gold);
-            color: var(--bg-deep);
+            background: linear-gradient(135deg, #f9e29c 0%, #d4af37 100%);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
         }
-        .btn-outline {
-            background: transparent;
-            border: 1px solid var(--white);
-            color: var(--white);
+        .btn-gold:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.6);
         }
-        .icon-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: var(--gold);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-        .icon-btn:hover {
-            background: rgba(212, 175, 55, 0.2);
-            border-color: var(--gold);
-        }
-        /* Layout */
-        .content-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            position: relative;
-            z-index: 10;
-        }
-        .centered {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 80vh;
-            justify-content: center;
-        }
-        .full-height {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        /* Glass Panels */
-        .glass-panel {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        }
-        .intro-card {
-            max-width: 600px;
-            margin: 2rem auto;
-            font-size: 1.1rem;
-        }
-        /* Sections & Transitions */
-        section {
+        .shimmer-particle {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            min-height: 100vh;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.8s ease, transform 0.8s ease;
-            transform: translateY(20px);
+            width: 2px;
+            height: 2px;
+            background: #f9e29c;
+            border-radius: 50%;
+            filter: blur(1px);
+            opacity: 0.6;
+            animation: drift var(--duration) linear infinite;
         }
-        section.active-section {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-            z-index: 5;
-            position: relative;
+        @keyframes drift {
+            0% { transform: translateY(0) translateX(0); opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-100vh) translateX(var(--x-drift)); opacity: 0; }
         }
-        .hidden-element {
-            display: none !important;
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
         }
-        /* Puzzle 1: Memory Match */
-        .game-stats-bar {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-bottom: 2rem;
-            padding: 1rem 2rem;
-        }
-        .stat {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: 'Montserrat', monospace;
-            font-size: 1.2rem;
-            color: var(--gold);
-        }
-        .memory-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            perspective: 1000px;
-        }
-        .card {
-            background-color: transparent;
-            width: 100%;
-            aspect-ratio: 3/4;
-            cursor: pointer;
-            position: relative;
+
+        /* --- PUZZLE 1 (MEMORY MATCH) STYLES --- */
+        .perspective-1000 {
+            perspective: 1000px
         }
         .card-inner {
             position: relative;
             width: 100%;
             height: 100%;
             text-align: center;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d
         }
-        .card.flipped .card-inner {
-            transform: rotateY(180deg);
+        /* Fix for backface visibility on some browsers */
+        .card-inner > * {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
         }
-        .card-front,
-        .card-back {
+
+        .card-flipped .card-inner {
+            transform: rotateY(180deg)
+        }
+        .card-front, .card-back {
             position: absolute;
             width: 100%;
             height: 100%;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid var(--gold);
-        }
-        .card-front {
-            background: linear-gradient(135deg, #1e3c72, #2a5298, #d4af37);
-            background-size: 200% 200%;
-            animation: gradientShift 5s ease infinite;
+            border-radius: 1rem;
+            border: 1px solid rgba(212, 175, 55, 0.2)
         }
         .card-back {
-            background-color: white;
-            color: black;
             transform: rotateY(180deg);
-            padding: 10px;
+            background: #15121B
         }
-        .card.matched .card-inner {
-            box-shadow: 0 0 15px var(--gold);
+        .filigree-pattern {
+            background-color: #0d0b12;
+            /* Using a subtle dark pattern if image fails, or the provided url */
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDlDeSijlPLqTldnAa3ejvLB9X-Ki4LYSUCnieTWh2q_pLnTExr7HA9a_SXsE1Qf5yzicmvwqtuCUCJJQa1E1xcps99IKZTjPL4SGKoxXPVD_2eqN5ZN9395fXPs1F9YKpTYnRNgtsRVGlyYRPEFTHvq1JSFKUDpaQX2SdS6MFAMl8PVDr2hLcstUigbPBunXHZofG_o-HQpJakzUzLBf8pAXxViqWZLona-8vbPtk6lmwz_jSG4xuv1gy6-pZGPUZnWlToay2Gkv4);
+            border: 2px solid #D4AF37;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8)
         }
-        @keyframes gradientShift {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+        .neon-text-pink { color: var(--neon-pink); text-shadow: 0 0 5px var(--neon-pink), 0 0 15px var(--neon-pink) }
+        .neon-text-purple { color: var(--neon-purple); text-shadow: 0 0 5px var(--neon-purple), 0 0 15px var(--neon-purple) }
+        .neon-text-blue { color: var(--neon-blue); text-shadow: 0 0 5px var(--neon-blue), 0 0 15px var(--neon-blue) }
+        .neon-text-gold { color: var(--neon-gold); text-shadow: 0 0 5px var(--neon-gold), 0 0 15px var(--neon-gold) }
+
+        /* --- PUZZLE 2 (UNSCRAMBLE) STYLES --- */
+        .puzzle2-bg {
+            background-color: var(--deep-night);
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+                radial-gradient(1px 1px at 25px 35px, white, transparent),
+                radial-gradient(1px 1px at 50px 100px, white, transparent),
+                radial-gradient(1.5px 1.5px at 150px 200px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 250px 50px, white, transparent),
+                radial-gradient(1px 1px at 300px 350px, white, transparent),
+                radial-gradient(1.5px 1.5px at 450px 150px, rgba(255,255,255,0.7), transparent),
+                radial-gradient(1px 1px at 600px 400px, white, transparent);
+            background-repeat: repeat;
+            background-size: 800px 800px, 800px 800px, 100px 100px, 150px 150px, 200px 200px, 250px 250px, 300px 300px, 350px 350px, 400px 400px;
         }
-        /* Puzzle 2: Unscramble */
-        .slots-container {
-            display: flex;
-            gap: 15px;
-            margin: 3rem 0;
-            justify-content: center;
-            flex-wrap: wrap;
+        .gold-glow-text {
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.4);
         }
-        .slot {
-            width: 60px;
-            height: 70px;
-            border: 2px dashed rgba(212, 175, 55, 0.4);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-family: var(--font-heading);
-            color: var(--gold);
-            background: rgba(0, 0, 0, 0.2);
-            transition: all 0.3s;
+        .floating-tile {
+            background: linear-gradient(145deg, #1A1A1D, #0F0F12);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8), inset 0 0 1px 1px rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .slot.filled {
-            border-style: solid;
-            border-color: var(--gold);
-            background: rgba(212, 175, 55, 0.1);
+        .floating-tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(212, 175, 55, 0.2), inset 0 0 1px 1px rgba(212, 175, 55, 0.3);
         }
-        .letters-container {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            min-height: 80px;
+        .letter-slot {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .letter-tile {
-            width: 50px;
-            height: 50px;
-            background: #1a1d35;
-            border: 1px solid var(--gold);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--white);
-            cursor: grab;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            animation: float 3s ease-in-out infinite;
+
+        /* --- PUZZLE 3 (HIDDEN HEART) STYLES --- */
+        .dark-illustration-icon {
+            @apply absolute transition-all duration-500 opacity-40;
+            -webkit-text-stroke: 1px var(--gold-outline);
+            color: transparent;
         }
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-5px);
-            }
+        .silver-stroke {
+            -webkit-text-stroke: 1px var(--silver-outline);
         }
-        /* Puzzle 3: Hidden Heart */
-        .discovery-canvas {
-            position: relative;
-            flex-grow: 1;
-            width: 100%;
-            margin: 2rem 0;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            overflow: hidden;
+        .hidden-heart {
+            @apply cursor-pointer transition-all duration-500;
+            color: var(--glow-pink);
+            filter: drop-shadow(0 0 8px var(--glow-pink));
         }
-        .scattered-icon {
-            position: absolute;
-            color: rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s, color 0.3s;
-            cursor: pointer;
+        .hidden-heart:hover {
+            transform: scale(1.3);
+            filter: drop-shadow(0 0 20px var(--glow-pink));
         }
-        .scattered-icon:hover {
-            color: var(--gold);
-            transform: scale(1.2);
+        #puzzle-canvas {
+            background: radial-gradient(circle at center, #1e1126 0%, #0a050c 100%);
+            border: 1px solid rgba(212, 175, 55, 0.2);
         }
-        .scattered-icon.heart-target:hover {
-            color: var(--pink);
-            filter: drop-shadow(0 0 10px var(--pink));
+
+        /* --- FINAL REVEAL STYLES --- */
+        @keyframes float-anim {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
         }
-        .pink-glow-text {
-            color: var(--pink);
-            font-weight: bold;
-            text-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+        @keyframes gold-confetti {
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+            20% { opacity: 1; }
+            100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
         }
-        /* Final Card */
-        .final-card-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
+        @keyframes light-leak {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
         }
-        .card-image-wrapper {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            height: 100%;
-            min-height: 400px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            border: 2px solid var(--gold);
+        .gold-text {
+            color: #d4af37; /* Fallback */
+            background: linear-gradient(to bottom, #F9E29B 0%, #D4AF37 50%, #996515 100%); /* Hardcoded colors to ensure vars arent the issue */
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /* Removed filter */
         }
-        .card-hero-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 5s ease;
+        .gold-border-glow {
+            border: 2px solid var(--gold-primary);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4), inset 0 0 15px rgba(212, 175, 55, 0.2);
         }
-        .card-image-wrapper:hover .card-hero-img {
-            transform: scale(1.05);
+        .starlit-bg {
+            background: radial-gradient(circle at center, #1a1a1a 0%, var(--deep-black) 100%);
         }
-        .overlay-text {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-            padding: 2rem;
-            font-family: var(--font-heading);
-            font-size: 2rem;
-            color: var(--gold);
-        }
-        .theme-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 2rem;
-        }
-        .theme-list li {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            font-family: 'Montserrat';
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-        }
-        .icon-gold {
-            color: var(--gold);
-        }
-        .icon-pink {
-            color: var(--pink);
-        }
-        .signature {
-            margin-top: 2rem;
-            text-align: right;
-            font-family: var(--font-heading);
-            color: var(--gold);
-        }
-        .final-actions {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            padding-bottom: 2rem;
-        }
-        /* Loader */
-        #loader {
+        .light-leak {
             position: fixed;
-            inset: 0;
-            z-index: 9999;
-            background: #0a0e27;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            transition: opacity 0.8s ease;
-        }
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 3px solid rgba(212, 175, 55, 0.3);
-            border-radius: 50%;
-            border-top-color: #d4af37;
-            animation: spin 1s ease-in-out infinite;
-        }
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        @keyframes celebrationPulse {
-            0% {
-                opacity: 0;
-                transform: translate(-50%, -50%) scale(0.5);
-            }
-            50% {
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(1.2);
-            }
-            100% {
-                opacity: 0;
-                transform: translate(-50%, -50%) scale(1);
-            }
-        }
-        @keyframes confettiFall {
-            to {
-                transform: translateY(100vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-        @keyframes confettiSwing {
-            0%, 100% {
-                transform: translateX(0);
-            }
-            25% {
-                transform: translateX(30px);
-            }
-            75% {
-                transform: translateX(-30px);
-            }
-        }
-        @keyframes fadeOut {
-            from {
-                opacity: 1;
-            }
-            to {
-                opacity: 0;
-            }
-        }
-        @keyframes fadeInOut {
-            0% {
-                opacity: 0;
-                transform: translate(-50%, -50%) scale(0.8);
-            }
-            50% {
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(1);
-            }
-            100% {
-                opacity: 0;
-                transform: translate(-50%, -50%) scale(0.8);
-            }
-        }
-        /* Background Stars */
-        .stars-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+            filter: blur(60px);
             pointer-events: none;
-            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            z-index: 1;
+            animation: light-leak 15s ease-in-out infinite;
         }
-        /* Audio Controls */
-        .audio-controls {
+        .confetti-gold {
             position: fixed;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 10px;
-            z-index: 1000;
+            width: 8px;
+            height: 8px;
+            background: linear-gradient(45deg, var(--gold-light), var(--gold-primary));
+            z-index: 2;
+            pointer-events: none;
+            animation: gold-confetti 6s linear infinite;
         }
-        /* Responsive */
-        @media (max-width: 900px) {
-            .memory-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .final-card-container {
-                grid-template-columns: 1fr;
+        .glass-gold-card {
+            background: rgba(13, 13, 13, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        /* Material Symbols Settings */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        
+        /* Utils */
+        .hidden-section {
+            display: none !important;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-in forwards;
+        }
+        .fade-out {
+            animation: fadeOut 0.6s ease-out forwards;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+
+        /* New Vibrant Text Classes */
+        .rose-gold-text {
+            background: linear-gradient(to right, #F472B6, #D4AF37, #F472B6);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+        }
+        .lavender-gradient {
+             background: linear-gradient(135deg, #E0C3FC 0%, #A9C9FF 100%);
+             -webkit-background-clip: text;
+             background-clip: text;
+             -webkit-text-fill-color: transparent;
+        }
+        .pearl-text {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 192, 203, 0.5), 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        @keyframes shine {
+            to {
+                background-position: 200% center;
             }
         }
-        @media (max-width: 600px) {
-            .main-title {
-                font-size: 2.5rem;
-            }
-            .memory-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 10px;
-            }
-            .slots-container {
-                gap: 15px;
-            }
-            .slot {
-                width: 50px;
-                height: 60px;
-                font-size: 1.5rem;
-            }
 
-            .glass-panel {
-                padding: 1rem;
-            }
-            .intro-card {
-                font-size: 0.9rem;
-            }
 
-            .section-title {
-                font-size: 2rem;
-            }
-            .puzzle3 {
-                font-size: 1.2rem;
-            }
-
-            .btn {
-                padding: 0.6rem 1rem;
-                font-size: 1rem;
-            }
-        }
     </style>
 </head>
-<body>
+
+<body class="bg-deep-navy text-slate-100 overflow-x-hidden relative min-h-screen transition-colors duration-500">
+
     <!-- Audio -->
-    <div class="audio-controls">
-        <button id="music-btn" class="icon-btn" aria-label="Toggle Music"><i data-lucide="music"></i></button>
-        <button id="sound-btn" class="icon-btn" aria-label="Toggle Sound Effects"><i
-                data-lucide="volume-2"></i></button>
-    </div>
-    <audio id="bg-music" loop autoplay muted>
-        <source src="./assets/happy-birthday.mp3" type="audio/mpeg">
+    <audio id="bg-music" loop>
+        <source src="assets/happy-birthday.mp3" type="audio/mpeg">
     </audio>
-    <audio id="celebration-sound">
-        <source src="https://assets.mixkit.co/active_sound/preview/active_sound_applause_with_whistles_crowd_cheer_1_3d4a2a0e.mp3" type="audio/mpeg">
-    </audio>
-    <!-- Celebration Container -->
-    <div id="celebration-overlay" style="display: none; position: fixed; inset: 0; z-index: 5000; pointer-events: none;">
-        <div id="confetti-container" style="position: absolute; width: 100%; height: 100%;"></div>
-        <div id="celebration-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem; font-family: 'Playfair Display', serif; color: var(--gold); text-shadow: 0 0 40px rgba(212, 175, 55, 0.8); white-space: nowrap; animation: celebrationPulse 1.5s ease-out;"></div>
+
+    <!-- Global Music Controls (Fixed top right) -->
+    <div class="fixed top-4 right-4 z-[9999] flex gap-2">
+        <button id="music-toggle"
+            class="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-champagne-gold hover:bg-white/10 transition-colors">
+            <span class="material-symbols-outlined">music_off</span>
+        </button>
     </div>
-    <!-- Loader -->
-    <div id="loader">
-        <div class="spinner"></div>
-        <p style="margin-top: 20px; font-family: 'Montserrat', sans-serif; color: #d4af37; letter-spacing: 2px;">
-            PREPARING SURPRISE...</p>
-    </div>
-    <!-- Background -->
-    <div class="stars-container"></div>
-    <main id="app-container">
-        <!-- Introduction -->
-        <section id="intro-screen" class="active-section">
-            <div class="content-wrapper centered">
-                <p class="overline">Part 1: The Invitation</p>
-                <h1 class="main-title">Happy 23rd <br> <span class="accent-font">Birthday</span> <br> <span
-                        class="highlight-name">Gulshan!</span></h1>
-                <div class="intro-card glass-panel">
-                    <p>My dearest sister, even though I'm far away in distance, my love and wishes for you on your
-                        special day know no bounds.</p>
-                    <p>This year, I've curated a series of special moments just for you. To unlock your birthday
-                        celebration, you'll need to navigate through a journey of our shared memories. Are you ready for
-                        the first challenge?</p>
+
+    <!-- SECTION 1: INTRO -->
+    <section id="section-intro"
+        class="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative z-10 intro-bg">
+        <!-- Floating Particles -->
+        <div class="hidden md:block fixed inset-0 pointer-events-none overflow-hidden z-0">
+            <div class="shimmer-particle" style="top: 90%; left: 10%; --duration: 15s; --x-drift: 50px;"></div>
+            <div class="shimmer-particle" style="top: 80%; left: 30%; --duration: 12s; --x-drift: -30px;"></div>
+            <div class="shimmer-particle" style="top: 95%; left: 50%; --duration: 18s; --x-drift: 20px;"></div>
+            <div class="shimmer-particle" style="top: 85%; left: 70%; --duration: 14s; --x-drift: -60px;"></div>
+            <div class="shimmer-particle" style="top: 75%; left: 90%; --duration: 16s; --x-drift: 40px;"></div>
+        </div>
+
+        <div class="max-w-4xl w-full text-center space-y-12 z-10">
+            <div class="space-y-4">
+                <div class="flex items-center justify-center gap-4 text-soft-blush mb-2 opacity-80">
+                    <span class="h-px w-12 bg-champagne-gold/40"></span>
+                    <span class="text-xs font-bold tracking-[0.4em] uppercase">Part 1: The Invitation</span>
+                    <span class="h-px w-12 bg-champagne-gold/40"></span>
                 </div>
-                <button id="start-btn" class="btn btn-primary glow-effect">Begin the Celebration! <i data-lucide="gift"
-                        style="margin-left:8px;"></i></button>
-                <div class="phase-indicator"
-                    style="margin-top: 2rem; color: rgba(255,255,255,0.4); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">
-                    Phase 1 of 3: The Gift Reveal</div>
+                <h1 class="text-6xl md:text-8xl font-black font-serif leading-tight">
+                    <span class="block text-slate-200">Happy 23rd Birthday</span>
+                    <span class="block gold-gradient-text mt-2 italic">Gulshan!</span>
+                </h1>
             </div>
-        </section>
-        <!-- Puzzle 1 -->
-        <section id="puzzle-1" class="hidden-section">
-            <div class="content-wrapper">
-                <header class="puzzle-header" style="text-align:center; margin-bottom: 2rem;">
-                    <h2 class="section-title">Puzzle I</h2>
-                    <p class="section-subtitle" style="color: var(--gold);">Memory Match Challenge</p>
-                </header>
-                <div class="game-stats-bar glass-panel">
-                    <div class="stat"><i data-lucide="timer"></i> <span id="p1-timer">00:00</span></div>
-                    <div class="stat"><i data-lucide="dice-5"></i> <span id="p1-moves">Moves: 0</span></div>
+
+            <div class="space-y-8 glass-panel p-10 md:p-14 rounded-[2.5rem] relative overflow-hidden group">
+                <div class="absolute -top-10 -right-10 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <span class="material-symbols-outlined text-[12rem] text-champagne-gold">celebration</span>
                 </div>
-                <div class="memory-grid" id="memory-grid"></div>
-                <div class="footer-msg" style="text-align:center; position: bottom; margin-top:2rem; font-size:0.9rem; opacity:0.7;">Happy
-                    23rd Birthday Gulshan</div>
-            </div>
-        </section>
-        <!-- Puzzle 2 -->
-        <section id="puzzle-2" class="hidden-section">
-            <div class="content-wrapper centered">
-                <header class="puzzle-header">
-                    <p class="overline">Puzzle 2 of 3</p>
-                    <h2 class="section-title">Unscramble the Wish</h2>
-                    <p class="instruction-text" style="max-width: 600px; margin: 1rem 0;">Rearrange the shimmering
-                        golden letters to reveal a special truth. Drag or click to place them.</p>
-                </header>
-                <div id="word-slots" class="slots-container"></div>
-                <div id="letter-pool" class="letters-container"></div>
-                <button id="p2-next-btn" class="btn btn-primary hidden-element">Unlock Final Puzzle <i
-                        data-lucide="arrow-right"></i></button>
-                <p class="footer-msg"
-                    style="margin-top:2rem; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;">
-                    Celebrating 23 Radiant Years</p>
-            </div>
-        </section>
-        <!-- Puzzle 3 -->
-        <section id="puzzle-3" class="hidden-section">
-            <div class="content-wrapper full-height">
-                <header class="puzzle-header overlay-header" style="padding: 1rem;">
-                    <h2 class="section-title puzzle3"><i data-lucide="star" class="icon-gold"></i> Puzzle 3: The Hidden Heart
-                    </h2>
-                </header>
-                <div class="center-instruction" style="text-align: center;">
-                    <h1 class="big-msg" style="font-size: 2rem;">One Last Secret...</h1>
-                    <p style="max-width: 600px; margin: 0 auto;">Gulshan, you've conquered every challenge. The gateway
-                        to your 23rd birthday card lies hidden in this midnight celebration. Search for the <span
-                            class="pink-glow-text">Glow of the Heart</span> amidst the gold and silver outlines.</p>
-                </div>
-                <div id="hidden-canvas" class="discovery-canvas"></div>
-                <div class="hint-box glass-panel" style="text-align: center; max-width: 500px; margin: 0 auto;">
-                    <i data-lucide="lightbulb" class="icon-gold"></i> <span
-                        style="font-family: 'Montserrat'; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: var(--gold);">Hint:
-                        A pulsing pink glow amongst the gold shadows</span>
+                <p class="text-xl md:text-2xl leading-relaxed text-slate-200 font-medium max-w-2xl mx-auto">
+                    My dearest sister, even though I'm far away in distance, my love and wishes for you on your special
+                    day know no bounds.
+                </p>
+                <p class="text-lg md:text-xl leading-relaxed text-slate-400 max-w-2xl mx-auto">
+                    This year, I've curated a series of special moments just for you.
+                    To unlock your birthday celebration, you'll need to navigate through a journey of our shared
+                    memories. Are you ready for the first challenge?
+                </p>
+                <div
+                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-champagne-gold/30 to-transparent">
                 </div>
             </div>
-        </section>
-        <!-- Final Reveal -->
-        <section id="final-card" class="hidden-section">
-            <div class="content-wrapper">
-                <div class="final-card-container active-card">
-                    <div class="card-left">
-                        <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop"
-                                alt="Gulshan Artistic Portrait" class="card-hero-img">
-                            <div class="overlay-text">Soul sisters forever...</div>
+
+            <div class="pt-8">
+                <button onclick="transitionTo('section-puzzle1')"
+                    class="btn-gold px-12 py-6 rounded-full text-deep-navy text-2xl font-bold flex items-center gap-4 mx-auto group">
+                    <span>Begin the Celebration!</span>
+                    <span
+                        class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform">redeem</span>
+                </button>
+                <p class="mt-8 text-xs text-soft-blush/40 font-semibold uppercase tracking-[0.3em]">Phase 1 of 3: The
+                    Gift Reveal</p>
+            </div>
+        </div>
+
+        <footer class="absolute bottom-8 left-0 w-full text-center">
+            <div class="flex items-center justify-center gap-3 text-champagne-gold/40">
+                <span class="material-symbols-outlined text-sm">auto_awesome</span>
+                <p class="text-xs font-medium tracking-widest uppercase">Crafted with love by your sister</p>
+                <span class="material-symbols-outlined text-sm">auto_awesome</span>
+            </div>
+        </footer>
+    </section>
+
+    <!-- SECTION 2: PUZZLE 1 (Memory Match) -->
+    <section id="section-puzzle1"
+        class="min-h-screen hidden-section flex-col items-center bg-background-dark p-4 md:p-8 font-sans">
+        <!-- Background Orbs -->
+        <div class="fixed inset-0 pointer-events-none opacity-20">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-900 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-gold/20 rounded-full blur-[120px]"></div>
+        </div>
+
+        <header class="w-full max-w-4xl mb-8 flex justify-between items-center relative z-10 pt-4">
+            <div class="flex flex-col">
+                <h1 class="font-display text-3xl md:text-4xl text-gold-light tracking-wide">Puzzle I</h1>
+                <p class="text-gold/60 font-medium tracking-[0.2em] uppercase text-xs mt-1">Memory Match Challenge</p>
+            </div>
+            <!-- Progress Indicator -->
+            <div class="text-gold/60 text-sm">1/3</div>
+        </header>
+
+        <main class="w-full max-w-2xl flex flex-col items-center relative z-10">
+            <!-- Stats -->
+            <div
+                class="w-full flex justify-between px-6 py-4 bg-card-dark/50 border border-gold/10 rounded-2xl mb-8 text-gold-light font-bold uppercase tracking-widest text-xs">
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-gold">timer</span>
+                    <span id="p1-timer">00:00</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-gold">ifl</span>
+                    <span id="p1-moves">Moves: 0</span>
+                </div>
+            </div>
+
+            <!-- Game Board -->
+            <div class="grid grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 w-full" id="game-board">
+                <!-- Cards injected via JS -->
+            </div>
+
+            <!-- Success Modal (Initially Hidden) -->
+            <div class="fixed inset-0 bg-black/90 backdrop-blur-md flex items-center justify-center z-50 hidden opacity-0 transition-all duration-500"
+                id="p1-modal">
+                <div
+                    class="bg-card-dark border-2 border-gold/30 p-8 md:p-16 rounded-[2.5rem] shadow-[0_0_50px_rgba(212,175,55,0.1)] max-w-md w-full text-center relative overflow-hidden transform scale-95 transition-transform">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold to-transparent">
+                    </div>
+                    <div
+                        class="w-24 h-24 bg-gold/10 border border-gold/30 text-gold rounded-full flex items-center justify-center mx-auto mb-8">
+                        <span class="material-symbols-outlined text-5xl">auto_awesome</span>
+                    </div>
+                    <h2 class="font-display text-4xl text-gold-light mb-4">Challenge Mastered</h2>
+                    <p class="text-gray-400 mb-10 leading-relaxed">Your memory is as sharp as your style. The first
+                        secret of your 23rd year is now revealed.</p>
+                    <button onclick="transitionTo('section-puzzle2')"
+                        class="w-full py-5 bg-gold text-background-dark font-black uppercase tracking-widest rounded-xl shadow-[0_10px_20px_rgba(212,175,55,0.2)] hover:bg-gold-light hover:shadow-gold/40 transition-all flex items-center justify-center gap-3 group">
+                        Proceed
+                        <span
+                            class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- SECTION 3: PUZZLE 2 (Unscramble) -->
+    <section id="section-puzzle2"
+        class="min-h-screen hidden-section flex flex-col items-center justify-center p-4 puzzle2-bg font-body relative overflow-hidden">
+        <div
+            class="max-w-3xl w-full bg-black/60 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/5 relative z-10">
+            <!-- Glows -->
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-[100px]"></div>
+            <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-purple-900/10 rounded-full blur-[100px]"></div>
+
+            <div class="text-center mb-12">
+                <h2 class="text-sm font-medium text-primary tracking-[0.3em] uppercase mb-3 opacity-80">Puzzle 2 of 3
+                </h2>
+                <h1 class="font-display text-4xl md:text-5xl text-white mb-4 tracking-tight">Unscramble the Wish</h1>
+                <p class="text-zinc-400 max-w-md mx-auto leading-relaxed">
+                    Rearrange the shimmering golden letters to reveal a special truth. Drag or click to place them.
+                </p>
+            </div>
+
+            <!-- Target Slots -->
+            <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-16" id="target-container">
+                <!-- Injected via JS -->
+            </div>
+
+            <!-- Source Letters -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12" id="source-container">
+                <!-- Injected via JS -->
+            </div>
+
+            <!-- Success Message -->
+            <div class="hidden text-center mb-8" id="p2-success-msg">
+                <p class="text-primary font-semibold text-lg flex items-center justify-center gap-2 gold-glow-text">
+                    <span class="material-symbols-outlined">auto_awesome</span> You truly are AMAZING!
+                </p>
+            </div>
+
+            <!-- Unlock Button -->
+            <div class="flex flex-col items-center gap-6">
+                <button id="p2-unlock-btn" disabled onclick="transitionTo('section-puzzle3')"
+                    class="group relative px-10 py-4 bg-zinc-900 text-primary font-medium rounded-full shadow-[0_0_20px_rgba(212,175,55,0.1)] border border-primary/30 hover:border-primary hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] transition-all hover:scale-105 active:scale-95 flex items-center gap-3 disabled:opacity-30 disabled:cursor-not-allowed">
+                    <span class="tracking-wide">Unlock Final Puzzle</span>
+                    <span
+                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+                <p class="text-zinc-600 text-[10px] uppercase tracking-[0.4em]">Celebrating 23 radiant years</p>
+            </div>
+        </div>
+
+        <!-- Floating Symbols bg -->
+        <div class="fixed pointer-events-none inset-0 overflow-hidden">
+            <div class="absolute top-[15%] left-[10%] text-primary/10 animate-pulse"><span
+                    class="material-symbols-outlined text-5xl">auto_fix_high</span></div>
+            <div class="absolute bottom-[20%] right-[12%] text-white/5 animate-bounce"><span
+                    class="material-symbols-outlined text-4xl">favorite</span></div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: PUZZLE 3 (Hidden Heart) -->
+    <section id="section-puzzle3"
+        class="min-h-screen hidden-section bg-background-dark font-sans overflow-x-hidden relative">
+        <header class="p-6 flex justify-between items-center max-w-7xl mx-auto">
+            <div class="flex items-center space-x-3">
+                <span class="material-symbols-outlined text-gold text-4xl">star</span>
+                <h1
+                    class="font-display text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gold via-pink-500 to-gold">
+                    Puzzle 3: The Hidden Heart</h1>
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto px-6 py-4 flex flex-col items-center">
+            <div class="text-center mb-10 max-w-2xl">
+                <h2 class="text-5xl font-display text-white mb-6">One Last Secret...</h2>
+                <p class="text-lg text-pink-100/80 leading-relaxed font-light">
+                    Gulshan, you've conquered every challenge. The gateway to your 23rd birthday card lies hidden in
+                    this midnight celebration.
+                    Search for the <span class="text-primary-pink font-semibold">Glow of the Heart</span> amidst the
+                    gold and silver outlines.
+                </p>
+            </div>
+
+            <!-- Canvas Container -->
+            <div class="w-full h-[600px] md:h-[650px] rounded-3xl shadow-[0_0_50px_rgba(0,0,0,0.5)] relative cursor-crosshair overflow-hidden group border border-gold/20"
+                id="puzzle-canvas" style="background: radial-gradient(circle at center, #1e1126 0%, #0a050c 100%);">
+                <!-- Icons injected via JS -->
+
+                <!-- Success Overlay -->
+                <div class="absolute inset-0 bg-background-dark/98 flex flex-col items-center justify-center z-[100] opacity-0 pointer-events-none transition-all duration-700 transform scale-105"
+                    id="p3-success-overlay">
+                    <div
+                        class="text-center p-12 border border-gold/20 rounded-[3rem] bg-white/5 backdrop-blur-sm max-w-xl">
+                        <span class="material-symbols-outlined text-9xl text-gold mb-8 block">auto_awesome</span>
+                        <h2 class="text-5xl font-display text-white mb-6">Masterfully Found!</h2>
+                        <a onclick="transitionTo('section-reveal')"
+                            class="relative inline-flex items-center space-x-4 px-12 py-5 bg-gradient-to-r from-gold to-primary-pink text-white rounded-full font-bold text-xl shadow-[0_0_30px_rgba(236,72,153,0.3)] hover:shadow-[0_0_50px_rgba(236,72,153,0.5)] hover:scale-105 transition-all cursor-pointer">
+                            <span>View Your Birthday Card</span>
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="mt-12 text-center text-gold/50 flex items-center space-x-4 bg-white/5 px-8 py-3 rounded-full border border-white/10">
+                <span class="material-symbols-outlined text-xl">lightbulb</span>
+                <p class="text-sm uppercase tracking-[0.2em] font-medium">Hint: A pulsing pink glow amongst the gold
+                    shadows</p>
+            </div>
+        </main>
+    </section>
+
+    <!-- SECTION 5: FINAL REVEAL -->
+    <section id="section-reveal"
+        class="min-h-screen hidden-section starlit-bg text-gray-200 font-sans relative overflow-x-hidden">
+        <div class="light-leak -top-20 -left-20"></div>
+        <div class="light-leak -bottom-20 -right-20" style="animation-delay: -5s;"></div>
+
+        <!-- Confetti Container -->
+        <div id="reveal-confetti" class="fixed inset-0 pointer-events-none z-0 overflow-hidden"></div>
+
+        <main class="relative z-10 max-w-5xl mx-auto px-6 py-12 lg:py-24">
+            <header class="text-center mb-20">
+                <div class="flex justify-center mb-6">
+                    <span
+                        class="px-6 py-1.5 rounded-full border border-[var(--gold-primary)] text-[var(--gold-primary)] text-xs font-bold tracking-[0.3em] uppercase bg-[var(--gold-primary)]/5">
+                        The Final Reveal
+                    </span>
+                </div>
+                <h1 class="text-7xl md:text-9xl font-display gold-text mb-4 leading-none">Happy Birthday</h1>
+                <h2 class="text-6xl md:text-8xl font-script gold-text opacity-90 italic">Gulshan</h2>
+                <div class="mt-10 flex justify-center items-center gap-4">
+                    <div class="h-[1px] w-12 bg-[var(--gold-primary)] opacity-40"></div>
+                    <span class="text-[var(--gold-primary)] font-display text-xl tracking-widest">23 YEARS OF
+                        RADIANCE</span>
+                    <div class="h-[1px] w-12 bg-[var(--gold-primary)] opacity-40"></div>
+                </div>
+            </header>
+
+            <div class="relative group mb-24">
+                <div
+                    class="absolute -inset-4 bg-[var(--gold-primary)] opacity-10 rounded-3xl blur-3xl group-hover:opacity-20 transition duration-1000">
+                </div>
+                <!-- Card Container -->
+                <div
+                    class="relative glass-gold-card rounded-2xl overflow-hidden shadow-2xl border-2 border-[var(--gold-primary)]/30">
+                    <div class="grid md:grid-cols-2">
+                        <!-- Image Side -->
+                        <div class="h-96 md:h-[600px] relative p-4">
+                            <div class="w-full h-full gold-border-glow rounded-xl overflow-hidden relative">
+                                <img alt="Sisters celebration"
+                                    class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-700"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNrrix7rCPPCw5ZA3f8no3OY_1V7XvVVOr2UMsNAOR426Umn_ivI8C4F-_YdSXwrIgXqR2K4gmhSQ3Xz5SHxK2HpANehubJTbmFGGLf_FtSALrqaDrEtb7ToH7mozYiI7maPqcVVHuPdLOZBdkgKpoBbc8IgYPy26egZWpm8SH1_qfqH_0CeUaX9n8vUQnCE7f0ipp3yw3uCbGNYBPk1Hs8UmNbO-ivDtHJGEdg45W7qnuuGxza8SdZ_5n4XtuR2YMNuZ2TgKKrvQ" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-[var(--deep-black)] via-transparent to-transparent flex items-end p-8">
+                                    <p class="gold-text font-script text-4xl">Soul sisters forever...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Completed Message Side -->
+                        <div class="p-8 md:p-16 flex flex-col justify-center">
+                            <span
+                                class="material-symbols-outlined text-6xl text-[var(--gold-primary)] mb-8">auto_awesome</span>
+                            <h3 class="text-4xl font-display gold-text mb-6">You Solved It!</h3>
+                            <p class="text-lg text-gray-300 leading-relaxed mb-8 font-light">
+                                Every puzzle you completed was a small reminder of the journey we've shared. From
+                                childhood secrets to adult dreams, you've always been my favorite person.
+                            </p>
+                            <div class="space-y-4">
+                                <div
+                                    class="flex items-center gap-4 text-sm tracking-widest text-[var(--gold-primary)] uppercase font-semibold">
+                                    <span class="material-symbols-outlined text-lg">favorite</span> Boundless Love
+                                </div>
+                                <div
+                                    class="flex items-center gap-4 text-sm tracking-widest text-[var(--gold-primary)] uppercase font-semibold">
+                                    <span class="material-symbols-outlined text-lg">celebration</span> Endless Laughter
+                                </div>
+                                <div
+                                    class="flex items-center gap-4 text-sm tracking-widest text-[var(--gold-primary)] uppercase font-semibold">
+                                    <span class="material-symbols-outlined text-lg">star</span> Golden Memories
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-right glass-panel">
-                        <div class="celebration-icons"><i data-lucide="stars" class="icon-gold"></i></div>
-                        <h2>You Solved It!</h2>
-                        <p class="completion-note">Every puzzle you completed was a small reminder of the journey we've
-                            shared. From childhood secrets to adult dreams, you've always been my favorite person.</p>
-                        <ul class="theme-list">
-                            <li><i data-lucide="heart" class="icon-pink"></i> Boundless Love</li>
-                            <li><i data-lucide="party-popper" class="icon-gold"></i> Endless Laughter</li>
-                            <li><i data-lucide="star" class="icon-gold"></i> Golden Memories</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="message-panel glass-panel mt-4">
-                    <div class="quote-block"
-                        style="border-left: 3px solid var(--gold); padding-left: 1rem; margin-bottom: 1.5rem; font-style: italic; font-size: 1.2rem;">
-                        "My dearest Gulshan, even though I'm far away in distance, my love and wishes for you on your
-                        special day know no bounds."
-                    </div>
-                    <p class="body-msg">
-                        Watching you grow into the incredible 23-year-old woman you are today has been the greatest
-                        privilege. You carry such grace, intelligence, and a heart that could light up the entire world.
-                        <br><br>
-                        This interactive journey was just a small way to show you that no matter how many miles lie
-                        between us, I am always right there by your side, cheering you on and celebrating every single
-                        one of your victories. <br><br>
-                        May this year be filled with unexpected joys, deep peace, and all the success your hard-working
-                        soul deserves. Keep shining, keep dreaming, and never forget how deeply you are loved.
-                    </p>
-                    <div class="signature">
-                        <p class="sig-title">With all my love, forever,</p>
-                        <p class="sig-name">YOUR BIG SISTER</p>
-                    </div>
-                </div>
-                <div class="final-actions">
-                    <button class="btn btn-gold"
-                        onclick="alert('Sharing functionality would open native share sheet!')"><i
-                            data-lucide="share-2"></i> Share the Joy</button>
-                    <button class="btn btn-outline" onclick="window.print()"><i data-lucide="download"></i> Save
-                        Memory</button>
                 </div>
             </div>
-        </section>
-    </main>
+
+            <!-- Letter Section -->
+            <section class="glass-gold-card rounded-[3rem] p-10 md:p-20 mb-24 shadow-2xl relative overflow-hidden">
+                <div
+                    class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
+                </div>
+                <div class="max-w-3xl mx-auto space-y-10 relative z-10">
+                    <p
+                        class="text-2xl md:text-3xl leading-relaxed font-display italic text-center md:text-left border-l-4 border-[var(--gold-primary)] pl-8 rose-gold-text font-bold">
+                        "My dearest Gulshan, even though I'm far away in distance, my love and wishes for you on your
+                        special day know no bounds."
+                    </p>
+                    <div class="space-y-6 text-lg leading-relaxed font-light pearl-text">
+                        <p>Watching you grow into the incredible 23-year-old woman you are today has been the greatest
+                            privilege. You carry such grace, intelligence, and a heart that could light up the entire
+                            world.</p>
+                        <p>This interactive journey was just a small way to show you that no matter how many miles lie
+                            between us, I am always right there by your side, cheering you on and celebrating every
+                            single one of your victories.</p>
+                        <p>May this year be filled with unexpected joys, deep peace, and all the success your
+                            hard-working soul deserves. Keep shining, keep dreaming, and never forget how deeply you are
+                            loved.</p>
+                    </div>
+                    <div class="pt-12 text-center md:text-right">
+                        <p class="font-script text-5xl lavender-gradient">With all my love, forever,</p>
+                        <p class="text-2xl font-display text-[var(--gold-primary)] mt-3 tracking-widest uppercase">Your
+                            Big Sister</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <footer class="text-center pb-24">
+                <div class="inline-flex flex-col items-center">
+                    <p class="text-[var(--gold-primary)] opacity-60 mb-8 tracking-[0.2em] uppercase text-xs">Capture
+                        this golden moment</p>
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <button onclick="shareJoy()"
+                            class="bg-gold hover:bg-gold-light text-[var(--deep-black)] px-10 py-5 rounded-full font-bold shadow-[0_0_25px_rgba(212,175,55,0.4)] flex items-center gap-3 transition-all hover:scale-105 active:scale-95 uppercase tracking-widest text-sm">
+                            <span class="material-symbols-outlined">share</span> Share the Joy
+                        </button>
+                        <button onclick="window.print()"
+                            class="bg-transparent border-2 border-[var(--gold-primary)]/40 text-[var(--gold-primary)] px-10 py-5 rounded-full font-bold flex items-center gap-3 transition-all hover:bg-[var(--gold-primary)]/10 uppercase tracking-widest text-sm">
+                            <span class="material-symbols-outlined">download</span> Save Memory
+                        </button>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </section>
+
+    <!-- SCRIPTS -->
     <script>
-        // Audio - Define first so it's available during init
-        const bgMusic = document.getElementById('bg-music');
-        const celebrationSound = document.getElementById('celebration-sound');
-        const musicBtn = document.getElementById('music-btn');
-        let isMusicPlaying = false;
-        let areSoundEffectsEnabled = true;
-        
-        // State
-        const state = {
-            currentPuzzle: 0,
-            p1: { timer: 0, moves: 0, timerInterval: null, matches: 0, locked: false, cards: [] },
-            p2: { word: "AMAZING", currentSlots: Array(7).fill(null) }
-        };
-        const sections = {
-            intro: document.getElementById('intro-screen'),
-            p1: document.getElementById('puzzle-1'),
-            p2: document.getElementById('puzzle-2'),
-            p3: document.getElementById('puzzle-3'),
-            final: document.getElementById('final-card'),
-            loader: document.getElementById('loader')
-        };
-        // Init
+        // GLOBAL STATE
+        let currentSection = 'section-intro';
+        const audio = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-toggle');
+        let isPlaying = false;
+
+        // Try Autoplay on Load
         window.addEventListener('load', () => {
-            setTimeout(() => {
-                sections.loader.style.opacity = '0';
-                setTimeout(() => { sections.loader.style.display = 'none'; }, 800);
-            }, 1000);
-            lucide.createIcons();
-            // Auto-play background music with unmute
-            setTimeout(() => {
-                bgMusic.muted = false;
-                bgMusic.play().then(() => {
-                    musicBtn.innerHTML = '<i data-lucide="pause"></i>';
-                    musicBtn.classList.add('active');
-                    isMusicPlaying = true;
-                }).catch(e => {
-                    console.log("Autoplay blocked, will start on first interaction", e);
+            audio.volume = 0.5; // Start reasonable
+            const playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    isPlaying = true;
+                    updateMusicIcon();
+                }).catch(error => {
+                    console.log("Autoplay prevented by browser, waiting for interaction.");
+                    // Muted autoplay fallback? Or just wait for click.
+                    // Let's try muted autoplay if failed
+                    audio.muted = true;
+                    audio.play().then(() => {
+                        isPlaying = true;
+                        // notification to unmute?
+                    }).catch(e => console.log("Muted autoplay also failed"));
                 });
-            }, 500);
-        });
-        
-        // Fallback: start music on first click if autoplay failed
-        document.addEventListener('click', function startMusicOnClick() {
-            if (!isMusicPlaying) {
-                bgMusic.muted = false;
-                bgMusic.play().then(() => {
-                    musicBtn.innerHTML = '<i data-lucide="pause"></i>';
-                    musicBtn.classList.add('active');
-                    isMusicPlaying = true;
-                    document.removeEventListener('click', startMusicOnClick);
-                }).catch(e => console.log("Play failed", e));
             }
         });
-        document.getElementById('start-btn').addEventListener('click', () => {
-            playCelebration();
-            transitionSection(sections.intro, sections.p1);
-            startPuzzle1();
-        });
-        function transitionSection(from, to) {
-            window.scrollTo(0, 0);
-            from.classList.remove('active-section');
-            from.style.opacity = '0';
-            setTimeout(() => {
-                from.classList.add('hidden-section');
-                to.classList.remove('hidden-section');
-                void to.offsetWidth;
-                to.classList.add('active-section');
-                to.style.opacity = '1';
-                lucide.createIcons();
-            }, 800);
-        }
-        
-        musicBtn.addEventListener('click', () => {
-            if (isMusicPlaying) {
-                bgMusic.pause();
-                musicBtn.innerHTML = '<i data-lucide="music"></i>';
-                musicBtn.classList.remove('active');
+
+        // Unmute/Play on first interaction (Capture phase)
+        document.addEventListener('click', function enableAudio() {
+            if (audio.muted) {
+                audio.muted = false;
+                audio.volume = 0.5;
+            }
+            if (audio.paused) {
+                audio.play().then(() => {
+                    isPlaying = true;
+                    updateMusicIcon();
+                });
+            }
+            // Remove listener once enabled
+            // But we keep it to ensure it catches the first valid click
+        }, { once: true });
+
+        // --- MUSIC CONTROL ---
+        function updateMusicIcon() {
+            if (isPlaying) {
+                musicBtn.querySelector('span').innerText = 'music_note';
+                musicBtn.classList.add('bg-white/10');
             } else {
-                bgMusic.play().catch(e => console.log("Audio play blocked", e));
-                musicBtn.innerHTML = '<i data-lucide="pause"></i>';
-                musicBtn.classList.add('active');
+                musicBtn.querySelector('span').innerText = 'music_off';
+                musicBtn.classList.remove('bg-white/10');
             }
-            lucide.createIcons();
-            isMusicPlaying = !isMusicPlaying;
-        });
-        
-        document.getElementById('sound-btn').addEventListener('click', () => {
-            areSoundEffectsEnabled = !areSoundEffectsEnabled;
-            if (areSoundEffectsEnabled) {
-                document.getElementById('sound-btn').classList.add('active');
+        }
+
+        musicBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Don't trigger the document listener
+            if (isPlaying) {
+                audio.pause();
+                isPlaying = false;
             } else {
-                document.getElementById('sound-btn').classList.remove('active');
+                audio.muted = false;
+                audio.play();
+                isPlaying = true;
             }
+            updateMusicIcon();
         });
-        
-        function playCelebration() {
-            if (areSoundEffectsEnabled) {
-                celebrationSound.currentTime = 0;
-                celebrationSound.play().catch(e => console.log("Sound effect blocked", e));
-            }
-            createCelebration();
-        }
-        
-        function createCelebration() {
-            const overlay = document.getElementById('celebration-overlay');
-            const confettiContainer = document.getElementById('confetti-container');
-            
-            // Show overlay
-            overlay.style.display = 'block';
-            
-            // Create confetti pieces
-            const confettiPieces = 50;
-            for (let i = 0; i < confettiPieces; i++) {
-                const confetti = document.createElement('div');
-                const size = Math.random() * 10 + 5;
-                const colors = ['#d4af37', '#f4d03f', '#ff1493', '#ffffff', '#00ffff'];
-                const color = colors[Math.floor(Math.random() * colors.length)];
-                
-                confetti.style.cssText = `
-                    position: absolute;
-                    width: ${size}px;
-                    height: ${size}px;
-                    background: ${color};
-                    border-radius: ${Math.random() > 0.5 ? '50%' : '0'};
-                    left: ${Math.random() * 100}%;
-                    top: -10px;
-                    animation: confettiFall ${Math.random() * 3 + 2}s ease-in forwards, 
-                               confettiSwing ${Math.random() * 2 + 1}s ease-in-out infinite;
-                    animation-delay: ${Math.random() * 0.5}s;
-                    opacity: ${Math.random() * 0.7 + 0.3};
-                    box-shadow: 0 0 ${size}px ${color}80;
-                `;
-                confettiContainer.appendChild(confetti);
-            }
-            
-            // Add screen flash
-            const flash = document.createElement('div');
-            flash.style.cssText = `
-                position: fixed;
-                inset: 0;
-                background: rgba(212, 175, 55, 0.3);
-                animation: fadeOut 0.8s ease-out forwards;
-                z-index: 4999;
-            `;
-            overlay.appendChild(flash);
-            
-            // Hide after animation
+
+        // --- TRANSITION LOGIC ---
+        function transitionTo(nextSectionId) {
+            const current = document.getElementById(currentSection);
+            const next = document.getElementById(nextSectionId);
+
+            // Fade out current
+            current.classList.add('fade-out');
+
             setTimeout(() => {
-                confettiContainer.innerHTML = '';
-                overlay.style.display = 'none';
-                flash.remove();
-            }, 4000);
+                current.classList.add('hidden-section');
+                current.classList.remove('fade-out');
+
+                // Show next
+                next.classList.remove('hidden-section');
+                next.classList.add('fade-in');
+
+                // Init next puzzle
+                if (nextSectionId === 'section-puzzle1') initPuzzle1();
+                if (nextSectionId === 'section-puzzle2') initPuzzle2();
+                if (nextSectionId === 'section-puzzle3') initPuzzle3();
+                if (nextSectionId === 'section-reveal') initReveal();
+
+                // Clean animation class after play
+                setTimeout(() => next.classList.remove('fade-in'), 800);
+
+                currentSection = nextSectionId;
+                window.scrollTo(0, 0);
+            }, 600);
         }
-        // Puzzle 1
-        const icons = ['camera', 'music', 'heart', 'star', 'gift', 'cake'];
-        const p1Grid = document.getElementById('memory-grid');
-        let flippedCards = [];
-        function startPuzzle1() {
-            const pairs = [...icons, ...icons].sort(() => Math.random() - 0.5);
-            p1Grid.innerHTML = '';
-            pairs.forEach((icon, index) => {
+
+        // --- PUZZLE 1: MEMORY MATCH ---
+        const p1Icons = [
+            { name: 'cake', color: 'neon-text-pink' },
+            { name: 'celebration', color: 'neon-text-purple' },
+            { name: 'redeem', color: 'neon-text-blue' },
+            { name: 'auto_awesome', color: 'neon-text-gold' },
+            { name: 'diamond', color: 'neon-text-pink' },
+            { name: 'star', color: 'neon-text-blue' }
+        ];
+        let p1Flipped = [];
+        let p1Matched = 0;
+        let p1Moves = 0;
+        let p1TimerInt;
+        let p1Seconds = 0;
+
+        function initPuzzle1() {
+            const board = document.getElementById('game-board');
+            board.innerHTML = '';
+            // Double and shuffle
+            const cards = [...p1Icons, ...p1Icons].sort(() => Math.random() - 0.5);
+
+            cards.forEach(item => {
                 const card = document.createElement('div');
-                card.className = 'card';
-                card.dataset.id = index;
-                card.dataset.icon = icon;
-                card.innerHTML = `<div class="card-inner"><div class="card-front"></div><div class="card-back"><i data-lucide="${icon}"></i></div></div>`;
-                card.addEventListener('click', () => handleCardClick(card));
-                p1Grid.appendChild(card);
+                card.className = 'perspective-1000 h-32 md:h-44 cursor-pointer group';
+                card.dataset.icon = item.name;
+                card.innerHTML = `
+                    <div class="card-inner shadow-2xl">
+                        <div class="card-front filigree-pattern relative">
+                            <div class="absolute inset-2 border border-gold/10 pointer-events-none"></div>
+                            <span class="material-symbols-outlined text-gold/20 text-4xl">fingerprint</span>
+                        </div>
+                        <div class="card-back">
+                            <span class="material-symbols-outlined text-6xl ${item.color}">${item.name}</span>
+                        </div>
+                    </div>
+                `;
+                card.addEventListener('click', () => flipCard(card));
+                board.appendChild(card);
             });
-            lucide.createIcons();
-            state.p1.timerInterval = setInterval(() => {
-                state.p1.timer++;
-                const mins = Math.floor(state.p1.timer / 60).toString().padStart(2, '0');
-                const secs = (state.p1.timer % 60).toString().padStart(2, '0');
-                document.getElementById('p1-timer').innerText = `${mins}:${secs}`;
+            startP1Timer();
+        }
+
+        function startP1Timer() {
+            if (p1TimerInt) return;
+            p1TimerInt = setInterval(() => {
+                p1Seconds++;
+                const m = Math.floor(p1Seconds / 60).toString().padStart(2, '0');
+                const s = (p1Seconds % 60).toString().padStart(2, '0');
+                document.getElementById('p1-timer').textContent = `${m}:${s}`;
             }, 1000);
         }
-        function handleCardClick(card) {
-            if (state.p1.locked || card.classList.contains('flipped') || card.classList.contains('matched')) return;
-            card.classList.add('flipped');
-            flippedCards.push(card);
-            if (flippedCards.length === 2) {
-                state.p1.moves++;
-                document.getElementById('p1-moves').innerText = `Moves: ${state.p1.moves}`;
-                checkForMatch();
+
+        function flipCard(card) {
+            if (p1Flipped.length < 2 && !card.classList.contains('card-flipped') && !card.classList.contains('matched')) {
+                card.classList.add('card-flipped');
+                p1Flipped.push(card);
+
+                if (p1Flipped.length === 2) {
+                    p1Moves++;
+                    document.getElementById('p1-moves').textContent = `Moves: ${p1Moves}`;
+                    checkP1Match();
+                }
             }
         }
-        function checkForMatch() {
-            state.p1.locked = true;
-            const [c1, c2] = flippedCards;
+
+        function checkP1Match() {
+            const [c1, c2] = p1Flipped;
             if (c1.dataset.icon === c2.dataset.icon) {
-                c1.classList.add('matched'); c2.classList.add('matched');
-                state.p1.matches++; flippedCards = []; state.p1.locked = false;
-                if (state.p1.matches === 6) {
-                    clearInterval(state.p1.timerInterval);
-                    playCelebration();
-                    setTimeout(() => { transitionSection(sections.p1, sections.p2); initPuzzle2(); }, 1500);
+                c1.classList.add('matched');
+                c2.classList.add('matched');
+                setTimeout(() => {
+                    c1.querySelector('.card-back').style.boxShadow = '0 0 30px rgba(212, 175, 55, 0.3)';
+                    c2.querySelector('.card-back').style.boxShadow = '0 0 30px rgba(212, 175, 55, 0.3)';
+                }, 200);
+                p1Matched++;
+                p1Flipped = [];
+                if (p1Matched === p1Icons.length) {
+                    clearInterval(p1TimerInt);
+                    setTimeout(() => {
+                        const modal = document.getElementById('p1-modal');
+                        modal.classList.remove('hidden');
+                        setTimeout(() => {
+                            modal.classList.remove('opacity-0');
+                            modal.querySelector('div').classList.remove('scale-95');
+                        }, 50);
+                    }, 800);
                 }
             } else {
                 setTimeout(() => {
-                    c1.classList.remove('flipped'); c2.classList.remove('flipped');
-                    flippedCards = []; state.p1.locked = false;
+                    c1.classList.remove('card-flipped');
+                    c2.classList.remove('card-flipped');
+                    p1Flipped = [];
                 }, 1000);
             }
         }
-        // Puzzle 2
+
+        // --- PUZZLE 2: UNSCRAMBLE ---
+        const TARGET_WORD = ["A", "M", "A", "Z", "I", "N", "G"];
+        const SCRAMBLED = ["N", "A", "Z", "A", "G", "M", "I"].sort(() => Math.random() - 0.5);
+
         function initPuzzle2() {
-            const word = "AMAZING";
-            const scrambled = "NAZAMGI".split('');
-            const pool = document.getElementById('letter-pool');
-            const slotsDiv = document.getElementById('word-slots');
-            slotsDiv.innerHTML = '';
-            for (let i = 0; i < word.length; i++) {
+            const tContainer = document.getElementById('target-container');
+            const sContainer = document.getElementById('source-container');
+            tContainer.innerHTML = '';
+            sContainer.innerHTML = '';
+
+            // Create Slots
+            TARGET_WORD.forEach(() => {
                 const slot = document.createElement('div');
-                slot.className = 'slot';
-                slot.dataset.index = i;
-                slot.addEventListener('click', () => returnLetterFromSlot(i));
-                slotsDiv.appendChild(slot);
-            }
-            pool.innerHTML = '';
-            scrambled.forEach((char, i) => {
-                const letter = document.createElement('div');
-                letter.className = 'letter-tile';
-                letter.innerText = char;
-                letter.id = `letter-${i}`;
-                letter.addEventListener('click', () => autoPlaceLetter(letter));
-                pool.appendChild(letter);
+                slot.className = 'letter-slot w-12 h-16 md:w-16 md:h-20 border-b-2 border-primary/20 flex items-center justify-center text-3xl font-bold text-primary bg-zinc-900/40 rounded-t-xl';
+                slot.dataset.filled = "false";
+                tContainer.appendChild(slot);
+            });
+
+            // Create Source Letters
+            SCRAMBLED.forEach(char => {
+                const btn = document.createElement('button');
+                btn.className = 'floating-tile w-14 h-14 text-white text-2xl font-bold rounded-xl cursor-pointer flex items-center justify-center border border-white/5 gold-glow-text hover:gold-glow-text';
+                btn.innerText = char;
+                btn.draggable = true;
+
+                // Drag Events
+                btn.addEventListener('dragstart', (e) => {
+                    e.dataTransfer.setData('text', char);
+                    btn.classList.add('opacity-50');
+                });
+                btn.addEventListener('dragend', () => btn.classList.remove('opacity-50'));
+
+                // Click Event
+                btn.addEventListener('click', () => fillSlot(char, btn));
+
+                sContainer.appendChild(btn);
             });
         }
-        function autoPlaceLetter(letter) {
-            const slots = document.querySelectorAll('.slot');
-            for (let slot of slots) {
-                if (!slot.hasChildNodes()) {
-                    slot.appendChild(letter);
-                    slot.classList.add('filled');
-                    checkWord();
-                    break;
+
+        function fillSlot(char, sourceBtn) {
+            const slots = document.querySelectorAll('.letter-slot');
+            const emptySlot = Array.from(slots).find(s => s.dataset.filled === "false");
+
+            if (emptySlot) {
+                emptySlot.innerText = char;
+                emptySlot.dataset.filled = "true";
+                emptySlot.classList.add('gold-glow-text', 'bg-zinc-800/60');
+
+                // Hide source
+                sourceBtn.style.opacity = '0';
+                sourceBtn.style.pointerEvents = 'none';
+
+                checkP2Completion();
+            }
+        }
+
+        function checkP2Completion() {
+            const slots = document.querySelectorAll('.letter-slot');
+            const allFilled = Array.from(slots).every(s => s.dataset.filled === "true");
+
+            if (allFilled) {
+                const currentWord = Array.from(slots).map(s => s.innerText).join('');
+                if (currentWord === "AMAZING") {
+                    document.getElementById('p2-success-msg').classList.remove('hidden');
+                    document.getElementById('p2-unlock-btn').disabled = false;
+                    slots.forEach(s => s.classList.add('border-primary', 'shadow-[0_0_15px_rgba(212,175,55,0.4)]'));
+                } else {
+                    // Reset on wrong
+                    setTimeout(() => {
+                        slots.forEach(s => {
+                            s.innerText = '';
+                            s.dataset.filled = "false";
+                            s.classList.remove('gold-glow-text', 'bg-zinc-800/60');
+                        });
+                        const sourceBtns = document.querySelectorAll('.floating-tile');
+                        sourceBtns.forEach(b => {
+                            b.style.opacity = '1';
+                            b.style.pointerEvents = 'auto';
+                        });
+                    }, 800);
                 }
             }
         }
-        function returnLetterFromSlot(index) {
-            // Simplification: letters only go one way for smoothness in this demo version
-        }
-        function checkWord() {
-            const slots = document.querySelectorAll('.slot');
-            let currentWord = "";
-            let filledSlots = 0;
-            slots.forEach(s => {
-                if (s.hasChildNodes()) filledSlots++;
-                currentWord += s.innerText;
-            });
-            
-            if (currentWord === "AMAZING") {
-                document.getElementById('p2-next-btn').classList.remove('hidden-element');
-                slots.forEach(s => s.style.borderColor = 'var(--gold-light)');
-            } else if (filledSlots === slots.length) {
-                // All slots filled but wrong word - show message and reset
-                showWrongMessage();
-            }
-        }
-        
-        function showWrongMessage() {
-            const messages = [
-                'Not quite! Try again.',
-                'Oops! Give it another shot.',
-                'Close, but not quite. Rearrange!',
-                'Hmm, that\'s not it. Try once more.',
-                'Nice try! Shuffle and try again.',
-                'Not the right order. Go again!',
-                'Almost there! Rearrange the letters.',
-                'That\'s not it. Keep trying!',
-                'Wrong order. Let\'s try again.',
-                'Not quite right. Rearrange them!'
-            ];
-            
-            const message = messages[Math.floor(Math.random() * messages.length)];
-            const slots = document.querySelectorAll('.slot');
-            
-            // Show message
-            const msgDiv = document.createElement('div');
-            msgDiv.style.cssText = `
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: rgba(255, 20, 147, 0.9);
-                color: white;
-                padding: 1rem 2rem;
-                border-radius: 20px;
-                font-size: 1.2rem;
-                font-weight: 600;
-                z-index: 100;
-                animation: fadeInOut 2s ease-in-out;
-                font-family: 'Montserrat', sans-serif;
-            `;
-            msgDiv.textContent = message;
-            document.body.appendChild(msgDiv);
-            
-            // Reset after 1 second
-            setTimeout(() => {
-                slots.forEach(slot => {
-                    const letter = slot.firstChild;
-                    if (letter) {
-                        document.getElementById('letter-pool').appendChild(letter);
-                        slot.innerHTML = '';
-                        slot.classList.remove('filled');
-                    }
-                });
-                msgDiv.remove();
-                document.getElementById('p2-next-btn').classList.add('hidden-element');
-            }, 1000);
-        }
-        document.getElementById('p2-next-btn').addEventListener('click', () => {
-            playCelebration();
-            transitionSection(sections.p2, sections.p3);
-            initPuzzle3();
-        });
-        // Puzzle 3
+
+        // --- PUZZLE 3: HIDDEN HEART ---
+        const P3_ICONS = ['celebration', 'liquor', 'cake', 'auto_awesome', 'redeem', 'confirmation_number', 'nightlife', 'brightness_7', 'featured_seasonal_and_gifts', 'local_bar'];
+
         function initPuzzle3() {
-            const canvas = document.getElementById('hidden-canvas');
-            const iconsList = ['gift', 'party-popper', 'glass-water', 'cake-slice', 'gem'];
-            for (let i = 0; i < 20; i++) {
-                const iconWrapper = document.createElement('div');
-                const iconName = iconsList[Math.floor(Math.random() * iconsList.length)];
-                iconWrapper.className = 'scattered-icon';
-                iconWrapper.innerHTML = `<i data-lucide="${iconName}"></i>`;
-                const x = Math.random() * 90; const y = Math.random() * 90;
-                iconWrapper.style.left = `${x}%`; iconWrapper.style.top = `${y}%`;
-                iconWrapper.style.animationDelay = `${Math.random() * 5}s`;
-                canvas.appendChild(iconWrapper);
+            const canvas = document.getElementById('puzzle-canvas');
+            // Clear previous except success overlay
+            const overlay = document.getElementById('p3-success-overlay');
+            canvas.querySelectorAll('.dark-illustration-icon, .puzzle-decor').forEach(el => el.remove());
+
+            // Randomly scatter icons
+            for (let i = 0; i < 15; i++) {
+                const icon = document.createElement('span');
+                icon.className = `material-symbols-outlined dark-illustration-icon text-${Math.floor(Math.random() * 4 + 5)}xl`;
+                if (Math.random() > 0.5) icon.classList.add('silver-stroke');
+                icon.innerText = P3_ICONS[Math.floor(Math.random() * P3_ICONS.length)];
+
+                // Random Pos
+                icon.style.left = Math.random() * 85 + 5 + '%';
+                icon.style.top = Math.random() * 85 + 5 + '%';
+                icon.style.transform = `rotate(${(Math.random() - 0.5) * 45}deg)`;
+
+                canvas.appendChild(icon);
             }
-            const heartWrapper = document.createElement('div');
-            heartWrapper.className = 'scattered-icon heart-target';
-            heartWrapper.innerHTML = `<i data-lucide="heart"></i>`;
-            heartWrapper.style.left = `${Math.random() * 80 + 10}%`;
-            heartWrapper.style.top = `${Math.random() * 80 + 10}%`;
-            heartWrapper.addEventListener('click', revealFinal);
-            canvas.appendChild(heartWrapper);
-            lucide.createIcons();
+
+            // Create Heart (Target)
+            const target = document.createElement('div');
+            target.className = 'absolute p-4 z-50 group/target puzzle-decor';
+            target.innerHTML = `
+                <span class="material-symbols-outlined text-3xl hidden-heart">favorite</span>
+                <div class="absolute inset-0 bg-pink-500/20 rounded-full blur-xl opacity-0 group-hover/target:opacity-100 transition-opacity"></div>
+            `;
+            // Random pos for heart too (ensure it's clickable)
+            target.style.left = Math.random() * 70 + 15 + '%';
+            target.style.top = Math.random() * 70 + 15 + '%';
+            target.addEventListener('click', () => {
+                target.querySelector('span').style.transform = 'scale(20)';
+                target.style.opacity = '0';
+                setTimeout(() => {
+                    const ov = document.getElementById('p3-success-overlay');
+                    ov.classList.remove('opacity-0', 'pointer-events-none', 'scale-105');
+                    ov.classList.add('opacity-100', 'scale-100');
+                    createP3Confetti();
+                }, 300);
+            });
+            canvas.appendChild(target);
         }
-        function revealFinal() {
-            playCelebration();
-            transitionSection(sections.p3, sections.final);
+
+        function createP3Confetti() {
+            // Simple visual effect
+            const overlay = document.getElementById('p3-success-overlay');
+            const colors = ['#d4af37', '#ec4899', '#ffffff', '#c0c0c0'];
+            for (let i = 0; i < 50; i++) {
+                const c = document.createElement('div');
+                c.style.cssText = `position:absolute; width:6px; height:6px; background:${colors[Math.floor(Math.random() * 4)]}; top:50%; left:50%;`;
+                overlay.appendChild(c);
+                c.animate([
+                    { transform: 'translate(0,0)' },
+                    { transform: `translate(${(Math.random() - 0.5) * 500}px, ${(Math.random() - 0.5) * 500}px)`, opacity: 0 }
+                ], { duration: 1500, easing: 'ease-out' }).onfinish = () => c.remove();
+            }
         }
+
+        // --- REVEAL SECTION ---
+        function initReveal() {
+            const container = document.getElementById('reveal-confetti');
+            for (let i = 0; i < 15; i++) {
+                const c = document.createElement('div');
+                c.className = 'confetti-gold';
+                c.style.left = Math.random() * 100 + '%';
+                c.style.animationDelay = Math.random() * 5 + 's';
+                c.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                container.appendChild(c);
+            }
+            // Auto play music if not already (user interaction might be needed, but we try)
+            if (!isPlaying && audio.paused) {
+                audio.play().then(() => {
+                    isPlaying = true;
+                    musicBtn.querySelector('span').innerText = 'music_note';
+                    musicBtn.classList.add('bg-white/10');
+                }).catch(e => console.log('Autoplay prevented', e));
+            }
+        }
+
+        function shareJoy() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Happy Birthday Gulshan!',
+                    text: 'Check out this birthday surprise!',
+                    url: window.location.href
+                });
+            } else {
+                alert('Copied link to clipboard!');
+                navigator.clipboard.writeText(window.location.href);
+            }
+        }
+
     </script>
 </body>
+
 </html>
