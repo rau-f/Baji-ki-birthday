@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Happy Birthday, Gulshan — (23? 24? Your secret.)</title>
+    <title>Happy Birthday, Gulshan — (24? 25? Your secret.)</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
@@ -130,6 +130,14 @@
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             border: 1px solid rgba(212, 175, 55, 0.2);
+            will-change: transform; /* Hint for compositor */
+        }
+        @media (max-width: 768px) {
+            .glass-panel {
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                background: rgba(255, 255, 255, 0.12); /* Higher opacity for legibility */
+            }
         }
 
         /* --- PUZZLE 1 (MEMORY MATCH) STYLES --- */
@@ -247,12 +255,24 @@
         }
         .hidden-heart {
             @apply cursor-pointer transition-all duration-500;
-            color: var(--glow-pink);
-            filter: drop-shadow(0 0 8px var(--glow-pink));
+            /* Outline only by default */
+            color: transparent;
+            -webkit-text-stroke: 1.5px var(--glow-pink);
+            filter: drop-shadow(0 0 3px rgba(236, 72, 153, 0.3));
+            opacity: 0.40;
         }
         .hidden-heart:hover {
-            transform: scale(1.3);
-            filter: drop-shadow(0 0 20px var(--glow-pink));
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 8px var(--glow-pink));
+            opacity: 1;
+        }
+        /* When found/clicked, fill with color and glow */
+        .hidden-heart.found {
+            color: var(--glow-pink);
+            -webkit-text-stroke: 0;
+            filter: drop-shadow(0 0 20px var(--glow-pink)) drop-shadow(0 0 40px var(--glow-pink));
+            transform: scale(1.8);
+            opacity: 1;
         }
         #puzzle-canvas {
             background: radial-gradient(circle at center, #1e1126 0%, #0a050c 100%);
@@ -290,13 +310,14 @@
         }
         .light-leak {
             position: fixed;
-            width: 60vw;
-            height: 60vw;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
-            filter: blur(60px);
+            width: 80vw;
+            height: 80vw;
+            /* Replaced blur(60px) with specific gradient for performance */
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, rgba(212, 175, 55, 0.02) 40%, transparent 70%);
             pointer-events: none;
             z-index: 1;
             animation: light-leak 15s ease-in-out infinite;
+            will-change: transform, opacity;
         }
         .confetti-gold {
             position: fixed;
@@ -310,7 +331,15 @@
         .glass-gold-card {
             background: rgba(13, 13, 13, 0.85);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        @media (max-width: 768px) {
+            .glass-gold-card {
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                background: rgba(13, 13, 13, 0.92);
+            }
         }
 
         /* Material Symbols Settings */
@@ -371,7 +400,12 @@
     </audio>
 
     <!-- Global Music Controls (Fixed top right) -->
-    <div class="fixed top-4 right-4 z-[9999] flex gap-2">
+    <div class="fixed top-4 right-4 z-[9999] flex items-center gap-3">
+        <!-- Tooltip (hidden by default, shown when autoplay blocked) -->
+        <div id="music-tooltip"
+            class="opacity-0 bg-black/80 text-champagne-gold text-xs px-3 py-2 rounded-full whitespace-nowrap animate-pulse border border-champagne-gold/30 transition-opacity duration-500 pointer-events-none">
+            Click to unmute 🔊
+        </div>
         <button id="music-toggle"
             class="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-champagne-gold hover:bg-white/10 transition-colors">
             <span class="material-symbols-outlined">music_off</span>
@@ -398,7 +432,7 @@
                     <span class="h-px w-12 bg-champagne-gold/40"></span>
                 </div>
                 <h1 class="text-4xl md:text-8xl font-black font-serif leading-tight">
-                    <span class="block text-slate-200">Happy 23rd Birthday</span>
+                    <span class="block text-slate-200">Happy 24th Birthday</span>
                     <span class="block gold-gradient-text mt-2 italic">Gulshan!</span>
                 </h1>
             </div>
@@ -447,9 +481,12 @@
     <section id="section-puzzle1"
         class="min-h-screen hidden-section flex flex-col items-center p-4 font-body transition-all duration-700">
         <!-- Background Orbs -->
-        <div class="fixed inset-0 pointer-events-none opacity-20">
-            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-900 rounded-full blur-[120px]"></div>
-            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-gold/20 rounded-full blur-[120px]"></div>
+        <!-- Background Orbs (Optimized: Gradients instead of Blur Filters) -->
+        <div class="fixed inset-0 pointer-events-none z-0">
+            <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%]"
+                style="background: radial-gradient(circle, rgba(88, 28, 135, 0.4) 0%, transparent 70%);"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%]"
+                style="background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);"></div>
         </div>
 
         <header class="w-full max-w-4xl mb-8 flex justify-between items-center relative z-10 pt-4">
@@ -512,9 +549,11 @@
         class="min-h-screen hidden-section flex flex-col items-center justify-center p-4 font-body relative overflow-hidden">
         <div
             class="max-w-3xl w-full bg-black/60 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/5 relative z-10">
-            <!-- Glows -->
-            <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-[100px]"></div>
-            <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-purple-900/10 rounded-full blur-[100px]"></div>
+            <!-- Glows (Optimized) -->
+            <div class="absolute -top-32 -right-32 w-80 h-80 pointer-events-none"
+                style="background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);"></div>
+            <div class="absolute -bottom-32 -left-32 w-80 h-80 pointer-events-none"
+                style="background: radial-gradient(circle, rgba(88, 28, 135, 0.15) 0%, transparent 70%);"></div>
 
             <div class="text-center mb-8 md:mb-12">
                 <h2 class="text-xs md:text-sm font-medium text-primary tracking-[0.3em] uppercase mb-3 opacity-80">
@@ -551,7 +590,7 @@
                     <span
                         class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </button>
-                <p class="text-zinc-600 text-[10px] uppercase tracking-[0.4em]">Celebrating 23 radiant years</p>
+                <p class="text-zinc-600 text-[10px] uppercase tracking-[0.4em]">Celebrating 24 radiant years</p>
             </div>
         </div>
 
@@ -579,7 +618,7 @@
             <div class="text-center mb-10 max-w-2xl">
                 <h2 class="text-3xl md:text-5xl font-display text-white mb-6">One more tiny secret (promise)</h2>
                 <p class="text-base md:text-lg text-pink-100/80 leading-relaxed font-light">
-                    Gulshan, you've conquered every challenge. The gateway to your 23rd birthday card lies hidden in
+                    Gulshan, you've conquered every challenge. The gateway to your 24th birthday card lies hidden in
                     this midnight celebration.
                     Search for the <span class="text-primary-pink font-semibold">Glow of the Heart</span> amidst the
                     gold and silver outlines.
@@ -639,7 +678,7 @@
                 <div class="mt-10 flex justify-center items-center gap-4">
                     <div class="h-[1px] w-12 bg-[var(--gold-primary)] opacity-40"></div>
                     <span
-                        class="text-[var(--gold-primary)] font-display text-base md:text-xl tracking-widest text-center">23
+                        class="text-[var(--gold-primary)] font-display text-base md:text-xl tracking-widest text-center">24
                         years (give or take) of causing delight</span>
                     <div class="h-[1px] w-12 bg-[var(--gold-primary)] opacity-40"></div>
                 </div>
@@ -749,41 +788,38 @@
         const musicBtn = document.getElementById('music-toggle');
         let isPlaying = false;
 
-        // Try Autoplay on Load
+        // Try Autoplay on Load (unmuted)
         window.addEventListener('load', () => {
-            audio.volume = 0.5; // Start reasonable
-            const playPromise = audio.play();
-            if (playPromise !== undefined) {
-                playPromise.then(() => {
-                    isPlaying = true;
-                    updateMusicIcon();
-                }).catch(error => {
-                    console.log("Autoplay prevented by browser, waiting for interaction.");
-                    // Muted autoplay fallback? Or just wait for click.
-                    // Let's try muted autoplay if failed
-                    audio.muted = true;
-                    audio.play().then(() => {
-                        isPlaying = true;
-                        // notification to unmute?
-                    }).catch(e => console.log("Muted autoplay also failed"));
-                });
-            }
+            audio.volume = 0.5;
+            audio.play().then(() => {
+                isPlaying = true;
+                updateMusicIcon();
+            }).catch(error => {
+                console.log("Autoplay blocked by browser. Music will start on first interaction.");
+                // Show the tooltip with fade in
+                document.getElementById('music-tooltip').classList.remove('opacity-0');
+                document.getElementById('music-tooltip').classList.add('opacity-100');
+            });
         });
 
-        // Unmute/Play on first interaction (Capture phase)
+        // Helper to hide tooltip properly
+        function hideTooltip() {
+            const tooltip = document.getElementById('music-tooltip');
+            tooltip.classList.remove('animate-pulse', 'opacity-100');
+            tooltip.classList.add('opacity-0');
+        }
+
+        // Play on first interaction if autoplay was blocked
         document.addEventListener('click', function enableAudio() {
-            if (audio.muted) {
-                audio.muted = false;
-                audio.volume = 0.5;
-            }
+            hideTooltip();
+
             if (audio.paused) {
+                audio.volume = 0.5;
                 audio.play().then(() => {
                     isPlaying = true;
                     updateMusicIcon();
                 });
             }
-            // Remove listener once enabled
-            // But we keep it to ensure it catches the first valid click
         }, { once: true });
 
         // --- MUSIC CONTROL ---
@@ -806,6 +842,7 @@
                 audio.muted = false;
                 audio.play();
                 isPlaying = true;
+                hideTooltip();
             }
             updateMusicIcon();
         });
@@ -1029,8 +1066,8 @@
             const overlay = document.getElementById('p3-success-overlay');
             canvas.querySelectorAll('.dark-illustration-icon, .puzzle-decor').forEach(el => el.remove());
 
-            // Randomly scatter icons
-            for (let i = 0; i < 15; i++) {
+            // Randomly scatter MORE decoy icons (40 for difficulty)
+            for (let i = 0; i < 40; i++) {
                 const icon = document.createElement('span');
                 icon.className = `material-symbols-outlined dark-illustration-icon text-${Math.floor(Math.random() * 4 + 5)}xl`;
                 if (Math.random() > 0.5) icon.classList.add('silver-stroke');
@@ -1055,14 +1092,17 @@
             target.style.left = Math.random() * 70 + 15 + '%';
             target.style.top = Math.random() * 70 + 15 + '%';
             target.addEventListener('click', () => {
-                target.querySelector('span').style.transform = 'scale(20)';
-                target.style.opacity = '0';
+                const heartEl = target.querySelector('span');
+                // Show the "found" state with fill and glow, stay in place
+                heartEl.classList.add('found');
+
+                // Wait a moment to appreciate the glowing heart, then show success
                 setTimeout(() => {
                     const ov = document.getElementById('p3-success-overlay');
                     ov.classList.remove('opacity-0', 'pointer-events-none', 'scale-105');
                     ov.classList.add('opacity-100', 'scale-100');
                     createP3Confetti();
-                }, 300);
+                }, 800);
             });
             canvas.appendChild(target);
         }
