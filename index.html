@@ -1,1794 +1,1068 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Happy Birthday Gulshan! 🎉</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Gulshan - A Special Journey</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+    <!-- Icons (CDN for portability, reliable for online sharing) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+        :root {
+            --bg-dark: #0a0e27;
+            --bg-deep: #050716;
+            --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --pink: #ff1493;
+            --white: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(212, 175, 55, 0.2);
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --transition-speed: 0.4s;
+        }
         * {
+            box-sizing: border-box;
+        }
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        :root {
-            --primary: #9c27b0;
-            --primary-light: #e1bee7;
-            --secondary: #ff4081;
-            --secondary-light: #f8bbd9;
-            --accent: #ffeb3b;
-            --light: #f9f0ff;
-            --dark: #4a148c;
-            --white: #ffffff;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            --mobile-padding: 15px;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f9f0ff 0%, #e1bee7 100%);
-            color: #333;
+            font-family: var(--font-body);
+            background-color: var(--bg-dark);
+            color: var(--white);
             min-height: 100vh;
             overflow-x: hidden;
-            font-size: 16px;
-            line-height: 1.5;
-            touch-action: manipulation;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--mobile-padding);
-        }
-
-        /* Welcome Screen - Mobile Optimized */
-        .welcome-screen {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            min-height: -webkit-fill-available;
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(135deg, rgba(156, 39, 176, 0.1) 0%, rgba(255, 64, 129, 0.1) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .welcome-screen::before {
-            content: '';
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
-            top: -50px;
-            left: -50px;
-            z-index: 0;
-        }
-
-        .welcome-screen::after {
-            content: '';
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: radial-gradient(circle, var(--secondary-light) 0%, transparent 70%);
-            bottom: -30px;
-            right: -30px;
-            z-index: 0;
-        }
-
-        .welcome-content {
-            position: relative;
-            z-index: 1;
-            max-width: 100%;
-            padding: 0 10px;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            color: var(--dark);
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            line-height: 1.2;
-            word-wrap: break-word;
-        }
-
-        .highlight {
-            color: var(--secondary);
-            text-shadow: 0 2px 5px rgba(255, 64, 129, 0.3);
-        }
-
-        .intro-text {
-            font-size: clamp(1rem, 4vw, 1.4rem);
             line-height: 1.6;
-            margin-bottom: 30px;
-            color: var(--dark);
-            max-width: 100%;
-            padding: 0 5px;
         }
-
-        /* Mobile-optimized buttons */
-        .btn-start {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: white;
-            border: none;
-            padding: 18px 40px;
-            font-size: clamp(1.1rem, 4vw, 1.3rem);
+        /* Typography */
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-heading);
+            margin: 0;
+        }
+        .main-title {
+            font-size: 4rem;
+            line-height: 1.1;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .accent-font {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: var(--gold-light);
+        }
+        .highlight-name {
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            font-style: italic;
+        }
+        .overline {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 1rem;
+        }
+        /* Buttons */
+        .btn {
+            padding: 1rem 2.5rem;
             border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            box-shadow: var(--shadow);
+            font-family: var(--font-body);
             font-weight: 600;
-            letter-spacing: 1px;
-            margin-top: 20px;
-            position: relative;
-            overflow: hidden;
-            min-height: 60px;
-            min-width: 250px;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+            border: none;
+            font-size: 1rem;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            touch-action: manipulation;
+            margin: 1rem 0;
         }
-
-        .btn-start:active {
-            transform: scale(0.98);
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--bg-deep);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
         }
-
-        .btn-start:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(156, 39, 176, 0.3);
-        }
-
-        /* Puzzle Sections - Mobile Optimized */
-        .puzzle-section {
-            display: none;
-            min-height: 100vh;
-            min-height: -webkit-fill-available;
-            padding: 30px var(--mobile-padding);
-            position: relative;
-            scroll-margin-top: 20px;
-        }
-
-        .active-puzzle {
-            display: block;
-            animation: fadeIn 1s ease;
-        }
-
-        .puzzle-container {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: clamp(20px, 5vw, 40px);
-            max-width: 100%;
-            margin: 0 auto;
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .puzzle-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 8px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-        }
-
-        .puzzle-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8rem, 6vw, 2.8rem);
-            color: var(--dark);
-            margin-bottom: 15px;
-            text-align: center;
-            line-height: 1.3;
-        }
-
-        .puzzle-instructions {
-            font-size: clamp(1rem, 3.5vw, 1.2rem);
-            color: #666;
-            margin-bottom: 30px;
-            text-align: center;
-            max-width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.5;
-        }
-
-        .puzzle-content {
-            margin: 30px 0;
-        }
-
-        .btn-next {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: white;
-            border: none;
-            padding: 16px 35px;
-            font-size: clamp(1rem, 3.5vw, 1.2rem);
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow);
-            font-weight: 600;
-            display: block;
-            margin: 30px auto 0;
-            position: relative;
-            overflow: hidden;
-            min-height: 55px;
-            min-width: 200px;
-            touch-action: manipulation;
-        }
-
-        .btn-next:active {
-            transform: scale(0.98);
-        }
-
-        .btn-next:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        .btn-next:hover:not(:disabled) {
+        .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(156, 39, 176, 0.3);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
         }
-
-        /* Puzzle 1 - Riddle (Mobile Optimized) */
-        .riddle-container {
-            text-align: center;
-            padding: 0 5px;
+        .btn-gold {
+            background: var(--gold);
+            color: var(--bg-deep);
         }
-
-        .riddle-text {
-            font-size: clamp(1.3rem, 4vw, 1.8rem);
-            font-style: italic;
-            color: var(--dark);
-            margin-bottom: 25px;
-            padding: 15px;
-            background: rgba(156, 39, 176, 0.05);
-            border-radius: 15px;
-            border-left: 5px solid var(--primary);
-            line-height: 1.4;
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--white);
+            color: var(--white);
         }
-
-        .answer-input {
-            width: 100%;
-            max-width: 350px;
-            padding: 15px 20px;
-            font-size: clamp(1rem, 3.5vw, 1.2rem);
-            border: 2px solid var(--primary-light);
-            border-radius: 50px;
-            margin: 20px auto;
-            display: block;
-            transition: all 0.3s ease;
-            -webkit-appearance: none;
-            appearance: none;
-        }
-
-        .answer-input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.2);
-        }
-
-        /* Puzzle 2 - Memory Game (Mobile Optimized) */
-        .memory-game {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            max-width: 100%;
-            margin: 0 auto;
-        }
-
-        .memory-card {
-            aspect-ratio: 1;
-            background: linear-gradient(45deg, var(--primary-light), var(--secondary-light));
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            cursor: pointer;
-            transform-style: preserve-3d;
-            transition: transform 0.5s;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            -webkit-tap-highlight-color: transparent;
-            user-select: none;
-        }
-
-        .memory-card.flipped {
-            transform: rotateY(180deg);
-            background: white;
-        }
-
-        .memory-card.matched {
-            background: linear-gradient(45deg, var(--accent), #ffcd38);
-            cursor: default;
-        }
-
-        /* Puzzle 3 - Drag and Drop (Mobile Optimized) */
-        .drag-drop-container {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            margin-top: 25px;
-        }
-
-        .drag-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-        }
-
-        .drag-item {
-            padding: 14px 20px;
-            background: linear-gradient(45deg, var(--primary-light), var(--secondary-light));
-            border-radius: 10px;
-            cursor: move;
-            text-align: center;
-            font-weight: 600;
-            color: var(--dark);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            font-size: clamp(0.9rem, 3vw, 1.1rem);
-            touch-action: none;
-            user-select: none;
-            min-width: 120px;
-        }
-
-        .drag-item:active {
-            transform: scale(0.95);
-        }
-
-        .drag-item.dragging {
-            opacity: 0.5;
-        }
-
-        .drop-zone {
-            min-height: 200px;
-            border: 3px dashed var(--primary);
-            border-radius: 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.5);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .drop-zone.over {
-            background: rgba(156, 39, 176, 0.1);
-            border-color: var(--secondary);
-        }
-
-        .drop-zone .drop-instruction {
-            color: var(--dark);
-            font-size: clamp(1rem, 3.5vw, 1.2rem);
-            text-align: center;
-            margin-top: 10px;
-            padding: 0 10px;
-        }
-
-        .dropped-item {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 12px 18px;
-            border-radius: 8px;
-            margin: 8px;
-            text-align: center;
-            font-weight: 600;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            animation: popIn 0.5s ease;
-            font-size: clamp(0.9rem, 3vw, 1.1rem);
-            max-width: 90%;
-        }
-
-        /* Photo Gallery */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 10px;
-            margin-top: 30px;
-        }
-
-        .gallery img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Final Card - Mobile Optimized */
-        .final-card {
-            display: none;
-            min-height: 100vh;
-            min-height: -webkit-fill-available;
-            padding: 30px var(--mobile-padding);
-            position: relative;
-            background: linear-gradient(135deg, rgba(156, 39, 176, 0.1) 0%, rgba(255, 64, 129, 0.1) 100%);
-        }
-
-        .final-card.active {
-            display: block;
-            animation: fadeIn 1s ease;
-        }
-
-        .card-container {
-            background: white;
-            border-radius: 20px;
-            max-width: 100%;
-            margin: 0 auto;
-            padding: clamp(25px, 5vw, 50px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 8px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
-        }
-
-        .birthday-message {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .birthday-message h2 {
-            font-family: 'Dancing Script', cursive;
-            font-size: clamp(2.2rem, 7vw, 3.5rem);
-            color: var(--secondary);
-            margin-bottom: 15px;
-            line-height: 1.2;
-        }
-
-        .birthday-message p {
-            font-size: clamp(1rem, 3.5vw, 1.3rem);
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        .personal-note {
-            background: rgba(255, 64, 129, 0.05);
-            border-radius: 15px;
-            padding: 20px;
-            margin-top: 25px;
-            border-left: 5px solid var(--secondary);
-        }
-
-        .personal-note h3 {
-            color: var(--dark);
-            margin-bottom: 10px;
-            font-size: clamp(1.2rem, 4vw, 1.5rem);
-        }
-
-        .birthday-wish {
-            font-family: 'Dancing Script', cursive;
-            font-size: clamp(1.6rem, 5vw, 2.2rem);
-            color: var(--primary);
-            margin-top: 30px;
-            text-align: center;
-            line-height: 1.3;
-        }
-
-        /* Progress Bar - Mobile Optimized */
-        .progress-bar {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
-        .progress-step {
+        .icon-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--gold);
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: var(--light);
-            border: 3px solid var(--primary-light);
+            cursor: pointer;
             display: flex;
-            justify-content: center;
             align-items: center;
-            font-weight: bold;
-            color: var(--dark);
-            margin: 0 10px;
-            position: relative;
+            justify-content: center;
             transition: all 0.3s ease;
+        }
+        .icon-btn:hover {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: var(--gold);
+        }
+        /* Layout */
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 10;
+        }
+        .centered {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 80vh;
+            justify-content: center;
+        }
+        .full-height {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Glass Panels */
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        .intro-card {
+            max-width: 600px;
+            margin: 2rem auto;
             font-size: 1.1rem;
         }
-
-        .progress-step.active {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: white;
-            transform: scale(1.1);
-        }
-
-        .progress-step.completed {
-            background: var(--secondary);
-            border-color: var(--secondary);
-            color: white;
-        }
-
-        .progress-step::after {
-            content: '';
+        /* Sections & Transitions */
+        section {
             position: absolute;
-            width: 20px;
-            height: 3px;
-            background: var(--primary-light);
-            right: -20px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .progress-step:last-child::after {
-            display: none;
-        }
-
-        /* Sound Controls */
-        .sound-controls {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1002;
-            display: flex;
-            gap: 10px;
-        }
-
-        .sound-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.9);
-            border: 2px solid var(--primary-light);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5rem;
-            color: var(--primary);
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-            touch-action: manipulation;
-        }
-
-        .sound-btn:active {
-            transform: scale(0.9);
-        }
-
-        .sound-btn.muted {
-            color: #999;
-            border-color: #ccc;
-        }
-
-        /* Confetti and Effects */
-        .confetti-container {
-            position: fixed;
-            width: 100%;
-            height: 100%;
             top: 0;
             left: 0;
-            pointer-events: none;
-            z-index: 1000;
+            width: 100%;
+            min-height: 100vh;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            transform: translateY(20px);
         }
-
-        .confetti {
+        section.active-section {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            z-index: 5;
+            position: relative;
+        }
+        .hidden-element {
+            display: none !important;
+        }
+        /* Puzzle 1: Memory Match */
+        .game-stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            padding: 1rem 2rem;
+        }
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Montserrat', monospace;
+            font-size: 1.2rem;
+            color: var(--gold);
+        }
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+        .card {
+            background-color: transparent;
+            width: 100%;
+            aspect-ratio: 3/4;
+            cursor: pointer;
+            position: relative;
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+        }
+        .card.flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front,
+        .card-back {
             position: absolute;
-            width: 10px;
-            height: 10px;
-            opacity: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--gold);
         }
-
-        .applause {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 4rem;
-            color: var(--accent);
-            opacity: 0;
-            pointer-events: none;
-            z-index: 1001;
-            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        .card-front {
+            background: linear-gradient(135deg, #1e3c72, #2a5298, #d4af37);
+            background-size: 200% 200%;
+            animation: gradientShift 5s ease infinite;
         }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
+        .card-back {
+            background-color: white;
+            color: black;
+            transform: rotateY(180deg);
+            padding: 10px;
         }
-
-        @keyframes popIn {
+        .card.matched .card-inner {
+            box-shadow: 0 0 15px var(--gold);
+        }
+        @keyframes gradientShift {
             0% {
-                transform: scale(0.8);
-                opacity: 0;
+                background-position: 0% 50%;
             }
-
+            50% {
+                background-position: 100% 50%;
+            }
             100% {
-                transform: scale(1);
-                opacity: 1;
+                background-position: 0% 50%;
             }
         }
-
+        /* Puzzle 2: Unscramble */
+        .slots-container {
+            display: flex;
+            gap: 15px;
+            margin: 3rem 0;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .slot {
+            width: 60px;
+            height: 70px;
+            border: 2px dashed rgba(212, 175, 55, 0.4);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-family: var(--font-heading);
+            color: var(--gold);
+            background: rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+        .slot.filled {
+            border-style: solid;
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+        }
+        .letters-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            min-height: 80px;
+        }
+        .letter-tile {
+            width: 50px;
+            height: 50px;
+            background: #1a1d35;
+            border: 1px solid var(--gold);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white);
+            cursor: grab;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
         @keyframes float {
-
             0%,
             100% {
                 transform: translateY(0);
             }
-
             50% {
-                transform: translateY(-20px);
+                transform: translateY(-5px);
             }
         }
-
-        @keyframes slideInUp {
-            from {
-                transform: translateY(50px);
+        /* Puzzle 3: Hidden Heart */
+        .discovery-canvas {
+            position: relative;
+            flex-grow: 1;
+            width: 100%;
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .scattered-icon {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+        .scattered-icon:hover {
+            color: var(--gold);
+            transform: scale(1.2);
+        }
+        .scattered-icon.heart-target:hover {
+            color: var(--pink);
+            filter: drop-shadow(0 0 10px var(--pink));
+        }
+        .pink-glow-text {
+            color: var(--pink);
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+        }
+        /* Final Card */
+        .final-card-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .card-image-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 100%;
+            min-height: 400px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--gold);
+        }
+        .card-hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 5s ease;
+        }
+        .card-image-wrapper:hover .card-hero-img {
+            transform: scale(1.05);
+        }
+        .overlay-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            padding: 2rem;
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--gold);
+        }
+        .theme-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 2rem;
+        }
+        .theme-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Montserrat';
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        .icon-gold {
+            color: var(--gold);
+        }
+        .icon-pink {
+            color: var(--pink);
+        }
+        .signature {
+            margin-top: 2rem;
+            text-align: right;
+            font-family: var(--font-heading);
+            color: var(--gold);
+        }
+        .final-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding-bottom: 2rem;
+        }
+        /* Loader */
+        #loader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: #0a0e27;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: opacity 0.8s ease;
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+            border-top-color: #d4af37;
+            animation: spin 1s ease-in-out infinite;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes celebrationPulse {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+            50% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+        @keyframes confettiFall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
                 opacity: 0;
             }
-
-            to {
-                transform: translateY(0);
+        }
+        @keyframes confettiSwing {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(30px);
+            }
+            75% {
+                transform: translateX(-30px);
+            }
+        }
+        @keyframes fadeOut {
+            from {
                 opacity: 1;
             }
-        }
-
-        /* Mobile-specific adjustments */
-        @media (max-width: 768px) {
-            .memory-game {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 10px;
-            }
-
-            .progress-step {
-                width: 35px;
-                height: 35px;
-                margin: 0 8px;
-                font-size: 1rem;
-            }
-
-            .progress-step::after {
-                width: 16px;
-                right: -16px;
-            }
-
-            .sound-controls {
-                top: 15px;
-                right: 15px;
-            }
-
-            .sound-btn {
-                width: 45px;
-                height: 45px;
-                font-size: 1.3rem;
-            }
-
-            .drag-item {
-                padding: 12px 16px;
-                min-width: 100px;
-            }
-
-            .drop-zone {
-                min-height: 180px;
+            to {
+                opacity: 0;
             }
         }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8rem;
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.8);
             }
-
-            .intro-text {
-                font-size: 0.95rem;
+            50% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
             }
-
-            .puzzle-title {
-                font-size: 1.5rem;
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.8);
             }
-
-            .puzzle-instructions {
-                font-size: 0.9rem;
-            }
-
-            .riddle-text {
-                font-size: 1.1rem;
-            }
-
-            .btn-start,
-            .btn-next {
-                font-size: 1rem;
-            }
-
-            body {
-                font-size: 14px;
-            }
-
-            .memory-game {
+        }
+        /* Background Stars */
+        .stars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+        /* Audio Controls */
+        .audio-controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+        /* Responsive */
+        @media (max-width: 900px) {
+            .memory-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
-
-            .progress-step {
-                width: 30px;
-                height: 30px;
-                margin: 0 5px;
-                font-size: 0.9rem;
-                border-width: 2px;
-            }
-
-            .progress-step::after {
-                width: 10px;
-                right: -10px;
-            }
-
-            .puzzle-container {
-                padding: 20px 15px;
-            }
-
-            .btn-start,
-            .btn-next {
-                min-width: 200px;
-                padding: 15px 30px;
-            }
-
-            .drag-drop-container {
-                gap: 20px;
-            }
-
-            .drag-items {
-                gap: 10px;
-            }
-
-            .drag-item {
-                min-width: 90px;
-                padding: 10px 14px;
+            .final-card-container {
+                grid-template-columns: 1fr;
             }
         }
-
-        @media (max-width: 360px) {
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            .intro-text {
-                font-size: 0.85rem;
-            }
-
-            .puzzle-title {
-                font-size: 1.3rem;
-            }
-
-            .puzzle-instructions {
-                font-size: 0.85rem;
-            }
-
-            .riddle-text {
-                font-size: 1rem;
-            }
-
-            body {
-                font-size: 13px;
-            }
-
-            .memory-game {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 8px;
-            }
-
-            .memory-card {
-                font-size: 1.5rem;
-            }
-
-            .progress-step {
-                width: 28px;
-                height: 28px;
-                margin: 0 4px;
-            }
-
-            .progress-step::after {
-                width: 8px;
-                right: -8px;
-            }
-        }
-
-        /* Landscape orientation fixes */
-        @media (max-height: 600px) and (orientation: landscape) {
-
-            .welcome-screen,
-            .puzzle-section,
-            .final-card {
-                min-height: 120vh;
-                padding-top: 60px;
-                padding-bottom: 60px;
-            }
-
-            h1 {
+        @media (max-width: 600px) {
+            .main-title {
                 font-size: 2.5rem;
             }
-
-            .intro-text {
-                font-size: 1rem;
-                margin-bottom: 20px;
+            .memory-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+            .slots-container {
+                gap: 15px;
+            }
+            .slot {
+                width: 50px;
+                height: 60px;
+                font-size: 1.5rem;
             }
 
-            .puzzle-title {
+            .glass-panel {
+                padding: 1rem;
+            }
+            .intro-card {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
                 font-size: 2rem;
             }
-
-            .puzzle-container {
-                padding: 25px;
+            .puzzle3 {
+                font-size: 1.2rem;
             }
-        }
 
-        /* Prevent zoom on input focus for iOS */
-        @media screen and (max-width: 768px) {
-
-            input,
-            textarea {
-                font-size: 16px !important;
+            .btn {
+                padding: 0.6rem 1rem;
+                font-size: 1rem;
             }
         }
     </style>
 </head>
-
 <body>
-    <!-- Sound Controls -->
-    <div class="sound-controls">
-        <button class="sound-btn" id="music-btn" title="Toggle Music">
-            <i class="fas fa-music"></i>
-        </button>
-        <button class="sound-btn" id="sound-btn" title="Toggle Sound Effects">
-            <i class="fas fa-volume-up"></i>
-        </button>
+    <!-- Audio -->
+    <div class="audio-controls">
+        <button id="music-btn" class="icon-btn" aria-label="Toggle Music"><i data-lucide="music"></i></button>
+        <button id="sound-btn" class="icon-btn" aria-label="Toggle Sound Effects"><i
+                data-lucide="volume-2"></i></button>
     </div>
-
-    <!-- Welcome Screen -->
-    <section class="welcome-screen active" id="welcome-screen">
-        <div class="welcome-content">
-            <h1>Happy Birthday <span class="highlight">Gulshan!</span></h1>
-            <p class="intro-text">
-                My dearest sister, even though I'm far away in distance, my love and wishes for you on your special day
-                know no bounds.
-                This year, I've created something special just for you - a journey of love, memories, and celebration!
-            </p>
-            <p class="intro-text">
-                To unlock your birthday card, you'll need to solve some fun logical puzzles. Each puzzle brings you
-                closer to your special message.
-                Ready to begin this beautiful journey?
-            </p>
-            <button class="btn-start" id="start-btn">
-                <span>Begin the Celebration!</span> <i class="fas fa-gift" style="margin-left: 10px;"></i>
-            </button>
-        </div>
-        <div class="confetti-container" id="confetti-container"></div>
-    </section>
-
-    <!-- Puzzle 1: Leap Year Riddle -->
-    <section class="puzzle-section" id="puzzle1">
-        <div class="container">
-            <div class="progress-bar">
-                <div class="progress-step active">1</div>
-                <div class="progress-step">2</div>
-                <div class="progress-step">3</div>
-            </div>
-            <div class="puzzle-container">
-                <h2 class="puzzle-title">Puzzle 1: The Leap Year Mystery</h2>
-                <p class="puzzle-instructions">
-                    Solve this logical riddle to proceed. It might take a moment to think about!
-                </p>
-                <div class="puzzle-content">
-                    <div class="riddle-container">
-                        <div class="riddle-text">
-                            A man dies of old age on his 25th birthday. How is this possible?
-                        </div>
-                        <input type="text" class="answer-input" id="riddle-answer"
-                            placeholder="Enter your answer here...">
-                        <p id="riddle-feedback" style="text-align: center; margin-top: 15px; font-weight: 600;"></p>
-                    </div>
-                </div>
-                <button class="btn-next" id="next1" disabled>
-                    <span>Next Puzzle</span> <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Puzzle 2: Memory Game with Birthday Items -->
-    <section class="puzzle-section" id="puzzle2">
-        <div class="container">
-            <div class="progress-bar">
-                <div class="progress-step completed">1</div>
-                <div class="progress-step active">2</div>
-                <div class="progress-step">3</div>
-            </div>
-            <div class="puzzle-container">
-                <h2 class="puzzle-title">Puzzle 2: Birthday Memory Match</h2>
-                <p class="puzzle-instructions">
-                    Find all matching pairs of birthday items! Tap on cards to reveal them and try to find matches. This
-                    one will test your memory!
-                </p>
-                <div class="puzzle-content">
-                    <div class="memory-game" id="memory-game">
-                        <!-- Cards will be generated by JavaScript -->
-                    </div>
-                    <p id="memory-status" style="text-align: center; margin-top: 20px; font-weight: 600;"></p>
-                </div>
-                <button class="btn-next" id="next2" disabled>
-                    <span>Next Puzzle</span> <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Puzzle 3: Cake Cutting Riddle with Drag and Drop Steps -->
-    <section class="puzzle-section" id="puzzle3">
-        <div class="container">
-            <div class="progress-bar">
-                <div class="progress-step completed">1</div>
-                <div class="progress-step completed">2</div>
-                <div class="progress-step active">3</div>
-            </div>
-            <div class="puzzle-container">
-                <h2 class="puzzle-title">Puzzle 3: The Cake Cutting Challenge</h2>
-                <p class="puzzle-instructions">
-                    Drag the steps in the correct order to cut a cake into 8 equal pieces with only 3 cuts!
-                </p>
-                <div class="puzzle-content">
-                    <div class="drag-drop-container">
-                        <div class="drag-items" id="drag-items">
-                            <div class="drag-item" draggable="true" data-id="1">Make one vertical cut to divide the cake
-                                into two halves</div>
-                            <div class="drag-item" draggable="true" data-id="2">Make a second vertical cut perpendicular
-                                to the first to divide into four quarters</div>
-                            <div class="drag-item" draggable="true" data-id="3">Make a horizontal cut through the middle
-                                to divide each quarter into two</div>
-                        </div>
-                        <div class="drop-zone" id="drop-zone">
-                            <div class="drop-instruction">Drag the steps here in the correct order</div>
-                        </div>
-                    </div>
-                    <p id="drag-feedback" style="text-align: center; margin-top: 20px; font-weight: 600;"></p>
-                </div>
-                <button class="btn-next" id="next3" disabled>
-                    <span>Unlock Birthday Card!</span> <i class="fas fa-gift" style="margin-left: 8px;"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final Birthday Card with Photo Gallery -->
-    <section class="final-card" id="final-card">
-        <div class="container">
-            <div class="card-container">
-                <div class="birthday-message">
-                    <h2>Happy Birthday, Dearest Gulshan!</h2>
-                    <p>Today, you turn <span style="color: var(--secondary); font-weight: bold;">23 or 24</span> (you
-                        know which one! 😉), and even though I can't be there with you in Lahore to celebrate, I'm
-                        sending all my love across the miles.</p>
-                    <p>It's been a year since your beautiful wedding in April 2025, and I'm so happy to see you
-                        flourishing in your new life. Marriage looks wonderful on you!</p>
-                    <p>On this special day, I wish you endless joy, laughter that fills your home, love that grows
-                        deeper each day, and dreams that turn into reality.</p>
-
-                    <div class="personal-note">
-                        <h3>A Special Note Just For You:</h3>
-                        <p>Gulshan, you've always been more than just a sister to me. You've been a guide, a friend, and
-                            an inspiration. Even with the distance between us, our bond remains as strong as ever. I'm
-                            so proud of the woman you've become and excited for all the beautiful moments ahead in your
-                            journey.</p>
-                        <p>May this year bring you closer to your dreams, fill your days with happiness, and bless you
-                            with health and prosperity. Enjoy your special day to the fullest!</p>
-                    </div>
-
-                    <div class="birthday-wish">
-                        With all my love,<br>
-                        Your sibling who misses you dearly ❤️
-                    </div>
-                </div>
-                <h3 class="puzzle-title">Photo Gallery of Memories</h3>
-                <div class="gallery">
-                    <!-- Add your photos here, replace src with actual images -->
-                    <img src="https://via.placeholder.com/300?text=Memory+1" alt="Memory 1">
-                    <img src="https://via.placeholder.com/300?text=Memory+2" alt="Memory 2">
-                    <img src="https://via.placeholder.com/300?text=Memory+3" alt="Memory 3">
-                    <img src="https://via.placeholder.com/300?text=Memory+4" alt="Memory 4">
-                    <!-- Add more as needed -->
-                </div>
-            </div>
-        </div>
-        <div class="confetti-container" id="final-confetti"></div>
-    </section>
-
-    <!-- Applause Effect -->
-    <div class="applause" id="applause">
-        <i class="fas fa-hand-sparkles"></i>
-    </div>
-
-    <!-- Audio elements for sounds -->
-    <audio id="bg-music" loop preload="auto">
-        <!-- We'll use a simple generated tone for background music -->
+    <audio id="bg-music" loop autoplay muted>
+        <source src="./happy-birthday.mp3" type="audio/mpeg">
     </audio>
-    <audio id="click-sound" preload="auto"></audio>
-    <audio id="success-sound" preload="auto"></audio>
-    <audio id="applause-sound" preload="auto"></audio>
-    <audio id="celebration-sound" preload="auto"></audio>
-
+    <audio id="celebration-sound">
+        <source src="https://assets.mixkit.co/active_sound/preview/active_sound_applause_with_whistles_crowd_cheer_1_3d4a2a0e.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Celebration Container -->
+    <div id="celebration-overlay" style="display: none; position: fixed; inset: 0; z-index: 5000; pointer-events: none;">
+        <div id="confetti-container" style="position: absolute; width: 100%; height: 100%;"></div>
+        <div id="celebration-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem; font-family: 'Playfair Display', serif; color: var(--gold); text-shadow: 0 0 40px rgba(212, 175, 55, 0.8); white-space: nowrap; animation: celebrationPulse 1.5s ease-out;"></div>
+    </div>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <p style="margin-top: 20px; font-family: 'Montserrat', sans-serif; color: #d4af37; letter-spacing: 2px;">
+            PREPARING SURPRISE...</p>
+    </div>
+    <!-- Background -->
+    <div class="stars-container"></div>
+    <main id="app-container">
+        <!-- Introduction -->
+        <section id="intro-screen" class="active-section">
+            <div class="content-wrapper centered">
+                <p class="overline">Part 1: The Invitation</p>
+                <h1 class="main-title">Happy 23rd <br> <span class="accent-font">Birthday</span> <br> <span
+                        class="highlight-name">Gulshan!</span></h1>
+                <div class="intro-card glass-panel">
+                    <p>My dearest sister, even though I'm far away in distance, my love and wishes for you on your
+                        special day know no bounds.</p>
+                    <p>This year, I've curated a series of special moments just for you. To unlock your birthday
+                        celebration, you'll need to navigate through a journey of our shared memories. Are you ready for
+                        the first challenge?</p>
+                </div>
+                <button id="start-btn" class="btn btn-primary glow-effect">Begin the Celebration! <i data-lucide="gift"
+                        style="margin-left:8px;"></i></button>
+                <div class="phase-indicator"
+                    style="margin-top: 2rem; color: rgba(255,255,255,0.4); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">
+                    Phase 1 of 3: The Gift Reveal</div>
+            </div>
+        </section>
+        <!-- Puzzle 1 -->
+        <section id="puzzle-1" class="hidden-section">
+            <div class="content-wrapper">
+                <header class="puzzle-header" style="text-align:center; margin-bottom: 2rem;">
+                    <h2 class="section-title">Puzzle I</h2>
+                    <p class="section-subtitle" style="color: var(--gold);">Memory Match Challenge</p>
+                </header>
+                <div class="game-stats-bar glass-panel">
+                    <div class="stat"><i data-lucide="timer"></i> <span id="p1-timer">00:00</span></div>
+                    <div class="stat"><i data-lucide="dice-5"></i> <span id="p1-moves">Moves: 0</span></div>
+                </div>
+                <div class="memory-grid" id="memory-grid"></div>
+                <div class="footer-msg" style="text-align:center; position: bottom; margin-top:2rem; font-size:0.9rem; opacity:0.7;">Happy
+                    23rd Birthday Gulshan</div>
+            </div>
+        </section>
+        <!-- Puzzle 2 -->
+        <section id="puzzle-2" class="hidden-section">
+            <div class="content-wrapper centered">
+                <header class="puzzle-header">
+                    <p class="overline">Puzzle 2 of 3</p>
+                    <h2 class="section-title">Unscramble the Wish</h2>
+                    <p class="instruction-text" style="max-width: 600px; margin: 1rem 0;">Rearrange the shimmering
+                        golden letters to reveal a special truth. Drag or click to place them.</p>
+                </header>
+                <div id="word-slots" class="slots-container"></div>
+                <div id="letter-pool" class="letters-container"></div>
+                <button id="p2-next-btn" class="btn btn-primary hidden-element">Unlock Final Puzzle <i
+                        data-lucide="arrow-right"></i></button>
+                <p class="footer-msg"
+                    style="margin-top:2rem; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;">
+                    Celebrating 23 Radiant Years</p>
+            </div>
+        </section>
+        <!-- Puzzle 3 -->
+        <section id="puzzle-3" class="hidden-section">
+            <div class="content-wrapper full-height">
+                <header class="puzzle-header overlay-header" style="padding: 1rem;">
+                    <h2 class="section-title puzzle3"><i data-lucide="star" class="icon-gold"></i> Puzzle 3: The Hidden Heart
+                    </h2>
+                </header>
+                <div class="center-instruction" style="text-align: center;">
+                    <h1 class="big-msg" style="font-size: 2rem;">One Last Secret...</h1>
+                    <p style="max-width: 600px; margin: 0 auto;">Gulshan, you've conquered every challenge. The gateway
+                        to your 23rd birthday card lies hidden in this midnight celebration. Search for the <span
+                            class="pink-glow-text">Glow of the Heart</span> amidst the gold and silver outlines.</p>
+                </div>
+                <div id="hidden-canvas" class="discovery-canvas"></div>
+                <div class="hint-box glass-panel" style="text-align: center; max-width: 500px; margin: 0 auto;">
+                    <i data-lucide="lightbulb" class="icon-gold"></i> <span
+                        style="font-family: 'Montserrat'; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: var(--gold);">Hint:
+                        A pulsing pink glow amongst the gold shadows</span>
+                </div>
+            </div>
+        </section>
+        <!-- Final Reveal -->
+        <section id="final-card" class="hidden-section">
+            <div class="content-wrapper">
+                <div class="final-card-container active-card">
+                    <div class="card-left">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop"
+                                alt="Gulshan Artistic Portrait" class="card-hero-img">
+                            <div class="overlay-text">Soul sisters forever...</div>
+                        </div>
+                    </div>
+                    <div class="card-right glass-panel">
+                        <div class="celebration-icons"><i data-lucide="stars" class="icon-gold"></i></div>
+                        <h2>You Solved It!</h2>
+                        <p class="completion-note">Every puzzle you completed was a small reminder of the journey we've
+                            shared. From childhood secrets to adult dreams, you've always been my favorite person.</p>
+                        <ul class="theme-list">
+                            <li><i data-lucide="heart" class="icon-pink"></i> Boundless Love</li>
+                            <li><i data-lucide="party-popper" class="icon-gold"></i> Endless Laughter</li>
+                            <li><i data-lucide="star" class="icon-gold"></i> Golden Memories</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="message-panel glass-panel mt-4">
+                    <div class="quote-block"
+                        style="border-left: 3px solid var(--gold); padding-left: 1rem; margin-bottom: 1.5rem; font-style: italic; font-size: 1.2rem;">
+                        "My dearest Gulshan, even though I'm far away in distance, my love and wishes for you on your
+                        special day know no bounds."
+                    </div>
+                    <p class="body-msg">
+                        Watching you grow into the incredible 23-year-old woman you are today has been the greatest
+                        privilege. You carry such grace, intelligence, and a heart that could light up the entire world.
+                        <br><br>
+                        This interactive journey was just a small way to show you that no matter how many miles lie
+                        between us, I am always right there by your side, cheering you on and celebrating every single
+                        one of your victories. <br><br>
+                        May this year be filled with unexpected joys, deep peace, and all the success your hard-working
+                        soul deserves. Keep shining, keep dreaming, and never forget how deeply you are loved.
+                    </p>
+                    <div class="signature">
+                        <p class="sig-title">With all my love, forever,</p>
+                        <p class="sig-name">YOUR BIG SISTER</p>
+                    </div>
+                </div>
+                <div class="final-actions">
+                    <button class="btn btn-gold"
+                        onclick="alert('Sharing functionality would open native share sheet!')"><i
+                            data-lucide="share-2"></i> Share the Joy</button>
+                    <button class="btn btn-outline" onclick="window.print()"><i data-lucide="download"></i> Save
+                        Memory</button>
+                </div>
+            </div>
+        </section>
+    </main>
     <script>
-        // DOM Elements
-        const welcomeScreen = document.getElementById('welcome-screen');
-        const puzzle1 = document.getElementById('puzzle1');
-        const puzzle2 = document.getElementById('puzzle2');
-        const puzzle3 = document.getElementById('puzzle3');
-        const finalCard = document.getElementById('final-card');
-        const startBtn = document.getElementById('start-btn');
-        const nextBtn1 = document.getElementById('next1');
-        const nextBtn2 = document.getElementById('next2');
-        const nextBtn3 = document.getElementById('next3');
-        const riddleAnswer = document.getElementById('riddle-answer');
-        const riddleFeedback = document.getElementById('riddle-feedback');
-        const memoryGame = document.getElementById('memory-game');
-        const memoryStatus = document.getElementById('memory-status');
-        const dragItems = document.getElementById('drag-items');
-        const dropZone = document.getElementById('drop-zone');
-        const dragFeedback = document.getElementById('drag-feedback');
-        const applause = document.getElementById('applause');
-        const confettiContainer = document.getElementById('confetti-container');
-        const finalConfetti = document.getElementById('final-confetti');
+        // Audio - Define first so it's available during init
+        const bgMusic = document.getElementById('bg-music');
+        const celebrationSound = document.getElementById('celebration-sound');
         const musicBtn = document.getElementById('music-btn');
-        const soundBtn = document.getElementById('sound-btn');
-
-        // Game State
-        let currentPuzzle = 0;
-        let matchedPairs = 0;
-        let flippedCards = [];
-        let correctOrder = [1, 2, 3];
-        let droppedItems = [];
-
-        // Sound State
-        let musicEnabled = true;
-        let soundEnabled = true;
-        let audioContext;
-        let backgroundMusicSource;
-
-        // Initialize the app
-        function init() {
-            // Initialize sound system
-            initSounds();
-
-            // Start button click event
-            startBtn.addEventListener('click', () => {
-                playSound('click');
-                playSound('celebration');
-                welcomeScreen.classList.remove('active');
-                puzzle1.classList.add('active-puzzle');
-                createConfetti(confettiContainer, 50);
-                playApplause();
-
-                // Auto-scroll to first puzzle with smooth behavior
-                setTimeout(() => {
-                    puzzle1.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }, 300);
-            });
-
-            // Sound control buttons
-            musicBtn.addEventListener('click', () => {
-                playSound('click');
-                musicEnabled = !musicEnabled;
-                musicBtn.classList.toggle('muted', !musicEnabled);
-                musicBtn.innerHTML = musicEnabled ? '<i class="fas fa-music"></i>' : '<i class="fas fa-music-slash"></i>';
-
-                if (musicEnabled) {
-                    playBackgroundMusic();
-                } else {
-                    stopBackgroundMusic();
-                }
-            });
-
-            soundBtn.addEventListener('click', () => {
-                playSound('click');
-                soundEnabled = !soundEnabled;
-                soundBtn.classList.toggle('muted', !soundEnabled);
-                soundBtn.innerHTML = soundEnabled ? '<i class="fas fa-volume-up"></i>' : '<i class="fas fa-volume-mute"></i>';
-            });
-
-            // Puzzle 1: Leap Year Riddle
-            const correctAnswer = "he was born on february 29"; // or "leap year" normalized
-            riddleAnswer.addEventListener('input', function () {
-                const answer = this.value.trim().toLowerCase();
-                if (answer.includes('february 29') || answer.includes('leap year')) {
-                    riddleFeedback.textContent = "Correct! 🎉 Well done!";
-                    riddleFeedback.style.color = "var(--secondary)";
-                    nextBtn1.disabled = false;
-                    createConfetti(confettiContainer, 30);
-                    playSound('success');
-                    playApplause();
-                } else if (answer) {
-                    riddleFeedback.textContent = "Not quite, try again! Hint: Think about calendar oddities.";
-                    riddleFeedback.style.color = "#ff5252";
-                } else {
-                    riddleFeedback.textContent = "";
-                }
-            });
-
-            // Next button for puzzle 1
-            nextBtn1.addEventListener('click', () => {
-                playSound('click');
-                puzzle1.classList.remove('active-puzzle');
-                puzzle2.classList.add('active-puzzle');
-                initMemoryGame();
-                createConfetti(confettiContainer, 20);
-
-                // Auto-scroll to next puzzle
-                setTimeout(() => {
-                    puzzle2.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }, 300);
-            });
-
-            // Puzzle 2: Memory Game initialization
-            function initMemoryGame() {
-                memoryGame.innerHTML = '';
-                matchedPairs = 0;
-                flippedCards = [];
-
-                // Birthday items emojis for the memory game
-                const emojis = ['🎂', '🎁', '🎈', '🎉', '🥳', '❤️', '✨', '🌸'];
-                const cards = [...emojis, ...emojis]; // Duplicate for pairs
-
-                // Shuffle cards
-                cards.sort(() => Math.random() - 0.5);
-
-                // Create card elements
-                cards.forEach((emoji, index) => {
-                    const card = document.createElement('div');
-                    card.className = 'memory-card';
-                    card.dataset.index = index;
-                    card.dataset.value = emoji;
-
-                    card.innerHTML = `<span style="opacity: 0;">${emoji}</span>`;
-
-                    // Use touch events for mobile
-                    card.addEventListener('click', () => {
-                        playSound('click');
-                        flipCard(card);
-                    });
-
-                    // Also support touch events explicitly
-                    card.addEventListener('touchstart', (e) => {
-                        e.preventDefault();
-                        playSound('click');
-                        flipCard(card);
-                    }, { passive: false });
-
-                    memoryGame.appendChild(card);
+        let isMusicPlaying = false;
+        let areSoundEffectsEnabled = true;
+        
+        // State
+        const state = {
+            currentPuzzle: 0,
+            p1: { timer: 0, moves: 0, timerInterval: null, matches: 0, locked: false, cards: [] },
+            p2: { word: "AMAZING", currentSlots: Array(7).fill(null) }
+        };
+        const sections = {
+            intro: document.getElementById('intro-screen'),
+            p1: document.getElementById('puzzle-1'),
+            p2: document.getElementById('puzzle-2'),
+            p3: document.getElementById('puzzle-3'),
+            final: document.getElementById('final-card'),
+            loader: document.getElementById('loader')
+        };
+        // Init
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                sections.loader.style.opacity = '0';
+                setTimeout(() => { sections.loader.style.display = 'none'; }, 800);
+            }, 1000);
+            lucide.createIcons();
+            // Auto-play background music with unmute
+            setTimeout(() => {
+                bgMusic.muted = false;
+                bgMusic.play().then(() => {
+                    musicBtn.innerHTML = '<i data-lucide="pause"></i>';
+                    musicBtn.classList.add('active');
+                    isMusicPlaying = true;
+                }).catch(e => {
+                    console.log("Autoplay blocked, will start on first interaction", e);
                 });
-
-                memoryStatus.textContent = "Find all 8 matching pairs!";
+            }, 500);
+        });
+        
+        // Fallback: start music on first click if autoplay failed
+        document.addEventListener('click', function startMusicOnClick() {
+            if (!isMusicPlaying) {
+                bgMusic.muted = false;
+                bgMusic.play().then(() => {
+                    musicBtn.innerHTML = '<i data-lucide="pause"></i>';
+                    musicBtn.classList.add('active');
+                    isMusicPlaying = true;
+                    document.removeEventListener('click', startMusicOnClick);
+                }).catch(e => console.log("Play failed", e));
             }
-
-            // Flip card logic
-            function flipCard(card) {
-                // Don't allow flipping if already matched or two cards are already flipped
-                if (card.classList.contains('matched') || flippedCards.length >= 2 || flippedCards.includes(card)) {
-                    return;
-                }
-
-                // Flip the card
-                card.classList.add('flipped');
-                card.innerHTML = `<span>${card.dataset.value}</span>`;
-                flippedCards.push(card);
-
-                // Check for match if two cards are flipped
-                if (flippedCards.length === 2) {
-                    const card1 = flippedCards[0];
-                    const card2 = flippedCards[1];
-
-                    if (card1.dataset.value === card2.dataset.value) {
-                        // Match found
-                        card1.classList.add('matched');
-                        card2.classList.add('matched');
-                        flippedCards = [];
-                        matchedPairs++;
-
-                        memoryStatus.textContent = `Great! ${matchedPairs} of 8 pairs found!`;
-                        playSound('success');
-
-                        if (matchedPairs === 8) {
-                            memoryStatus.textContent = "Excellent! All pairs found! 🎉";
-                            nextBtn2.disabled = false;
-                            createConfetti(confettiContainer, 50);
-                            playSound('applause');
-                            playApplause();
-                        }
-                    } else {
-                        // No match, flip back after delay
-                        setTimeout(() => {
-                            card1.classList.remove('flipped');
-                            card2.classList.remove('flipped');
-                            card1.innerHTML = `<span style="opacity: 0;">${card1.dataset.value}</span>`;
-                            card2.innerHTML = `<span style="opacity: 0;">${card2.dataset.value}</span>`;
-                            flippedCards = [];
-                        }, 1000);
-                    }
-                }
-            }
-
-            // Next button for puzzle 2
-            nextBtn2.addEventListener('click', () => {
-                playSound('click');
-                puzzle2.classList.remove('active-puzzle');
-                puzzle3.classList.add('active-puzzle');
-                initDragDrop();
-                createConfetti(confettiContainer, 20);
-
-                // Auto-scroll to next puzzle
-                setTimeout(() => {
-                    puzzle3.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }, 300);
-            });
-
-            // Puzzle 3: Drag and Drop initialization
-            function initDragDrop() {
-                droppedItems = [];
-                dropZone.innerHTML = '<div class="drop-instruction">Drag the steps here in correct order</div>';
-                dragFeedback.textContent = "Arrange the steps to solve the riddle!";
-                dragFeedback.style.color = "var(--dark)";
-
-                // Make drag items draggable again
-                document.querySelectorAll('.drag-item').forEach(item => {
-                    item.addEventListener('dragstart', dragStart);
-                    item.addEventListener('touchstart', touchStart, { passive: false });
-                });
-
-                // Drop zone events
-                dropZone.addEventListener('dragover', dragOver);
-                dropZone.addEventListener('dragenter', dragEnter);
-                dropZone.addEventListener('dragleave', dragLeave);
-                dropZone.addEventListener('drop', drop);
-
-                // Touch events for mobile
-                dropZone.addEventListener('touchmove', touchMove, { passive: false });
-                dropZone.addEventListener('touchend', touchEnd);
-            }
-
-            // Drag and Drop functions for desktop
-            function dragStart(e) {
-                e.dataTransfer.setData('text/plain', e.target.dataset.id);
-                e.target.classList.add('dragging');
-            }
-
-            function dragOver(e) {
-                e.preventDefault();
-            }
-
-            function dragEnter(e) {
-                e.preventDefault();
-                dropZone.classList.add('over');
-            }
-
-            function dragLeave() {
-                dropZone.classList.remove('over');
-            }
-
-            function drop(e) {
-                e.preventDefault();
-                dropZone.classList.remove('over');
-
-                const id = e.dataTransfer.getData('text/plain');
-                handleDrop(id);
-            }
-
-            // Touch events for mobile drag and drop
-            let draggedElement = null;
-
-            function touchStart(e) {
-                e.preventDefault();
-                const touch = e.touches[0];
-                draggedElement = e.target;
-                draggedElement.classList.add('dragging');
-                playSound('click');
-            }
-
-            function touchMove(e) {
-                if (!draggedElement) return;
-                e.preventDefault();
-            }
-
-            function touchEnd(e) {
-                if (!draggedElement) return;
-
-                const touch = e.changedTouches[0];
-                const dropZoneRect = dropZone.getBoundingClientRect();
-
-                // Check if touch ended in drop zone
-                if (touch.clientX >= dropZoneRect.left &&
-                    touch.clientX <= dropZoneRect.right &&
-                    touch.clientY >= dropZoneRect.top &&
-                    touch.clientY <= dropZoneRect.bottom) {
-
-                    handleDrop(draggedElement.dataset.id);
-                }
-
-                draggedElement.classList.remove('dragging');
-                draggedElement = null;
-            }
-
-            function handleDrop(id) {
-                const draggedItem = document.querySelector(`.drag-item[data-id="${id}"]`);
-
-                // Check if item is already dropped
-                if (droppedItems.includes(parseInt(id))) {
-                    dragFeedback.textContent = "You've already used this step!";
-                    dragFeedback.style.color = "#ff5252";
-                    draggedItem.classList.remove('dragging');
-                    return;
-                }
-
-                // Add to dropped items
-                droppedItems.push(parseInt(id));
-
-                // Create dropped element
-                const droppedElement = document.createElement('div');
-                droppedElement.className = 'dropped-item';
-                droppedElement.textContent = draggedItem.textContent;
-                droppedElement.dataset.id = id;
-
-                // Insert in the correct position (before the instruction)
-                const instruction = dropZone.querySelector('.drop-instruction');
-                dropZone.insertBefore(droppedElement, instruction);
-
-                // Check if all items are dropped
-                if (droppedItems.length === 3) {
-                    // Check if the order is correct
-                    const isCorrect = JSON.stringify(droppedItems) === JSON.stringify(correctOrder);
-
-                    if (isCorrect) {
-                        dragFeedback.textContent = "Perfect! You've solved the cake cutting riddle! 🎉";
-                        dragFeedback.style.color = "var(--secondary)";
-                        nextBtn3.disabled = false;
-                        createConfetti(confettiContainer, 50);
-                        playSound('applause');
-                        playApplause();
-                    } else {
-                        dragFeedback.textContent = "Almost! Try again.";
-                        dragFeedback.style.color = "#ff5252";
-                        playSound('click');
-                        // Allow reordering by resetting
-                        setTimeout(() => {
-                            droppedItems = [];
-                            dropZone.innerHTML = '<div class="drop-instruction">Drag the steps here in correct order</div>';
-                            document.querySelectorAll('.drag-item').forEach(item => {
-                                item.classList.remove('dragging');
-                            });
-                        }, 1500);
-                    }
-                } else {
-                    dragFeedback.textContent = `Good! ${3 - droppedItems.length} more to place.`;
-                    dragFeedback.style.color = "var(--dark)";
-                    playSound('success');
-                }
-
-                draggedItem.classList.remove('dragging');
-            }
-
-            // Next button for puzzle 3
-            nextBtn3.addEventListener('click', () => {
-                playSound('click');
-                puzzle3.classList.remove('active-puzzle');
-                finalCard.classList.add('active');
-                createConfetti(finalConfetti, 200);
-                setTimeout(() => createConfetti(finalConfetti, 200), 500);
-                setTimeout(() => createConfetti(finalConfetti, 200), 1000);
-                playSound('celebration');
-                playApplause();
-
-                // Auto-scroll to final card
-                setTimeout(() => {
-                    finalCard.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }, 300);
-            });
-
-            // Sound initialization
-            function initSounds() {
-                // Generate simple tones for sounds
-                generateClickSound();
-                generateSuccessSound();
-                generateApplauseSound();
-                generateCelebrationSound();
-
-                // Start background music if enabled
-                if (musicEnabled) {
-                    setTimeout(() => {
-                        playBackgroundMusic();
-                    }, 1000);
-                }
-            }
-
-            function playBackgroundMusic() {
-                if (!musicEnabled) return;
-
-                try {
-                    // Create a simple background melody using Web Audio API
-                    if (!audioContext) {
-                        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                    }
-
-                    // Create a simple pleasant melody
-                    const notes = [261.63, 329.63, 392.00, 523.25, 392.00, 329.63]; // C, E, G, C, G, E
-                    let currentNote = 0;
-
-                    function playNote() {
-                        if (!musicEnabled || !audioContext) return;
-
-                        const oscillator = audioContext.createOscillator();
-                        const gainNode = audioContext.createGain();
-
-                        oscillator.connect(gainNode);
-                        gainNode.connect(audioContext.destination);
-
-                        oscillator.frequency.value = notes[currentNote];
-                        oscillator.type = 'sine';
-
-                        gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
-                        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 1);
-
-                        oscillator.start(audioContext.currentTime);
-                        oscillator.stop(audioContext.currentTime + 1);
-
-                        currentNote = (currentNote + 1) % notes.length;
-
-                        // Schedule next note
-                        setTimeout(playNote, 1500);
-                    }
-
-                    // Start the melody
-                    playNote();
-                } catch (e) {
-                    console.log("Audio context not supported");
-                }
-            }
-
-            function stopBackgroundMusic() {
-                // For Web Audio API, we just stop scheduling new notes
-                // The musicEnabled flag will prevent new notes from playing
-            }
-
-            function generateClickSound() {
-                try {
-                    if (!audioContext) {
-                        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                    }
-
-                    const oscillator = audioContext.createOscillator();
-                    const gainNode = audioContext.createGain();
-
-                    oscillator.connect(gainNode);
-                    gainNode.connect(audioContext.destination);
-
-                    oscillator.frequency.value = 800;
-                    oscillator.type = 'sine';
-
-                    gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
-                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
-
-                    // Store the nodes so we can replay
-                    clickSound.oscillator = oscillator;
-                    clickSound.gainNode = gainNode;
-                    clickSound.audioContext = audioContext;
-                } catch (e) {
-                    console.log("Could not generate click sound");
-                }
-            }
-
-            function generateSuccessSound() {
-                try {
-                    if (!audioContext) {
-                        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                    }
-
-                    // Create a rising success sound
-                    const oscillator1 = audioContext.createOscillator();
-                    const oscillator2 = audioContext.createOscillator();
-                    const gainNode = audioContext.createGain();
-
-                    oscillator1.connect(gainNode);
-                    oscillator2.connect(gainNode);
-                    gainNode.connect(audioContext.destination);
-
-                    oscillator1.frequency.value = 800;
-                    oscillator2.frequency.value = 1200;
-                    oscillator1.type = 'sine';
-                    oscillator2.type = 'sine';
-
-                    gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
-                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
-
-                    successSound.oscillator1 = oscillator1;
-                    successSound.oscillator2 = oscillator2;
-                    successSound.gainNode = gainNode;
-                    successSound.audioContext = audioContext;
-                } catch (e) {
-                    console.log("Could not generate success sound");
-                }
-            }
-
-            function generateApplauseSound() {
-                try {
-                    if (!audioContext) {
-                        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                    }
-
-                    // Create applause-like sound with multiple oscillators
-                    const gainNode = audioContext.createGain();
-                    gainNode.connect(audioContext.destination);
-                    gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
-
-                    // Create multiple oscillators at different frequencies
-                    const oscillators = [];
-                    for (let i = 0; i < 5; i++) {
-                        const oscillator = audioContext.createOscillator();
-                        oscillator.connect(gainNode);
-                        oscillator.frequency.value = 500 + Math.random() * 1000;
-                        oscillator.type = 'sine';
-                        oscillators.push(oscillator);
-                    }
-
-                    applauseSound.oscillators = oscillators;
-                    applauseSound.gainNode = gainNode;
-                    applauseSound.audioContext = audioContext;
-                } catch (e) {
-                    console.log("Could not generate applause sound");
-                }
-            }
-
-            function generateCelebrationSound() {
-                try {
-                    if (!audioContext) {
-                        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                    }
-
-                    // Create a celebratory arpeggio
-                    const notes = [523.25, 659.25, 783.99, 1046.50]; // C, E, G, C (higher)
-                    const gainNode = audioContext.createGain();
-                    gainNode.connect(audioContext.destination);
-
-                    celebrationSound.notes = notes;
-                    celebrationSound.gainNode = gainNode;
-                    celebrationSound.audioContext = audioContext;
-                } catch (e) {
-                    console.log("Could not generate celebration sound");
-                }
-            }
-
-            function playSound(type) {
-                if (!soundEnabled) return;
-
-                try {
-                    if (!audioContext) {
-                        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                    }
-
-                    if (audioContext.state === 'suspended') {
-                        audioContext.resume();
-                    }
-
-                    switch (type) {
-                        case 'click':
-                            if (clickSound.oscillator) {
-                                const oscillator = audioContext.createOscillator();
-                                const gainNode = audioContext.createGain();
-
-                                oscillator.connect(gainNode);
-                                gainNode.connect(audioContext.destination);
-
-                                oscillator.frequency.value = 800;
-                                oscillator.type = 'sine';
-
-                                gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
-                                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
-
-                                oscillator.start(audioContext.currentTime);
-                                oscillator.stop(audioContext.currentTime + 0.1);
-                            }
-                            break;
-
-                        case 'success':
-                            if (successSound.oscillator1) {
-                                const oscillator1 = audioContext.createOscillator();
-                                const oscillator2 = audioContext.createOscillator();
-                                const gainNode = audioContext.createGain();
-
-                                oscillator1.connect(gainNode);
-                                oscillator2.connect(gainNode);
-                                gainNode.connect(audioContext.destination);
-
-                                oscillator1.frequency.value = 800;
-                                oscillator2.frequency.value = 1200;
-                                oscillator1.type = 'sine';
-                                oscillator2.type = 'sine';
-
-                                gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
-                                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
-
-                                oscillator1.start(audioContext.currentTime);
-                                oscillator2.start(audioContext.currentTime);
-                                oscillator1.stop(audioContext.currentTime + 0.5);
-                                oscillator2.stop(audioContext.currentTime + 0.5);
-                            }
-                            break;
-
-                        case 'applause':
-                            if (applauseSound.oscillators) {
-                                const gainNode = audioContext.createGain();
-                                gainNode.connect(audioContext.destination);
-                                gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
-                                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 1.5);
-
-                                // Create multiple oscillators at different frequencies
-                                for (let i = 0; i < 5; i++) {
-                                    const oscillator = audioContext.createOscillator();
-                                    oscillator.connect(gainNode);
-                                    oscillator.frequency.value = 500 + Math.random() * 1000;
-                                    oscillator.type = 'sine';
-
-                                    oscillator.start(audioContext.currentTime);
-                                    oscillator.stop(audioContext.currentTime + 1.5);
-                                }
-                            }
-                            break;
-
-                        case 'celebration':
-                            if (celebrationSound.notes) {
-                                const notes = celebrationSound.notes;
-                                const gainNode = audioContext.createGain();
-                                gainNode.connect(audioContext.destination);
-
-                                // Play an arpeggio
-                                notes.forEach((frequency, index) => {
-                                    setTimeout(() => {
-                                        const oscillator = audioContext.createOscillator();
-                                        oscillator.connect(gainNode);
-                                        oscillator.frequency.value = frequency;
-                                        oscillator.type = 'sine';
-
-                                        gainNode.gain.setValueAtTime(0.15, audioContext.currentTime);
-                                        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
-
-                                        oscillator.start(audioContext.currentTime);
-                                        oscillator.stop(audioContext.currentTime + 0.3);
-                                    }, index * 150);
-                                });
-                            }
-                            break;
-                    }
-                } catch (e) {
-                    console.log("Could not play sound:", e);
-                }
-            }
-
-            // Create confetti effect
-            function createConfetti(container, count) {
-                const colors = ['#9c27b0', '#ff4081', '#ffeb3b', '#4a148c', '#e1bee7', '#f8bbd9'];
-
-                for (let i = 0; i < count; i++) {
-                    const confetti = document.createElement('div');
-                    confetti.className = 'confetti';
-                    confetti.style.left = Math.random() * 100 + 'vw';
-                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                    confetti.style.width = Math.random() * 15 + 5 + 'px';
-                    confetti.style.height = Math.random() * 15 + 5 + 'px';
-                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
-
-                    container.appendChild(confetti);
-
-                    // Animate confetti
-                    const animation = confetti.animate([
-                        {
-                            transform: 'translateY(-100vh) rotate(0deg)',
-                            opacity: 1
-                        },
-                        {
-                            transform: `translateY(${window.innerHeight}px) rotate(${Math.random() * 720}deg)`,
-                            opacity: 0
-                        }
-                    ], {
-                        duration: Math.random() * 3000 + 2000,
-                        easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
-                    });
-
-                    // Remove confetti after animation
-                    animation.onfinish = () => {
-                        confetti.remove();
-                    };
-                }
-            }
-
-            // Play applause effect
-            function playApplause() {
-                applause.style.animation = 'none';
-                applause.style.opacity = '1';
-
-                // Trigger reflow
-                void applause.offsetWidth;
-
-                applause.style.animation = 'float 1.5s ease-in-out';
-
-                setTimeout(() => {
-                    applause.style.opacity = '0';
-                }, 1500);
-            }
-
-            // Initialize memory game and drag drop on load (but hidden)
-            initMemoryGame();
-            initDragDrop();
-
-            // Handle mobile viewport height issues
-            function setViewportHeight() {
-                let vh = window.innerHeight * 0.01;
-                document.documentElement.style.setProperty('--vh', `${vh}px`);
-            }
-
-            setViewportHeight();
-            window.addEventListener('resize', setViewportHeight);
-            window.addEventListener('orientationchange', setViewportHeight);
+        });
+        document.getElementById('start-btn').addEventListener('click', () => {
+            playCelebration();
+            transitionSection(sections.intro, sections.p1);
+            startPuzzle1();
+        });
+        function transitionSection(from, to) {
+            window.scrollTo(0, 0);
+            from.classList.remove('active-section');
+            from.style.opacity = '0';
+            setTimeout(() => {
+                from.classList.add('hidden-section');
+                to.classList.remove('hidden-section');
+                void to.offsetWidth;
+                to.classList.add('active-section');
+                to.style.opacity = '1';
+                lucide.createIcons();
+            }, 800);
         }
-
-        // Start the app when DOM is loaded
-        document.addEventListener('DOMContentLoaded', init);
-
-        // Prevent pull-to-refresh on mobile
-        document.addEventListener('touchmove', function (e) {
-            if (e.scale !== 1) {
-                e.preventDefault();
+        
+        musicBtn.addEventListener('click', () => {
+            if (isMusicPlaying) {
+                bgMusic.pause();
+                musicBtn.innerHTML = '<i data-lucide="music"></i>';
+                musicBtn.classList.remove('active');
+            } else {
+                bgMusic.play().catch(e => console.log("Audio play blocked", e));
+                musicBtn.innerHTML = '<i data-lucide="pause"></i>';
+                musicBtn.classList.add('active');
             }
-        }, { passive: false });
+            lucide.createIcons();
+            isMusicPlaying = !isMusicPlaying;
+        });
+        
+        document.getElementById('sound-btn').addEventListener('click', () => {
+            areSoundEffectsEnabled = !areSoundEffectsEnabled;
+            if (areSoundEffectsEnabled) {
+                document.getElementById('sound-btn').classList.add('active');
+            } else {
+                document.getElementById('sound-btn').classList.remove('active');
+            }
+        });
+        
+        function playCelebration() {
+            if (areSoundEffectsEnabled) {
+                celebrationSound.currentTime = 0;
+                celebrationSound.play().catch(e => console.log("Sound effect blocked", e));
+            }
+            createCelebration();
+        }
+        
+        function createCelebration() {
+            const overlay = document.getElementById('celebration-overlay');
+            const confettiContainer = document.getElementById('confetti-container');
+            
+            // Show overlay
+            overlay.style.display = 'block';
+            
+            // Create confetti pieces
+            const confettiPieces = 50;
+            for (let i = 0; i < confettiPieces; i++) {
+                const confetti = document.createElement('div');
+                const size = Math.random() * 10 + 5;
+                const colors = ['#d4af37', '#f4d03f', '#ff1493', '#ffffff', '#00ffff'];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                confetti.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    background: ${color};
+                    border-radius: ${Math.random() > 0.5 ? '50%' : '0'};
+                    left: ${Math.random() * 100}%;
+                    top: -10px;
+                    animation: confettiFall ${Math.random() * 3 + 2}s ease-in forwards, 
+                               confettiSwing ${Math.random() * 2 + 1}s ease-in-out infinite;
+                    animation-delay: ${Math.random() * 0.5}s;
+                    opacity: ${Math.random() * 0.7 + 0.3};
+                    box-shadow: 0 0 ${size}px ${color}80;
+                `;
+                confettiContainer.appendChild(confetti);
+            }
+            
+            // Add screen flash
+            const flash = document.createElement('div');
+            flash.style.cssText = `
+                position: fixed;
+                inset: 0;
+                background: rgba(212, 175, 55, 0.3);
+                animation: fadeOut 0.8s ease-out forwards;
+                z-index: 4999;
+            `;
+            overlay.appendChild(flash);
+            
+            // Hide after animation
+            setTimeout(() => {
+                confettiContainer.innerHTML = '';
+                overlay.style.display = 'none';
+                flash.remove();
+            }, 4000);
+        }
+        // Puzzle 1
+        const icons = ['camera', 'music', 'heart', 'star', 'gift', 'cake'];
+        const p1Grid = document.getElementById('memory-grid');
+        let flippedCards = [];
+        function startPuzzle1() {
+            const pairs = [...icons, ...icons].sort(() => Math.random() - 0.5);
+            p1Grid.innerHTML = '';
+            pairs.forEach((icon, index) => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.dataset.id = index;
+                card.dataset.icon = icon;
+                card.innerHTML = `<div class="card-inner"><div class="card-front"></div><div class="card-back"><i data-lucide="${icon}"></i></div></div>`;
+                card.addEventListener('click', () => handleCardClick(card));
+                p1Grid.appendChild(card);
+            });
+            lucide.createIcons();
+            state.p1.timerInterval = setInterval(() => {
+                state.p1.timer++;
+                const mins = Math.floor(state.p1.timer / 60).toString().padStart(2, '0');
+                const secs = (state.p1.timer % 60).toString().padStart(2, '0');
+                document.getElementById('p1-timer').innerText = `${mins}:${secs}`;
+            }, 1000);
+        }
+        function handleCardClick(card) {
+            if (state.p1.locked || card.classList.contains('flipped') || card.classList.contains('matched')) return;
+            card.classList.add('flipped');
+            flippedCards.push(card);
+            if (flippedCards.length === 2) {
+                state.p1.moves++;
+                document.getElementById('p1-moves').innerText = `Moves: ${state.p1.moves}`;
+                checkForMatch();
+            }
+        }
+        function checkForMatch() {
+            state.p1.locked = true;
+            const [c1, c2] = flippedCards;
+            if (c1.dataset.icon === c2.dataset.icon) {
+                c1.classList.add('matched'); c2.classList.add('matched');
+                state.p1.matches++; flippedCards = []; state.p1.locked = false;
+                if (state.p1.matches === 6) {
+                    clearInterval(state.p1.timerInterval);
+                    playCelebration();
+                    setTimeout(() => { transitionSection(sections.p1, sections.p2); initPuzzle2(); }, 1500);
+                }
+            } else {
+                setTimeout(() => {
+                    c1.classList.remove('flipped'); c2.classList.remove('flipped');
+                    flippedCards = []; state.p1.locked = false;
+                }, 1000);
+            }
+        }
+        // Puzzle 2
+        function initPuzzle2() {
+            const word = "AMAZING";
+            const scrambled = "NAZAMGI".split('');
+            const pool = document.getElementById('letter-pool');
+            const slotsDiv = document.getElementById('word-slots');
+            slotsDiv.innerHTML = '';
+            for (let i = 0; i < word.length; i++) {
+                const slot = document.createElement('div');
+                slot.className = 'slot';
+                slot.dataset.index = i;
+                slot.addEventListener('click', () => returnLetterFromSlot(i));
+                slotsDiv.appendChild(slot);
+            }
+            pool.innerHTML = '';
+            scrambled.forEach((char, i) => {
+                const letter = document.createElement('div');
+                letter.className = 'letter-tile';
+                letter.innerText = char;
+                letter.id = `letter-${i}`;
+                letter.addEventListener('click', () => autoPlaceLetter(letter));
+                pool.appendChild(letter);
+            });
+        }
+        function autoPlaceLetter(letter) {
+            const slots = document.querySelectorAll('.slot');
+            for (let slot of slots) {
+                if (!slot.hasChildNodes()) {
+                    slot.appendChild(letter);
+                    slot.classList.add('filled');
+                    checkWord();
+                    break;
+                }
+            }
+        }
+        function returnLetterFromSlot(index) {
+            // Simplification: letters only go one way for smoothness in this demo version
+        }
+        function checkWord() {
+            const slots = document.querySelectorAll('.slot');
+            let currentWord = "";
+            let filledSlots = 0;
+            slots.forEach(s => {
+                if (s.hasChildNodes()) filledSlots++;
+                currentWord += s.innerText;
+            });
+            
+            if (currentWord === "AMAZING") {
+                document.getElementById('p2-next-btn').classList.remove('hidden-element');
+                slots.forEach(s => s.style.borderColor = 'var(--gold-light)');
+            } else if (filledSlots === slots.length) {
+                // All slots filled but wrong word - show message and reset
+                showWrongMessage();
+            }
+        }
+        
+        function showWrongMessage() {
+            const messages = [
+                'Not quite! Try again.',
+                'Oops! Give it another shot.',
+                'Close, but not quite. Rearrange!',
+                'Hmm, that\'s not it. Try once more.',
+                'Nice try! Shuffle and try again.',
+                'Not the right order. Go again!',
+                'Almost there! Rearrange the letters.',
+                'That\'s not it. Keep trying!',
+                'Wrong order. Let\'s try again.',
+                'Not quite right. Rearrange them!'
+            ];
+            
+            const message = messages[Math.floor(Math.random() * messages.length)];
+            const slots = document.querySelectorAll('.slot');
+            
+            // Show message
+            const msgDiv = document.createElement('div');
+            msgDiv.style.cssText = `
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(255, 20, 147, 0.9);
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 20px;
+                font-size: 1.2rem;
+                font-weight: 600;
+                z-index: 100;
+                animation: fadeInOut 2s ease-in-out;
+                font-family: 'Montserrat', sans-serif;
+            `;
+            msgDiv.textContent = message;
+            document.body.appendChild(msgDiv);
+            
+            // Reset after 1 second
+            setTimeout(() => {
+                slots.forEach(slot => {
+                    const letter = slot.firstChild;
+                    if (letter) {
+                        document.getElementById('letter-pool').appendChild(letter);
+                        slot.innerHTML = '';
+                        slot.classList.remove('filled');
+                    }
+                });
+                msgDiv.remove();
+                document.getElementById('p2-next-btn').classList.add('hidden-element');
+            }, 1000);
+        }
+        document.getElementById('p2-next-btn').addEventListener('click', () => {
+            playCelebration();
+            transitionSection(sections.p2, sections.p3);
+            initPuzzle3();
+        });
+        // Puzzle 3
+        function initPuzzle3() {
+            const canvas = document.getElementById('hidden-canvas');
+            const iconsList = ['gift', 'party-popper', 'glass-water', 'cake-slice', 'gem'];
+            for (let i = 0; i < 20; i++) {
+                const iconWrapper = document.createElement('div');
+                const iconName = iconsList[Math.floor(Math.random() * iconsList.length)];
+                iconWrapper.className = 'scattered-icon';
+                iconWrapper.innerHTML = `<i data-lucide="${iconName}"></i>`;
+                const x = Math.random() * 90; const y = Math.random() * 90;
+                iconWrapper.style.left = `${x}%`; iconWrapper.style.top = `${y}%`;
+                iconWrapper.style.animationDelay = `${Math.random() * 5}s`;
+                canvas.appendChild(iconWrapper);
+            }
+            const heartWrapper = document.createElement('div');
+            heartWrapper.className = 'scattered-icon heart-target';
+            heartWrapper.innerHTML = `<i data-lucide="heart"></i>`;
+            heartWrapper.style.left = `${Math.random() * 80 + 10}%`;
+            heartWrapper.style.top = `${Math.random() * 80 + 10}%`;
+            heartWrapper.addEventListener('click', revealFinal);
+            canvas.appendChild(heartWrapper);
+            lucide.createIcons();
+        }
+        function revealFinal() {
+            playCelebration();
+            transitionSection(sections.p3, sections.final);
+        }
     </script>
 </body>
-
 </html>
