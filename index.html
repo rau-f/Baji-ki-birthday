@@ -1223,10 +1223,20 @@
                 container.appendChild(c);
             }
 
-            // Launch fireworks periodically - more intense!
-            launchFirework();
-            launchFirework(); // Launch 2 at start
-            setInterval(launchFirework, 800); // Faster launches
+            // CELEBRATION BURST: Launch lots of fireworks for 3 seconds
+            // Initial rapid burst
+            for (let i = 0; i < 8; i++) {
+                setTimeout(launchFirework, i * 150); // Staggered initial burst
+            }
+
+            // Continue rapid fire for 3 seconds
+            const celebrationInterval = setInterval(launchFirework, 200);
+
+            // After 5 seconds, switch to normal flow
+            setTimeout(() => {
+                clearInterval(celebrationInterval);
+                setInterval(launchFirework, 1200); // Normal slower flow
+            }, 5000);
 
             // Auto play music if not already
             if (!isPlaying && audio.paused) {
