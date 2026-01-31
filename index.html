@@ -179,25 +179,39 @@
         .neon-text-blue { color: var(--neon-blue); text-shadow: 0 0 5px var(--neon-blue), 0 0 15px var(--neon-blue) }
         .neon-text-gold { color: var(--neon-gold); text-shadow: 0 0 5px var(--neon-gold), 0 0 15px var(--neon-gold) }
 
-        /* --- PUZZLE 2 (UNSCRAMBLE) STYLES --- */
-        .puzzle2-bg {
-            background-color: var(--deep-night);
+        /* --- UNIFIED STARRY BACKGROUND --- */
+        .star-dust-bg {
+            background-color: #010103; /* Much Darker Base */
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
-                radial-gradient(1px 1px at 25px 35px, white, transparent),
-                radial-gradient(1px 1px at 50px 100px, white, transparent),
-                radial-gradient(1.5px 1.5px at 150px 200px, rgba(255,255,255,0.8), transparent),
-                radial-gradient(1px 1px at 250px 50px, white, transparent),
-                radial-gradient(1px 1px at 300px 350px, white, transparent),
-                radial-gradient(1.5px 1.5px at 450px 150px, rgba(255,255,255,0.7), transparent),
-                radial-gradient(1px 1px at 600px 400px, white, transparent);
+                radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 60%), /* Reduced Gold Glow opacity */
+                radial-gradient(circle at 10% 10%, rgba(236, 72, 153, 0.05) 0%, transparent 50%), /* Reduced Pink Tint opacity */
+                /* BRIGHTER STARS */
+                radial-gradient(2px 2px at 25px 35px, white, transparent),
+                radial-gradient(2px 2px at 50px 100px, rgba(255, 255, 255, 0.9), transparent),
+                radial-gradient(2.5px 2.5px at 150px 200px, rgba(255, 215, 0, 0.8), transparent), /* Gold Star */
+                radial-gradient(2px 2px at 250px 50px, white, transparent),
+                radial-gradient(2px 2px at 300px 350px, rgba(255, 255, 255, 0.8), transparent),
+                radial-gradient(3px 3px at 450px 150px, rgba(255, 255, 255, 0.9), transparent),
+                radial-gradient(2px 2px at 600px 400px, rgba(255, 255, 255, 0.8), transparent),
+                radial-gradient(2px 2px at 700px 100px, white, transparent),
+                radial-gradient(2.5px 2.5px at 800px 500px, rgba(255, 215, 0, 0.7), transparent); /* Gold Star */
             background-repeat: repeat;
-            background-size: 800px 800px, 800px 800px, 100px 100px, 150px 150px, 200px 200px, 250px 250px, 300px 300px, 350px 350px, 400px 400px;
+            background-size: 800px 800px, 800px 800px, 
+                             150px 150px, 200px 200px, 300px 300px, 
+                             250px 250px, 350px 350px, 450px 450px, 
+                             500px 500px, 600px 600px, 700px 700px;
+            animation: star-twinkle 6s ease-in-out infinite alternate;
         }
+
+        @keyframes star-twinkle {
+            0% { background-size: 800px 800px, 800px 800px, 150px 150px, 200px 200px, 300px 300px, 250px 250px, 350px 350px, 450px 450px, 500px 500px, 600px 600px, 700px 700px; }
+            100% { background-size: 810px 810px, 790px 790px, 155px 155px, 205px 205px, 305px 305px, 255px 255px, 355px 355px, 455px 455px, 505px 505px, 605px 605px, 705px 705px; }
+        }
+
         .gold-glow-text {
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.4);
         }
+
         .floating-tile {
             background: linear-gradient(145deg, #1A1A1D, #0F0F12);
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8), inset 0 0 1px 1px rgba(255, 255, 255, 0.05);
@@ -350,9 +364,9 @@
         </button>
     </div>
 
-    <!-- SECTION 1: INTRO -->
+    <!-- INTRO SECTION -->
     <section id="section-intro"
-        class="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative z-10 intro-bg">
+        class="min-h-screen flex flex-col items-center justify-center p-6 md:p-12 relative overflow-hidden star-dust-bg text-center fade-in">
         <!-- Floating Particles -->
         <div class="hidden md:block fixed inset-0 pointer-events-none overflow-hidden z-0">
             <div class="shimmer-particle" style="top: 90%; left: 10%; --duration: 15s; --x-drift: 50px;"></div>
@@ -416,7 +430,7 @@
 
     <!-- SECTION 2: PUZZLE 1 (Memory Match) -->
     <section id="section-puzzle1"
-        class="min-h-screen hidden-section flex-col items-center bg-background-dark p-4 md:p-8 font-sans">
+        class="min-h-screen hidden-section flex flex-col items-center p-4 star-dust-bg font-body transition-all duration-700">
         <!-- Background Orbs -->
         <div class="fixed inset-0 pointer-events-none opacity-20">
             <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-900 rounded-full blur-[120px]"></div>
@@ -480,7 +494,7 @@
 
     <!-- SECTION 3: PUZZLE 2 (Unscramble) -->
     <section id="section-puzzle2"
-        class="min-h-screen hidden-section flex flex-col items-center justify-center p-4 puzzle2-bg font-body relative overflow-hidden">
+        class="min-h-screen hidden-section flex flex-col items-center justify-center p-4 star-dust-bg font-body relative overflow-hidden">
         <div
             class="max-w-3xl w-full bg-black/60 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/5 relative z-10">
             <!-- Glows -->
@@ -536,8 +550,7 @@
     </section>
 
     <!-- SECTION 4: PUZZLE 3 (Hidden Heart) -->
-    <section id="section-puzzle3"
-        class="min-h-screen hidden-section bg-background-dark font-sans overflow-x-hidden relative">
+    <section id="section-puzzle3" class="min-h-screen hidden-section star-dust-bg font-sans overflow-x-hidden relative">
         <header class="p-6 flex justify-between items-center max-w-7xl mx-auto">
             <div class="flex items-center space-x-3">
                 <span class="material-symbols-outlined text-gold text-4xl">star</span>
@@ -592,7 +605,7 @@
 
     <!-- SECTION 5: FINAL REVEAL -->
     <section id="section-reveal"
-        class="min-h-screen hidden-section starlit-bg text-gray-200 font-sans relative overflow-x-hidden">
+        class="min-h-screen hidden-section star-dust-bg text-gray-200 font-sans relative overflow-x-hidden">
         <div class="light-leak -top-20 -left-20"></div>
         <div class="light-leak -bottom-20 -right-20" style="animation-delay: -5s;"></div>
 
@@ -634,7 +647,7 @@
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNrrix7rCPPCw5ZA3f8no3OY_1V7XvVVOr2UMsNAOR426Umn_ivI8C4F-_YdSXwrIgXqR2K4gmhSQ3Xz5SHxK2HpANehubJTbmFGGLf_FtSALrqaDrEtb7ToH7mozYiI7maPqcVVHuPdLOZBdkgKpoBbc8IgYPy26egZWpm8SH1_qfqH_0CeUaX9n8vUQnCE7f0ipp3yw3uCbGNYBPk1Hs8UmNbO-ivDtHJGEdg45W7qnuuGxza8SdZ_5n4XtuR2YMNuZ2TgKKrvQ" />
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-[var(--deep-black)] via-transparent to-transparent flex items-end p-8">
-                                    <p class="gold-text font-script text-4xl">Soul sisters forever...</p>
+                                    <p class="gold-text font-script text-4xl">No escape, you’re my sister...</p>
                                 </div>
                             </div>
                         </div>
