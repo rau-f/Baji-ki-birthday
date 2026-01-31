@@ -125,8 +125,9 @@
             100% { transform: translateY(-100vh) translateX(var(--x-drift)); opacity: 0; }
         }
         .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
             border: 1px solid rgba(212, 175, 55, 0.2);
         }
 
@@ -349,7 +350,9 @@
     </style>
 </head>
 
-<body class="bg-deep-navy text-slate-100 overflow-x-hidden relative min-h-screen transition-colors duration-500">
+<body class="text-slate-100 overflow-x-hidden relative min-h-screen transition-colors duration-500">
+    <!-- Fixed Global Background (Stars) -->
+    <div class="fixed inset-0 z-[-1] star-dust-bg pointer-events-none"></div>
 
     <!-- Audio -->
     <audio id="bg-music" loop>
@@ -366,7 +369,7 @@
 
     <!-- INTRO SECTION -->
     <section id="section-intro"
-        class="min-h-screen flex flex-col items-center justify-center p-6 md:p-12 relative overflow-hidden star-dust-bg text-center fade-in">
+        class="min-h-screen flex flex-col items-center justify-center p-6 md:p-12 relative overflow-hidden text-center fade-in">
         <!-- Floating Particles -->
         <div class="hidden md:block fixed inset-0 pointer-events-none overflow-hidden z-0">
             <div class="shimmer-particle" style="top: 90%; left: 10%; --duration: 15s; --x-drift: 50px;"></div>
@@ -407,14 +410,15 @@
                 </div>
             </div>
 
-            <div class="pt-8">
+            <div>
                 <button onclick="transitionTo('section-puzzle1')"
                     class="btn-gold px-8 py-4 md:px-12 md:py-6 rounded-full text-deep-navy text-lg md:text-2xl font-bold flex items-center gap-3 md:gap-4 mx-auto group">
                     <span>Let the Show Begin!</span>
                     <span
                         class="material-symbols-outlined text-2xl md:text-3xl group-hover:rotate-12 transition-transform">redeem</span>
                 </button>
-                <p class="mt-8 text-xs text-soft-blush/40 font-semibold uppercase tracking-[0.3em]">Phase 1 of 3: Baby
+                <p class="mt-8 mb-16 text-xs text-soft-blush/40 font-semibold uppercase tracking-[0.3em]">Phase 1 of 3:
+                    Baby
                     steps to the cake</p>
             </div>
         </div>
@@ -430,7 +434,7 @@
 
     <!-- SECTION 2: PUZZLE 1 (Memory Match) -->
     <section id="section-puzzle1"
-        class="min-h-screen hidden-section flex flex-col items-center p-4 star-dust-bg font-body transition-all duration-700">
+        class="min-h-screen hidden-section flex flex-col items-center p-4 font-body transition-all duration-700">
         <!-- Background Orbs -->
         <div class="fixed inset-0 pointer-events-none opacity-20">
             <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-900 rounded-full blur-[120px]"></div>
@@ -494,7 +498,7 @@
 
     <!-- SECTION 3: PUZZLE 2 (Unscramble) -->
     <section id="section-puzzle2"
-        class="min-h-screen hidden-section flex flex-col items-center justify-center p-4 star-dust-bg font-body relative overflow-hidden">
+        class="min-h-screen hidden-section flex flex-col items-center justify-center p-4 font-body relative overflow-hidden">
         <div
             class="max-w-3xl w-full bg-black/60 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/5 relative z-10">
             <!-- Glows -->
@@ -550,7 +554,7 @@
     </section>
 
     <!-- SECTION 4: PUZZLE 3 (Hidden Heart) -->
-    <section id="section-puzzle3" class="min-h-screen hidden-section star-dust-bg font-sans overflow-x-hidden relative">
+    <section id="section-puzzle3" class="min-h-screen hidden-section font-sans overflow-x-hidden relative">
         <header class="p-6 flex justify-between items-center max-w-7xl mx-auto">
             <div class="flex items-center space-x-3">
                 <span class="material-symbols-outlined text-gold text-4xl">star</span>
@@ -604,8 +608,7 @@
     </section>
 
     <!-- SECTION 5: FINAL REVEAL -->
-    <section id="section-reveal"
-        class="min-h-screen hidden-section star-dust-bg text-gray-200 font-sans relative overflow-x-hidden">
+    <section id="section-reveal" class="min-h-screen hidden-section text-gray-200 font-sans relative overflow-x-hidden">
         <div class="light-leak -top-20 -left-20"></div>
         <div class="light-leak -bottom-20 -right-20" style="animation-delay: -5s;"></div>
 
@@ -644,7 +647,7 @@
                             <div class="w-full h-full gold-border-glow rounded-xl overflow-hidden relative">
                                 <img alt="looking goofy and happy"
                                     class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-700"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNrrix7rCPPCw5ZA3f8no3OY_1V7XvVVOr2UMsNAOR426Umn_ivI8C4F-_YdSXwrIgXqR2K4gmhSQ3Xz5SHxK2HpANehubJTbmFGGLf_FtSALrqaDrEtb7ToH7mozYiI7maPqcVVHuPdLOZBdkgKpoBbc8IgYPy26egZWpm8SH1_qfqH_0CeUaX9n8vUQnCE7f0ipp3yw3uCbGNYBPk1Hs8UmNbO-ivDtHJGEdg45W7qnuuGxza8SdZ_5n4XtuR2YMNuZ2TgKKrvQ" />
+                                    src="assets/image.png" />
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-[var(--deep-black)] via-transparent to-transparent flex items-end p-8">
                                     <p class="gold-text font-script text-4xl">No escape, you’re my sister...</p>
